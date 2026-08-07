@@ -1,0 +1,15 @@
+.next
+.next-stale-*
+node_modules
+out
+dist
+backups
+.wrangler
+.vinext
+outputs
+work
+.env*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

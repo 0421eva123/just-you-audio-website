@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import type { ReactNode } from "react";
+import { AnalyticsEvents } from "./AnalyticsEvents";
 import { contactInfo, siteUrl } from "../site-config";
 import "./globals.css";
 
@@ -76,6 +77,7 @@ export default function RootLayout({
           />
         </noscript>
         {children}
+        <AnalyticsEvents />
       </body>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-8TNM54RXVY"

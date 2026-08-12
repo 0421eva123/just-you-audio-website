@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { delayNavigationTo, trackGa4CustomEvent } from "../AnalyticsEvents";
 
 const pdfUrl = "/catalog/product-overview.pdf?v=20260812";
 
@@ -21,12 +22,6 @@ const productInterests = [
   "Complete PA System",
   "OEM/ODM",
 ];
-
-declare global {
-  interface Window {
-    dataLayer?: unknown[];
-  }
-}
 
 export default function DownloadCatalogForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
@@ -53,18 +48,8 @@ export default function DownloadCatalogForm() {
         throw new Error("Lead submission failed");
       }
 
-      let redirected = false;
-      const redirectToPdf = () => {
-        if (redirected) return;
-        redirected = true;
-        window.location.href = pdfUrl;
-      };
-
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "catalog_download_completed",
-      });
-      window.setTimeout(redirectToPdf, 1000);
+      trackGa4CustomEvent("catalog_download_completed");
+      delayNavigationTo(pdfUrl);
     } catch {
       setStatus("error");
       setError("Please check your information and submit again.");

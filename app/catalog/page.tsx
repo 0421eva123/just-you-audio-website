@@ -88,7 +88,7 @@ export default function CatalogPage() {
                 include detailed prices.
               </small>
             </div>
-            <a className="btn btn-secondary catalog-button" href="/catalog/product-overview.pdf">
+            <a className="btn btn-secondary catalog-button" href="/download-catalog">
               Download Product Overview PDF
             </a>
           </article>

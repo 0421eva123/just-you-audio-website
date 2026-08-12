@@ -24,7 +24,7 @@ const productInterests = [
 
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
   }
 }
 
@@ -60,15 +60,11 @@ export default function DownloadCatalogForm() {
         window.location.href = pdfUrl;
       };
 
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "catalog_download_completed", {
-          event_callback: redirectToPdf,
-          event_timeout: 1000,
-        });
-        window.setTimeout(redirectToPdf, 1200);
-      } else {
-        redirectToPdf();
-      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "catalog_download_completed",
+      });
+      window.setTimeout(redirectToPdf, 1000);
     } catch {
       setStatus("error");
       setError("Please check your information and submit again.");

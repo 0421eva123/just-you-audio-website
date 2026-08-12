@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
-const pdfUrl = "https://www.justyouaudio.com/catalog/product-overview.pdf";
+const pdfUrl = "/catalog/product-overview.pdf?v=20260812";
 
 const businessTypes = [
   "Distributor",

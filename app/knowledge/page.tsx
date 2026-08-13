@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { englishKnowledgePages, spanishLandingPages } from "../seo-pages";
 import { contactInfo, getEmailLink, getWhatsAppLink } from "../../site-config";
 
 const boardPosts = [
@@ -200,6 +201,25 @@ export default function KnowledgePage() {
                 </article>
               ))}
             </div>
+
+            <section className="solution-board">
+              <div>
+                <div className="label">SEO Page Structure</div>
+                <h2>New knowledge and Spanish landing pages</h2>
+                <p>
+                  These pages are prepared with page-specific metadata, headings,
+                  internal links and CTA sections. Full long-form SEO copy can be
+                  added in the next content phase.
+                </p>
+              </div>
+              <div className="topic-grid route-grid">
+                {[...englishKnowledgePages, ...spanishLandingPages].map((page) => (
+                  <a href={page.route} key={page.route}>
+                    {page.h1}
+                  </a>
+                ))}
+              </div>
+            </section>
 
             <section className="qa-board">
               <div className="knowledge-section-head compact">

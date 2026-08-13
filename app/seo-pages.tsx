@@ -58,13 +58,13 @@ export const englishKnowledgePages: SeoPage[] = [
     keywords: ["100V line", "PA amplifier", "speaker zones", "commercial paging"],
     trustTitle: "For installers, distributors and project buyers",
     trustText:
-      "The page should help readers understand when a 100V system is appropriate and which information JUST YOU AUDIO needs before recommending models.",
+      "Understand when a 100V system is appropriate and which project information is needed before selecting models.",
     sections: [
       {
         eyebrow: "System Basics",
         title: "How a 100V PA system works",
         intro:
-          "Placeholder structure for explaining amplifier output, transformer speakers, cable runs and multi-speaker layouts.",
+          "Learn how amplifier output, transformer speakers, cable runs and multi-speaker layouts work together.",
         items: [
           {
             title: "Amplifier output",
@@ -84,7 +84,7 @@ export const englishKnowledgePages: SeoPage[] = [
         eyebrow: "Design Structure",
         title: "Information needed before system design",
         intro:
-          "This section will become a project intake checklist for contractors and distributors.",
+          "Collect the key project information before selecting amplifiers, speakers and cable.",
         items: [
           {
             title: "Area and layout",
@@ -129,7 +129,7 @@ export const englishKnowledgePages: SeoPage[] = [
       {
         question: "Is a 100V PA system suitable for many speakers?",
         answer:
-          "Yes. The final copy should explain why distributed 100V systems are commonly used when one amplifier feeds multiple commercial speakers.",
+          "Yes. Distributed 100V systems are commonly used when one amplifier feeds multiple commercial speakers.",
       },
       {
         question: "Can JUST YOU AUDIO help match a complete system?",
@@ -846,16 +846,16 @@ Contact us through WhatsApp with your project information for equipment matching
     eyebrow: "Amplifier Selection",
     h1: "How to choose a PA amplifier for commercial audio",
     intro:
-      "This placeholder page sets up a practical amplifier selection guide for shops, hotels, schools, factories and public spaces.",
+      "A practical amplifier selection guide for shops, hotels, schools, factories and public spaces.",
     keywords: ["PA amplifier", "mixer amplifier", "100V output", "zone amplifier"],
     trustTitle: "Choose by project needs, not model name alone",
     trustText:
-      "The final copy should help buyers compare power, inputs, zoning and speaker load before requesting a quotation.",
+      "Compare power, inputs, zoning and speaker load before requesting a quotation.",
     sections: [
       {
         eyebrow: "Selection Factors",
         title: "Key amplifier decisions",
-        intro: "Future copy should break amplifier choice into clear, useful buying criteria.",
+        intro: "Compare amplifier options by the requirements that affect real commercial installations.",
         items: [
           {
             title: "Power rating",
@@ -874,7 +874,7 @@ Contact us through WhatsApp with your project information for equipment matching
       {
         eyebrow: "Buying Context",
         title: "Match amplifier type to application",
-        intro: "This section will connect amplifier features with real project environments.",
+        intro: "Different commercial spaces need different amplifier functions and control options.",
         items: [
           {
             title: "Background music",
@@ -914,7 +914,7 @@ Contact us through WhatsApp with your project information for equipment matching
       {
         question: "How much amplifier power do I need?",
         answer:
-          "The final copy should guide readers to total speaker wattage plus practical headroom instead of choosing only by room size.",
+          "Start with total speaker wattage, then reserve practical headroom instead of choosing only by room size.",
       },
       {
         question: "Can one amplifier support music and paging?",
@@ -939,7 +939,7 @@ Contact us through WhatsApp with your project information for equipment matching
     eyebrow: "Hotel BGM",
     h1: "Hotel background music system planning guide",
     intro:
-      "This page will become a buyer-friendly planning guide for hotel background music and light paging systems.",
+      "A buyer-friendly planning guide for hotel background music and light paging systems.",
     keywords: ["hotel BGM", "ceiling speaker", "zone amplifier", "commercial audio"],
     trustTitle: "Designed for quiet, polished hospitality spaces",
     trustText:
@@ -948,7 +948,7 @@ Contact us through WhatsApp with your project information for equipment matching
       {
         eyebrow: "Hotel Areas",
         title: "Plan music by zone",
-        intro: "Future copy should explain how different hotel spaces need different sound levels and speaker choices.",
+        intro: "Different hotel spaces need different sound levels, speaker styles and control zones.",
         items: [
           {
             title: "Lobby and reception",
@@ -967,7 +967,7 @@ Contact us through WhatsApp with your project information for equipment matching
       {
         eyebrow: "Product Matching",
         title: "Recommended hotel audio components",
-        intro: "This section will connect hotel requirements with JUST YOU AUDIO product categories.",
+        intro: "Match hotel requirements with practical amplifier, ceiling speaker and wall speaker options.",
         items: [
           {
             title: "Frameless ceiling speakers",
@@ -1012,7 +1012,7 @@ Contact us through WhatsApp with your project information for equipment matching
       {
         question: "Are ceiling speakers suitable for hotels?",
         answer:
-          "Yes. The final copy should explain where ceiling speakers provide clean appearance and even background music.",
+          "Yes. Ceiling speakers provide clean appearance and even background music in many hotel areas.",
       },
       {
         question: "Can the system support different hotel zones?",
@@ -1037,7 +1037,7 @@ Contact us through WhatsApp with your project information for equipment matching
     eyebrow: "Factory PA Design",
     h1: "Factory PA system design structure",
     intro:
-      "This page sets up the future structure for a practical factory and warehouse public address system guide.",
+      "A practical factory and warehouse public address system guide for paging, announcements and area coverage.",
     keywords: ["factory PA system", "warehouse paging", "horn speaker", "outdoor column speaker"],
     trustTitle: "Built around voice clarity and reliable coverage",
     trustText:
@@ -1046,7 +1046,7 @@ Contact us through WhatsApp with your project information for equipment matching
       {
         eyebrow: "Coverage Planning",
         title: "Separate noisy and quiet areas",
-        intro: "Future copy should show how factories require different speaker types across production and office areas.",
+        intro: "Factories often require different speaker types across production, warehouse and office areas.",
         items: [
           {
             title: "Production floor",
@@ -1065,7 +1065,7 @@ Contact us through WhatsApp with your project information for equipment matching
       {
         eyebrow: "System Control",
         title: "Paging and zone requirements",
-        intro: "This section will outline microphone access, zones and priority announcements.",
+        intro: "Plan microphone access, speaker zones and priority announcements before selecting equipment.",
         items: [
           {
             title: "Paging microphone",
@@ -1135,7 +1135,7 @@ Contact us through WhatsApp with your project information for equipment matching
     eyebrow: "Outdoor Speakers",
     h1: "Outdoor waterproof speaker guide for PA projects",
     intro:
-      "This placeholder page organizes the future outdoor speaker guide by environment, coverage need and product type.",
+      "A guide to outdoor speaker selection by environment, coverage need and product type.",
     keywords: ["waterproof speaker", "outdoor column speaker", "horn speaker", "lawn speaker"],
     trustTitle: "Choose by coverage, weather exposure and appearance",
     trustText:
@@ -1144,7 +1144,7 @@ Contact us through WhatsApp with your project information for equipment matching
       {
         eyebrow: "Speaker Types",
         title: "Compare outdoor PA speaker options",
-        intro: "Future copy should help readers decide between column, horn and landscape speakers.",
+        intro: "Choose between column, horn and landscape speakers based on coverage, sound goal and appearance.",
         items: [
           {
             title: "Waterproof column speakers",
@@ -1163,7 +1163,7 @@ Contact us through WhatsApp with your project information for equipment matching
       {
         eyebrow: "Project Details",
         title: "Outdoor information to confirm",
-        intro: "This section will become the outdoor speaker project intake structure.",
+        intro: "Confirm the installation environment before choosing outdoor speaker models and amplifier power.",
         items: [
           {
             title: "Weather exposure",
@@ -1236,11 +1236,11 @@ export const spanishLandingPages: SeoPage[] = [
     eyebrow: "Megafonía Comercial",
     h1: "Sistema de megafonía para proyectos comerciales",
     intro:
-      "Esta página queda preparada como landing en español para explicar soluciones de megafonía, audio ambiental y voceo en proyectos comerciales de Latinoamérica.",
+      "Soluciones de megafonía, audio ambiental y voceo para proyectos comerciales de Latinoamérica.",
     keywords: ["megafonía", "audio comercial", "100V", "voceo"],
     trustTitle: "Pensada para distribuidores e instaladores",
     trustText:
-      "La versión final debe hablar de manera clara sobre aplicaciones, componentes y datos necesarios para cotizar sin sonar como traducción literal.",
+      "Revisa aplicaciones, componentes y datos necesarios para preparar una cotización clara.",
     sections: [
       {
         eyebrow: "Aplicaciones",
@@ -1266,7 +1266,7 @@ export const spanishLandingPages: SeoPage[] = [
         eyebrow: "Componentes",
         title: "Estructura básica del sistema",
         intro:
-          "La futura redacción explicará cómo combinar amplificadores, altavoces y accesorios según el proyecto.",
+          "Combina amplificadores, altavoces y accesorios según el tipo de proyecto.",
         items: [
           {
             title: "Amplificador PA",
@@ -1336,17 +1336,17 @@ export const spanishLandingPages: SeoPage[] = [
     eyebrow: "Amplificador PA",
     h1: "Amplificador PA para audio comercial",
     intro:
-      "Esta landing queda lista para desarrollar contenido natural en español sobre cómo elegir amplificadores PA para música ambiental y voceo.",
+      "Guía para elegir amplificadores PA para música ambiental y voceo en proyectos comerciales.",
     keywords: ["amplificador PA", "amplificador 100V", "audio comercial", "zonas"],
     trustTitle: "Selección por potencia, entradas y aplicación",
     trustText:
-      "La página debe ayudar al comprador a enviar datos útiles para una recomendación rápida, sin llenar la página de repeticiones.",
+      "Define potencia, entradas y funciones de control según las necesidades del proyecto.",
     sections: [
       {
         eyebrow: "Cómo elegir",
         title: "Factores clave del amplificador",
         intro:
-          "La futura versión explicará cada criterio con ejemplos de proyectos comerciales comunes.",
+          "Compara cada criterio con base en proyectos comerciales comunes.",
         items: [
           {
             title: "Potencia",
@@ -1366,7 +1366,7 @@ export const spanishLandingPages: SeoPage[] = [
         eyebrow: "Aplicaciones",
         title: "Usos comunes en proyectos",
         intro:
-          "Esta sección conectará modelos de amplificador con necesidades de hoteles, tiendas y escuelas.",
+          "Relaciona modelos de amplificador con necesidades de hoteles, tiendas y escuelas.",
         items: [
           {
             title: "Música ambiental",
@@ -1431,7 +1431,7 @@ export const spanishLandingPages: SeoPage[] = [
     eyebrow: "Altavoces Comerciales",
     h1: "Altavoces para audio comercial y megafonía",
     intro:
-      "Esta página prepara la estructura para presentar altavoces comerciales por tipo de instalación, ambiente y necesidad de sonido.",
+      "Altavoces comerciales organizados por tipo de instalación, ambiente y necesidad de sonido.",
     keywords: ["altavoces comerciales", "altavoces de techo", "altavoces exteriores", "megafonía"],
     trustTitle: "El altavoz correcto depende del espacio",
     trustText:
@@ -1461,7 +1461,7 @@ export const spanishLandingPages: SeoPage[] = [
         eyebrow: "Selección",
         title: "Cómo definir el altavoz adecuado",
         intro:
-          "La futura redacción guiará al lector por ambiente, distancia, estética y uso principal.",
+          "Elige por ambiente, distancia, estética y uso principal.",
         items: [
           {
             title: "Ambiente",
@@ -1817,15 +1817,6 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
   const checklistLabel = isSpanish ? "Checklist" : "Checklist";
   const applicationsLabel = isSpanish ? "Aplicaciones" : "Applications";
   const nextStepLabel = isSpanish ? "Siguiente paso" : "Next Step";
-  const productIntro = isSpanish
-    ? "Estos enlaces internos orientan al lector hacia categorías relevantes de JUST YOU AUDIO sin crear contenido repetitivo."
-    : "These internal links point readers toward relevant JUST YOU AUDIO product categories without creating keyword-stuffed copy.";
-  const checklistIntro = isSpanish
-    ? "Mantén esta sección breve por ahora; después se puede ampliar con ejemplos y criterios de decisión."
-    : "Keep this section concise now, then expand it later with examples and decision guidance.";
-  const placeholderNote = isSpanish
-    ? "La redacción SEO de largo formato se ampliará aquí en la siguiente fase de contenido."
-    : "Long-form SEO copy will be expanded here in the next content phase.";
 
   return (
     <>
@@ -1869,11 +1860,6 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
                 </article>
               ))}
             </div>
-            {index === 0 ? (
-              <div className="seo-placeholder-note">
-                {placeholderNote}
-              </div>
-            ) : null}
           </section>
         ))}
 
@@ -1881,7 +1867,6 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
           <div className="knowledge-block-head">
             <div className="label">{productLabel}</div>
             <h2>{productHeading}</h2>
-            <p>{productIntro}</p>
           </div>
           <div className="system-overview-grid">
             {page.productLinks.map((link) => (
@@ -1899,7 +1884,6 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
           <div className="knowledge-block-head">
             <div className="label">{checklistLabel}</div>
             <h2>{checklistHeading}</h2>
-            <p>{checklistIntro}</p>
           </div>
           <ul className="check-list">
             {page.checklist.map((item) => (

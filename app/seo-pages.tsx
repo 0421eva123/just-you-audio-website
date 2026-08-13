@@ -1640,8 +1640,15 @@ function formatInlineMarkdown(text: string) {
   });
 }
 
-function ArticleMarkdown({ markdown }: { markdown: string }) {
-  const lines = markdown.split(/\r?\n/);
+function getArticleAnchor(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/Ω/g, "ohm")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function renderMarkdownNodes(lines: string[], keyPrefix: string) {
   const nodes: ReactNode[] = [];
   let listItems: string[] = [];
   let orderedItems: string[] = [];
@@ -1691,19 +1698,19 @@ function ArticleMarkdown({ markdown }: { markdown: string }) {
 
     if (trimmed.startsWith("## ")) {
       flushLists();
-      nodes.push(<h2 key={`h2-${index}`}>{formatInlineMarkdown(trimmed.slice(3))}</h2>);
+      nodes.push(<h2 key={`${keyPrefix}-h2-${index}`}>{formatInlineMarkdown(trimmed.slice(3))}</h2>);
       return;
     }
 
     if (trimmed.startsWith("### ")) {
       flushLists();
-      nodes.push(<h3 key={`h3-${index}`}>{formatInlineMarkdown(trimmed.slice(4))}</h3>);
+      nodes.push(<h3 key={`${keyPrefix}-h3-${index}`}>{formatInlineMarkdown(trimmed.slice(4))}</h3>);
       return;
     }
 
     if (trimmed.startsWith("#### ")) {
       flushLists();
-      nodes.push(<h4 key={`h4-${index}`}>{formatInlineMarkdown(trimmed.slice(5))}</h4>);
+      nodes.push(<h4 key={`${keyPrefix}-h4-${index}`}>{formatInlineMarkdown(trimmed.slice(5))}</h4>);
       return;
     }
 
@@ -1727,19 +1734,101 @@ function ArticleMarkdown({ markdown }: { markdown: string }) {
 
     if (trimmed.startsWith("**") && trimmed.endsWith("**")) {
       nodes.push(
-        <p className="article-callout" key={`p-${index}`}>
+        <p className="article-callout" key={`${keyPrefix}-p-${index}`}>
           {formatInlineMarkdown(trimmed)}
         </p>,
       );
       return;
     }
 
-    nodes.push(<p key={`p-${index}`}>{formatInlineMarkdown(trimmed)}</p>);
+    nodes.push(<p key={`${keyPrefix}-p-${index}`}>{formatInlineMarkdown(trimmed)}</p>);
   });
 
   flushLists();
 
-  return <article className="seo-article">{nodes}</article>;
+  return nodes;
+}
+
+function getArticleSections(markdown: string) {
+  const lines = markdown.split(/\r?\n/);
+  const sections: Array<{ title: string; id: string; lines: string[] }> = [];
+  const preamble: string[] = [];
+  let currentSection: { title: string; id: string; lines: string[] } | null = null;
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+
+    if (trimmed.startsWith("# ")) {
+      return;
+    }
+
+    if (trimmed.startsWith("## ")) {
+      currentSection = {
+        title: trimmed.slice(3),
+        id: getArticleAnchor(trimmed.slice(3)),
+        lines: [],
+      };
+      sections.push(currentSection);
+      return;
+    }
+
+    if (currentSection) {
+      currentSection.lines.push(line);
+      return;
+    }
+
+    preamble.push(line);
+  });
+
+  if (preamble.some((line) => line.trim()) && sections[0]) {
+    sections[0].lines = [...preamble, "", "---", "", ...sections[0].lines];
+  }
+
+  const faqIndex = sections.findIndex((section) => section.title === "Frequently Asked Questions");
+  const helpSection = sections.find((section) => section.title === "Need Help Selecting a 100V PA System?");
+
+  if (faqIndex >= 0 && helpSection) {
+    const [faqSection] = sections.splice(faqIndex, 1);
+    helpSection.lines = [
+      ...helpSection.lines,
+      "",
+      "---",
+      "",
+      "### Frequently Asked Questions",
+      "",
+      ...faqSection.lines,
+    ];
+  }
+
+  return sections;
+}
+
+function ArticleMarkdown({ markdown }: { markdown: string }) {
+  const sections = getArticleSections(markdown);
+
+  return (
+    <article className="seo-article">
+      <div className="article-topic-board">
+        <div className="article-topic-board-head">
+          <span className="label">Article Sections</span>
+          <h2>100V PA System Guide Topics</h2>
+        </div>
+        <div className="article-topic-list">
+          {sections.map((section, index) => (
+            <details className="article-topic" id={section.id} key={section.title}>
+              <summary>
+                <span className="article-topic-number">{String(index + 1).padStart(2, "0")}</span>
+                <h2>{formatInlineMarkdown(section.title)}</h2>
+              </summary>
+              <div className="article-topic-content">
+                {renderMarkdownNodes(section.lines, section.id)}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
 }
 
 function ArticleContentPage({ page }: { page: SeoPage }) {

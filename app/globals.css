@@ -2752,6 +2752,96 @@ img {
   color: #33363b;
 }
 
+.article-topic-board {
+  display: grid;
+  gap: 18px;
+}
+
+.article-topic-board-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-topic-board-head h2 {
+  max-width: 680px;
+  margin: 0;
+  color: var(--text);
+  font-size: 32px;
+  line-height: 1.14;
+}
+
+.article-topic-list {
+  display: grid;
+  gap: 12px;
+}
+
+.article-topic {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  overflow: clip;
+}
+
+.article-topic summary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 14px;
+  min-height: 74px;
+  padding: 18px 20px;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+}
+
+.article-topic summary::-webkit-details-marker {
+  display: none;
+}
+
+.article-topic summary::after {
+  content: "+";
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  color: var(--gold);
+  font-size: 24px;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.article-topic[open] summary::after {
+  content: "-";
+}
+
+.article-topic-number {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(191, 138, 54, 0.35);
+  border-radius: 50%;
+  background: var(--softgold);
+  color: #7a5a23;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.article-topic summary h2 {
+  max-width: calc(100% - 38px);
+  margin: 0;
+  color: inherit;
+  font-size: 20px;
+  line-height: 1.28;
+}
+
+.article-topic-content {
+  padding: 0 22px 26px 76px;
+}
+
 .seo-article h2 {
   margin: 44px 0 16px;
   color: var(--text);
@@ -3209,6 +3299,33 @@ img {
 
   .seo-article h3 {
     font-size: 21px;
+  }
+
+  .article-topic-board-head {
+    display: grid;
+    align-items: start;
+  }
+
+  .article-topic-board-head h2 {
+    font-size: 27px;
+  }
+
+  .article-topic summary {
+    grid-template-columns: auto 1fr;
+    padding: 16px;
+  }
+
+  .article-topic-number {
+    width: 36px;
+    height: 36px;
+  }
+
+  .article-topic summary h2 {
+    font-size: 18px;
+  }
+
+  .article-topic-content {
+    padding: 0 16px 22px;
   }
 
   .hero h1 {

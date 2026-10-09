@@ -38,7 +38,7 @@ export default function DownloadCatalogPage() {
             <a href="/#categories">Categories</a>
             <a href="/#solutions">Solutions</a>
             <a href="/#distributors">Distributor Support</a>
-            <a href="/#factory">Factory Strength</a>
+            <a href="/#factory">Manufacturing Partners & Quality Coordination</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>

@@ -2,31 +2,38 @@ import type { Metadata } from "next";
 import { contactInfo, getEmailLink, getWhatsAppLink } from "../../site-config";
 import SolutionCaseSwitcher from "./SolutionCaseSwitcher";
 
-const establishedYear = "2003";
-
-const historyItems = [
-  ["2003", "JUST YOU AUDIO was established as an audio equipment company integrating development, research, manufacturing and sales."],
-  ["Sub-Brands", "The company operates multiple sub-brands to serve different professional audio application markets."],
-  ["Integrated Service", "We provide system design, project implementation, technical training and maintenance support for audio and video system projects."],
+const workItems = [
+  [
+    "Focused Product Portfolio",
+    "Commercial speakers, PA amplifiers and complementary products for background music and public address installations.",
+  ],
+  [
+    "Specialized Manufacturing Partners",
+    "Coordinated supply and customization through manufacturing partners specializing in different audio product categories.",
+  ],
+  [
+    "Project & Distributor Support",
+    "Product selection and system configuration guidance for integrators, contractors and distribution partners.",
+  ],
 ];
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About JUST YOU AUDIO | Commercial Audio & PA Supplier",
   description:
-    "Learn about JUST YOU AUDIO, its company history, certificates, solution cases and professional PA audio manufacturing capabilities.",
+    "Learn about JUST YOU AUDIO, a China-based commercial audio and 70V/100V PA supplier supporting distributors, integrators and project contractors.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About JUST YOU AUDIO",
+    title: "About JUST YOU AUDIO | Commercial Audio & PA Supplier",
     description:
-      "Company profile, certificates, solutions and project case display for JUST YOU AUDIO.",
+      "China-based commercial audio and 70V/100V PA supplier supporting distributors, integrators and project contractors.",
     images: [
       {
-        url: "/images/factory-product-display.jpg",
+        url: "/images/hero-pa-system.jpg",
         width: 1200,
         height: 630,
-        alt: "JUST YOU AUDIO factory and product display",
+        alt: "JUST YOU AUDIO commercial audio and PA product range",
       },
     ],
     url: "/about",
@@ -46,7 +53,7 @@ export default function AboutPage() {
             <a href="/#categories">Categories</a>
             <a href="/#solutions">Solutions</a>
             <a href="/#distributors">Distributor Support</a>
-            <a href="/#factory">Factory Strength</a>
+            <a href="/#factory">Manufacturing Partners & Quality Coordination</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
@@ -66,74 +73,47 @@ export default function AboutPage() {
         <section className="about-simple-hero">
           <div>
             <div className="label">About JUST YOU AUDIO</div>
-            <h1>Company Profile</h1>
+            <h1>About JUST YOU AUDIO</h1>
             <p>
-              Founded in 2003, JUST YOU AUDIO is a national high-tech
-              enterprise integrating the development, research, manufacturing
-              and sales of professional audio equipment.
+              Commercial Audio & 70V/100V PA System Supplier
             </p>
           </div>
           <div className="about-year-card">
-            <span>Founded</span>
-            <strong>{establishedYear}</strong>
-            <p>Development, manufacturing and sales of audio equipment.</p>
+            <span>Supplier Profile</span>
+            <strong>PA Audio</strong>
+            <p>Commercial audio sourcing, product matching and OEM support.</p>
           </div>
         </section>
 
         <section className="about-history-section">
           <div className="about-section-title">
-            <div className="label">Company History</div>
-            <h2>Professional audio manufacturing and system service experience.</h2>
+            <div className="label">Company Profile</div>
+            <h2>Commercial audio supply for distributors and project contractors.</h2>
           </div>
           <div className="about-history-layout">
             <div className="about-history-copy">
               <p>
-                JUST YOU AUDIO was founded in 2003. It is a national high-tech
-                enterprise integrating the development, research, manufacturing
-                and sales of audio equipment. The company owns multiple
-                sub-brands.
+                JUST YOU AUDIO is a China-based supplier of commercial audio
+                and 70V/100V public address products for distributors, system
+                integrators and project contractors.
               </p>
               <p>
-                Our main product categories include campus IP digital network
-                broadcasting, multifunctional lecture hall systems, stadium
-                sound reinforcement equipment, professional conference room
-                audio equipment, multimedia classroom sound reinforcement,
-                analog broadcasting equipment, stage lighting systems, home
-                karaoke and cinema systems, entertainment venues and music
-                restaurants.
+                Our product portfolio includes PA amplifiers, ceiling and
+                wall-mounted speakers, indoor and outdoor column speakers, horn
+                speakers, landscape speakers and IP network audio products.
+                Microphones, speaker cables and other accessories are available
+                to help complete project requirements.
               </p>
               <p>
-                Our products have passed testing and obtained CCC certification,
-                ISO9001 management system certification, EU CE and ROHS
-                certification. The company also holds more than ten patents and
-                software copyright certificates.
-              </p>
-              <p>
-                With 13 years of experience in research and development,
-                production and sales, we have been committed to the global audio
-                market for more than a decade, providing high-quality products
-                for enterprises, public institutions, education projects and
-                stage entertainment markets.
-              </p>
-              <p>
-                We maintain close cooperation with well-known domestic and
-                international audio and video manufacturers, enabling us to
-                provide integrated services including multimedia audio-video
-                system engineering design, project implementation, technical
-                training and maintenance.
-              </p>
-              <p>
-                Guided by the corporate philosophy of integrity, humility,
-                service and professionalism, we bring together experienced
-                technical and sales specialists with strong industry knowledge.
-                By deeply understanding market applications, we provide timely
-                system solutions to solve customers' real needs. We are
-                committed to offering comprehensive service and working closely
-                with customers for mutual development and long-term success.
+                We work with specialized manufacturing partners to coordinate
+                product supply, customization and order requirements. This
+                approach allows us to offer a broad range of audio products and
+                flexible support for commercial background music and public
+                address projects.
               </p>
             </div>
             <div className="about-history-list">
-              {historyItems.map(([title, text]) => (
+              {workItems.map(([title, text]) => (
                 <article key={title}>
                   <strong>{title}</strong>
                   <p>{text}</p>
@@ -143,23 +123,51 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="about-history-section">
+          <div className="about-section-title">
+            <div className="label">How We Work</div>
+            <h2>Clear sourcing support from product selection to order follow-up.</h2>
+          </div>
+          <div className="about-history-copy">
+            <p>
+              We help customers select suitable products based on application,
+              installation environment, zoning requirements and estimated
+              quantities. Our role is to coordinate product selection,
+              manufacturing partners and order follow-up, giving customers a
+              clear point of contact throughout the sourcing process.
+            </p>
+            <p>
+              For OEM customers, we can discuss logo, packaging and selected
+              product customization with the relevant manufacturing partner.
+              Availability, minimum order quantities and lead times are
+              confirmed for each model and order.
+            </p>
+          </div>
+        </section>
+
         <section className="about-honor-section">
           <div className="about-section-title centered">
-            <div className="label">Honor</div>
-            <h2>企业资质</h2>
+            <div className="label">Documentation</div>
+            <h2>Certifications & Product Documentation</h2>
           </div>
-          <div className="enterprise-qualification">
-            <img
-              src="/images/enterprise-qualification.png"
-              alt="JUST YOU AUDIO enterprise qualification certificates"
-            />
+          <div className="about-history-copy">
+            <p>
+              Applicable certificates, test reports and declarations can be
+              requested for the selected product model. Document availability
+              and coverage vary by model and manufacturing partner.
+            </p>
+            <p>
+              Please share your target market and project requirements so we can
+              check the available documentation for the products you are
+              considering.
+            </p>
           </div>
         </section>
 
         <section className="about-case-section" id="case-presentation">
           <div className="about-section-title centered">
-            <div className="label">Solution & Cases</div>
-            <h2>Application solutions and project case display.</h2>
+            <div className="label">Typical Applications</div>
+            <h2>Typical system configurations for commercial audio projects.</h2>
           </div>
           <SolutionCaseSwitcher />
         </section>

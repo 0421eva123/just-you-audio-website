@@ -5,73 +5,45 @@ import { useState } from "react";
 const solutionCases = [
   {
     category: "Education",
-    title: "Campus IP Digital Network Broadcasting",
+    title: "School PA & Campus Audio",
     description:
-      "IP network broadcasting, classroom sound reinforcement and campus public announcement systems for schools and universities.",
+      "Typical 70V/100V speaker and amplifier combinations for classrooms, corridors, playgrounds and campus announcement areas.",
     image: "/images/scene-school-public.jpg",
   },
   {
-    category: "Shopping malls and supermarkets",
-    title: "Commercial Background Music & Paging",
+    category: "Commercial buildings",
+    title: "Commercial Building Background Music",
     description:
-      "Multi-zone background music, paging microphones and ceiling speaker systems for retail and commercial spaces.",
+      "Ceiling speakers, wall speakers and zone amplifiers for offices, lobbies and shared commercial spaces.",
     image: "/images/solution-cases/solution-02-shopping-malls.jpg",
   },
   {
-    category: "Hotel buildings",
-    title: "Hotel Public Address System",
+    category: "Restaurants and hotels",
+    title: "Restaurant & Hotel Audio System",
     description:
-      "Lobby music, corridor paging, restaurant audio and emergency broadcast support for hotel buildings.",
+      "Background music and paging product matching for restaurants, hotel lobbies, corridors and hospitality spaces.",
     image: "/images/solution-cases/solution-03-hotel-buildings.jpg",
   },
   {
-    category: "Military and prison",
-    title: "Secure Area Broadcast Coverage",
+    category: "Retail stores",
+    title: "Retail Store Music & Paging",
     description:
-      "Reliable voice broadcast and controlled-zone paging solutions for supervised public address environments.",
-    image: "/images/solution-cases/solution-04-military-prison.jpg",
+      "Compact amplifier, ceiling speaker and paging microphone selections for stores, showrooms and supermarkets.",
+    image: "/images/solution-cases/solution-02-shopping-malls.jpg",
   },
   {
-    category: "Factories and mines",
-    title: "Industrial Public Address System",
+    category: "Factories and warehouses",
+    title: "Warehouse & Industrial PA Matching",
     description:
-      "High-power amplifiers, horn speakers and outdoor column speakers for factories, warehouses and industrial areas.",
+      "Horn speakers, column speakers and higher-power amplifier options for voice coverage in industrial and storage areas.",
     image: "/images/solution-cases/solution-05-factories-mines.jpg",
   },
   {
-    category: "Emergency broadcast",
-    title: "Emergency Voice Alarm Broadcast",
+    category: "Outdoor public areas",
+    title: "Outdoor Public Area Audio Coverage",
     description:
-      "Public voice notification and emergency broadcast equipment for buildings, campuses and public facilities.",
-    image: "/images/solution-cases/solution-06-emergency-broadcast.jpg",
-  },
-  {
-    category: "Hospital and bank",
-    title: "Public Service Audio System",
-    description:
-      "Clear announcement, background music and information broadcast solutions for hospitals, banks and service halls.",
-    image: "/images/solution-cases/solution-07-hospital-bank.jpg",
-  },
-  {
-    category: "Park scenic area",
-    title: "Outdoor Scenic Area Audio Coverage",
-    description:
-      "Weather-resistant column speakers, lawn speakers and outdoor PA products for parks, resorts and public spaces.",
+      "Weather-resistant column speakers, horn speakers and landscape speakers for parks, resorts and outdoor public areas.",
     image: "/images/solution-cases/solution-08-park-scenic-area.jpg",
-  },
-  {
-    category: "Airport and train station",
-    title: "Transportation Hub Paging System",
-    description:
-      "Long-distance voice announcement, zone paging and background broadcast solutions for transport terminals.",
-    image: "/images/solution-cases/solution-09-airport-train-station.jpg",
-  },
-  {
-    category: "Intelligent transportation",
-    title: "Traffic & Public Area Broadcast",
-    description:
-      "Outdoor voice coverage and network audio products for public roads, stations, platforms and smart transport projects.",
-    image: "/images/solution-cases/solution-10-intelligent-transportation.jpg",
   },
 ];
 
@@ -81,7 +53,7 @@ export default function SolutionCaseSwitcher() {
 
   return (
     <div className="solution-switcher">
-      <div className="solution-number-buttons" aria-label="Solution selector">
+      <div className="solution-number-buttons" aria-label="Typical application selector">
         {solutionCases.map((item, index) => (
           <button
             aria-pressed={activeIndex === index}
@@ -101,7 +73,7 @@ export default function SolutionCaseSwitcher() {
           <img src={activeCase.image} alt={activeCase.title} />
         </div>
         <div className="solution-feature-copy">
-          <span>CASES</span>
+          <span>APPLICATIONS</span>
           <h3>{activeCase.title}</h3>
           <p>{activeCase.description}</p>
           <small>{activeCase.category}</small>

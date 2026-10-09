@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/place-gtm-noscript.mjs && node scripts/create-static-route-indexes.mjs",
+    "build": "next build && node scripts/place-gtm-noscript.mjs && node scripts/create-static-route-indexes.mjs && node scripts/fix-homepage-canonical.mjs",
     "start": "next start",
     "lint": "next lint"
   },

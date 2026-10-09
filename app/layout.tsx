@@ -8,7 +8,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "JUST YOU AUDIO | Professional PA Audio Manufacturer",
+    default: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
     template: "%s | JUST YOU AUDIO",
   },
   description:
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "JUST YOU AUDIO | Professional PA Audio Manufacturer",
+    title: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
     description:
       "Professional PA audio products and public address system solutions for distributors and project contractors.",
     emails: [contactInfo.salesEmail, contactInfo.infoEmail],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "JUST YOU AUDIO | Professional PA Audio Manufacturer",
+    title: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
     description:
       "PA systems, amplifiers, speakers and public address solutions for distributors and project contractors.",
     images: ["/images/hero-pa-system.jpg"],

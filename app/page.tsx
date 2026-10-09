@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
-import { contactInfo, getEmailLink, getWhatsAppLink } from "../site-config";
+import { brandName, contactInfo, getEmailLink, getWhatsAppLink, siteUrl } from "../site-config";
 
 export const metadata: Metadata = {
-  title: "Professional PA Audio Manufacturer",
+  title: {
+    absolute: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
+  },
   description:
-    "JUST YOU AUDIO supplies PA amplifiers, ceiling speakers, wall speakers, outdoor column speakers, horn speakers and complete PA system solutions.",
+    "JUST YOU AUDIO is a China-based commercial audio and 70V/100V PA supplier supporting distributors, system integrators and project contractors.",
   alternates: {
-    canonical: "/",
+    canonical: `${siteUrl}/`,
   },
   openGraph: {
-    title: "JUST YOU AUDIO | Professional PA Audio Manufacturer",
+    title: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
     description:
-      "PA audio products, OEM support and project matching for distributors and contractors.",
+      "JUST YOU AUDIO is a China-based commercial audio and 70V/100V PA supplier supporting distributors, system integrators and project contractors.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -20,7 +22,38 @@ export const metadata: Metadata = {
         alt: "JUST YOU AUDIO PA system product display",
       },
     ],
-    url: "/",
+    siteName: brandName,
+    type: "website",
+    url: `${siteUrl}/`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
+    description:
+      "JUST YOU AUDIO is a China-based commercial audio and 70V/100V PA supplier supporting distributors, system integrators and project contractors.",
+    images: ["/images/hero-pa-system.jpg"],
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
+  name: brandName,
+  url: `${siteUrl}/`,
+  logo: `${siteUrl}/icon.svg`,
+  description:
+    "China-based commercial audio and 70V/100V PA supplier supporting distributors, system integrators and project contractors.",
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  name: brandName,
+  url: `${siteUrl}/`,
+  publisher: {
+    "@id": `${siteUrl}/#organization`,
   },
 };
 
@@ -143,46 +176,29 @@ const supports = [
   ["Project Matching", "Recommend amplifier power, speaker type and quantity based on the project."],
 ];
 
-const factoryItems = [
-  [
-    "Product Display",
-    "Clear product presentation for online stores, catalogs and local showrooms.",
-    "/images/factory-product-display.jpg",
-  ],
-  [
-    "Quality Check",
-    "Products are checked before packing to support stable project delivery.",
-    "/images/factory-quality-check.jpg",
-  ],
-  [
-    "Export Packing",
-    "Carton, foam protection, label and shipment preparation.",
-    "/images/factory-export-packing.jpg",
-  ],
-  [
-    "Warehouse Supply",
-    "Inventory, model variety and batch order preparation.",
-    "/images/factory-warehouse.jpg",
-  ],
-];
-
 const manufacturingCapability = [
-  "SMT electronic assembly",
-  "Amplifier aging test",
-  "Audio performance testing",
-  "Waterproof IP testing",
-  "Mass assembly & packaging",
+  "Model and specification confirmation",
+  "OEM logo and packaging coordination",
+  "Production and lead-time follow-up",
 ];
 
 const qualityControl = [
-  "100% factory testing",
-  "Aging test before shipment",
-  "Power & distortion testing",
+  "Inspection requirements agreed for the order",
+  "Model-specific test documentation, where available",
+  "Packing and shipment preparation coordination",
 ];
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       <nav className="nav">
         <div className="nav-inner">
           <div className="brand">
@@ -193,7 +209,7 @@ export default function Home() {
             <a href="#categories">Categories</a>
             <a href="#solutions">Solutions</a>
             <a href="#distributors">Distributor Support</a>
-            <a href="#factory">Factory Strength</a>
+            <a href="#factory">Manufacturing Partners & Quality Coordination</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
@@ -214,7 +230,7 @@ export default function Home() {
           <div className="hero-inner">
             <div>
               <div className="eyebrow">
-                Factory Supply · OEM Support · Complete PA System
+                Commercial Audio Supply · OEM Support · PA System Matching
               </div>
               <h1>
                 Premium PA audio products for <em>distributors</em> and project
@@ -262,7 +278,7 @@ export default function Home() {
                 />
                 <div className="tag one">Retail-ready appearance</div>
                 <div className="tag two">Complete PA product line</div>
-                <div className="tag three">Factory direct supply</div>
+                <div className="tag three">Specialized Manufacturing Partnerships</div>
               </div>
             </div>
           </div>
@@ -428,39 +444,29 @@ export default function Home() {
         <section className="section" id="factory">
           <div className="section-head">
             <div>
-              <div className="label">Factory Strength</div>
-              <h2>Reliable supply behind every order</h2>
+              <div className="label">Manufacturing Partners & Quality Coordination</div>
+              <h2>Manufacturing Partners & Quality Coordination</h2>
             </div>
             <p>
-              See how products are displayed, checked, packed and prepared for
-              shipment, giving distributors more confidence before placing an
-              order.
+              We coordinate with specialized manufacturing partners to support
+              model selection, order requirements and export preparation for
+              commercial audio projects.
             </p>
-          </div>
-          <div className="factory-evidence">
-            {factoryItems.map(([title, description, image]) => (
-              <article className="evidence" key={title}>
-                <img className="evidence-photo" src={image} alt={title} />
-                <div>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                </div>
-              </article>
-            ))}
           </div>
           <div className="factory-detail-panel">
             <div className="factory-detail-summary">
-              <div className="label">Factory Process</div>
-              <h3>Manufacturing capability & quality control</h3>
+              <div className="label">Manufacturing Partner Support</div>
+              <h3>Production & Quality Coordination</h3>
               <p>
-                From electronic assembly to aging test, audio performance check
-                and export packing, each order is prepared for stable project
-                delivery.
+                We coordinate with the relevant manufacturing partner on
+                production, inspection and export packing requirements. Testing
+                arrangements are confirmed according to the selected model and
+                order specifications.
               </p>
             </div>
             <div className="factory-detail-lists">
               <div className="factory-detail-group">
-                <h4>Manufacturing Capability</h4>
+                <h4>Manufacturing Partner Coordination</h4>
                 <ul>
                   {manufacturingCapability.map((item) => (
                     <li key={item}>{item}</li>
@@ -468,7 +474,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="factory-detail-group">
-                <h4>Quality Control</h4>
+                <h4>Quality & Order Requirements</h4>
                 <ul>
                   {qualityControl.map((item) => (
                     <li key={item}>{item}</li>

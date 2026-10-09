@@ -78,7 +78,7 @@ const productLines = [
 
 const companySnapshot = [
   ["Company Name", "JUST YOU AUDIO"],
-  ["Business Type", "Professional Manufacturer of PA Systems"],
+  ["Business Type", "Commercial Audio & 70V/100V PA System Supplier"],
   [
     "Main Products",
     "100V / 70V Amplifiers, Ceiling Speakers, Wall Mount Speakers, Outdoor Column Speakers, Horn Speakers, PA System Accessories",
@@ -88,26 +88,32 @@ const companySnapshot = [
     "Applications",
     "Hotels, Schools, Churches, Shopping Malls, Industrial Projects, Public Spaces",
   ],
-  ["Services", "OEM / ODM customization, system design support"],
+  [
+    "Services",
+    "Product selection, system configuration guidance, OEM support and order coordination with specialized manufacturing partners",
+  ],
 ];
 
-const manufacturerFaqs = [
+const supplierFaqs = [
   {
-    question: "Are you a manufacturer or trading company?",
-    answer: "We are a professional manufacturer of PA systems.",
+    question: "What kind of company is JUST YOU AUDIO?",
+    answer:
+      "JUST YOU AUDIO is a China-based commercial audio and 70V/100V PA system supplier working with specialized manufacturing partners.",
   },
   {
     question: "Do you support OEM/ODM?",
     answer:
-      "Yes, we support customization for power, design, branding, and system solutions.",
+      "Yes. Logo, packaging and selected product customization can be discussed with the relevant manufacturing partner for each model and order.",
   },
   {
     question: "What is your warranty?",
-    answer: "We provide 1-2 year warranty depending on product type.",
+    answer:
+      "Warranty terms depend on the selected product type, model and manufacturing partner. We confirm the applicable terms during quotation.",
   },
   {
     question: "Can you design a complete PA system?",
-    answer: "Yes, we provide full system design support.",
+    answer:
+      "We can provide product selection and system configuration guidance based on the project area, installation environment, zones and estimated quantities.",
   },
   {
     question: "What markets do you mainly serve?",
@@ -119,7 +125,7 @@ const manufacturerFaqs = [
 export const metadata: Metadata = {
   title: "Public Address Knowledge Hub",
   description:
-    "Public address news, PA audio Q&A, project solution knowledge and manufacturer information from JUST YOU AUDIO.",
+    "Public address news, PA audio Q&A, project solution knowledge and supplier information from JUST YOU AUDIO.",
   alternates: {
     canonical: "/knowledge",
   },
@@ -152,7 +158,7 @@ export default function KnowledgePage() {
             <a href="/#categories">Categories</a>
             <a href="/#solutions">Solutions</a>
             <a href="/#distributors">Distributor Support</a>
-            <a href="/#factory">Factory Strength</a>
+            <a href="/#factory">Manufacturing Partners & Quality Coordination</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
@@ -175,7 +181,7 @@ export default function KnowledgePage() {
           <p>
             A practical information board for distributors, installers and
             project buyers who need public address products, background music
-            systems and reliable factory supply.
+            systems and reliable sourcing support.
           </p>
         </section>
 
@@ -251,16 +257,16 @@ export default function KnowledgePage() {
             </section>
           </div>
 
-          <aside className="factory-profile" aria-label="Factory profile">
+          <aside className="factory-profile" aria-label="Supplier profile">
             <div className="factory-profile-card">
-              <div className="label">Manufacturer Profile</div>
-              <h2>JUST YOU AUDIO factory supply for PA audio distributors</h2>
+              <div className="label">Supplier Profile</div>
+              <h2>JUST YOU AUDIO supply support for PA audio distributors</h2>
               <p>
                 JUST YOU AUDIO supplies commercial public address and background
                 music audio products for distributors, contractors and project
                 buyers. Our range is built around complete PA system sourcing,
-                stable model selection, OEM cooperation and project matching
-                support.
+                coordinated manufacturing partner support, OEM discussion and
+                project matching guidance.
               </p>
               <div className="profile-stats">
                 <div>
@@ -300,9 +306,9 @@ export default function KnowledgePage() {
 
             <div className="manufacturer-faq-card">
               <div className="label">FAQ</div>
-              <h2>Manufacturer FAQ</h2>
+              <h2>Supplier FAQ</h2>
               <div className="manufacturer-faq-list">
-                {manufacturerFaqs.map((faq) => (
+                {supplierFaqs.map((faq) => (
                   <article key={faq.question}>
                     <h3>{faq.question}</h3>
                     <p>{faq.answer}</p>

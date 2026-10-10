@@ -212,27 +212,15 @@ export default function Home() {
       />
       <nav className="nav">
         <div className="nav-inner">
-          <div className="brand">
+          <a className="brand" href="/">
             JUST YOU <span>AUDIO</span>
-          </div>
+          </a>
           <div className="links">
-            <a href="#featured">Hot Products</a>
-            <a href="#categories">Categories</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#distributors">Distributor Support</a>
-            <a href="#factory">Supply & Quality</a>
-            <a href="/about">About Us</a>
-            <a href="/knowledge">Knowledge</a>
-            <a href="/catalog">Catalog</a>
-          </div>
-          <div className="nav-actions">
-            <a className="nav-btn" href="/catalog">
-              Request Catalog
-            </a>
-            <a className="nav-btn dark" href="/catalog">
-              Ask Quotation
-            </a>
-          </div>
+          <a href="/supply-quality">Supply & Quality</a>
+          <a href="/about">About Us</a>
+          <a href="/knowledge">Knowledge</a>
+          <a href="/catalog">Catalog</a>
+        </div>
         </div>
       </nav>
 

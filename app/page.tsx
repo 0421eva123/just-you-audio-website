@@ -185,7 +185,7 @@ const supplyQualityCards = [
   {
     title: "OEM Support",
     description:
-      "Coordinate available logo, packaging and product customization options with the relevant manufacturing partner.",
+      "We support logo, packaging and selected product customization based on your requirements.",
   },
   {
     title: "Quality Coordination",

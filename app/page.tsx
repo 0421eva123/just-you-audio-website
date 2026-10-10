@@ -176,16 +176,27 @@ const supports = [
   ["Project Matching", "Recommend amplifier power, speaker type and quantity based on the project."],
 ];
 
-const manufacturingCapability = [
-  "Model and specification confirmation",
-  "OEM logo and packaging coordination",
-  "Production and lead-time follow-up",
-];
-
-const qualityControl = [
-  "Inspection requirements agreed for the order",
-  "Model-specific test documentation, where available",
-  "Packing and shipment preparation coordination",
+const supplyQualityCards = [
+  {
+    title: "Product Matching",
+    description:
+      "Select amplifiers, speakers and accessories according to the application, zoning and installation requirements.",
+  },
+  {
+    title: "OEM Support",
+    description:
+      "Coordinate available logo, packaging and product customization options with the relevant manufacturing partner.",
+  },
+  {
+    title: "Quality Coordination",
+    description:
+      "Confirm inspection requirements and available test documentation for the selected models and order.",
+  },
+  {
+    title: "Order Follow-Up",
+    description:
+      "Coordinate specifications, production updates, packing requirements and shipment preparation.",
+  },
 ];
 
 export default function Home() {
@@ -209,7 +220,7 @@ export default function Home() {
             <a href="#categories">Categories</a>
             <a href="#solutions">Solutions</a>
             <a href="#distributors">Distributor Support</a>
-            <a href="#factory">Manufacturing Partners & Quality Coordination</a>
+            <a href="#factory">Supply & Quality</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
@@ -230,41 +241,37 @@ export default function Home() {
           <div className="hero-inner">
             <div>
               <div className="eyebrow">
-                Commercial Audio Supply · OEM Support · PA System Matching
+                For Distributors, Integrators & Project Contractors
               </div>
               <h1>
-                Premium PA audio products for <em>distributors</em> and project
-                contractors.
+                Commercial Audio & 70V/100V PA Solutions
               </h1>
               <p>
-                We supply 100V PA amplifiers, ceiling speakers, wall speakers,
-                outdoor column speakers, horn speakers, IP audio systems and
-                accessories for commercial background music and public address
-                projects.
+                PA amplifiers, commercial speakers and complementary products
+                for background music and public address projects. We help you
+                select suitable models, match system components and coordinate
+                OEM requirements through specialized manufacturing partners.
               </p>
               <div className="cta">
-                <a className="btn btn-primary" href="#featured">
-                  View Hot-Selling Series
+                <a className="btn btn-primary" href="/catalog">
+                  Get Product Catalog
                 </a>
-                <a className="btn btn-secondary" href="/catalog">
-                  Get Catalog & Distributor Price
-                </a>
-                <a className="btn btn-gold" href="#contact">
-                  Ask for Distributor Price
+                <a className="btn btn-gold" href={getWhatsAppLink()}>
+                  Discuss Your Project
                 </a>
               </div>
               <div className="buyer-bar">
                 <div className="buyer-item">
-                  <strong>One-Stop</strong>
-                  <span>Amplifiers, speakers, microphones and accessories</span>
+                  <strong>System Supply</strong>
+                  <span>Amplifiers, speakers and project accessories.</span>
                 </div>
                 <div className="buyer-item">
-                  <strong>OEM</strong>
-                  <span>Logo, packaging and model customization support</span>
+                  <strong>OEM Support</strong>
+                  <span>Branding and packaging options for selected models.</span>
                 </div>
                 <div className="buyer-item">
-                  <strong>Project</strong>
-                  <span>System matching support for contractors</span>
+                  <strong>Project Matching</strong>
+                  <span>Product selection and configuration guidance.</span>
                 </div>
               </div>
             </div>
@@ -276,8 +283,8 @@ export default function Home() {
                   src="/images/hero-pa-system.jpg"
                   alt="JUST YOU AUDIO PA amplifier and speaker product range"
                 />
-                <div className="tag two">Complete PA product line</div>
-                <div className="tag three">Specialized Manufacturing Partnerships</div>
+                <div className="tag two">PA Product Range</div>
+                <div className="tag three">Manufacturing Partners</div>
               </div>
             </div>
           </div>
@@ -443,44 +450,24 @@ export default function Home() {
         <section className="section" id="factory">
           <div className="section-head">
             <div>
-              <div className="label">Manufacturing Partners & Quality Coordination</div>
-              <h2>Manufacturing Partners & Quality Coordination</h2>
+              <div className="label">Supply & Quality</div>
+              <h2>Specialized Partners. Coordinated Support.</h2>
             </div>
             <p>
-              We coordinate with specialized manufacturing partners to support
-              model selection, order requirements and export preparation for
-              commercial audio projects.
+              We work with specialized manufacturing partners across different
+              audio product categories. From product selection to order
+              preparation, we coordinate specifications, customization and
+              quality requirements for your selected models.
             </p>
           </div>
-          <div className="factory-detail-panel">
-            <div className="factory-detail-summary">
-              <div className="label">Manufacturing Partner Support</div>
-              <h3>Production & Quality Coordination</h3>
-              <p>
-                We coordinate with the relevant manufacturing partner on
-                production, inspection and export packing requirements. Testing
-                arrangements are confirmed according to the selected model and
-                order specifications.
-              </p>
-            </div>
-            <div className="factory-detail-lists">
-              <div className="factory-detail-group">
-                <h4>Manufacturing Partner Coordination</h4>
-                <ul>
-                  {manufacturingCapability.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="factory-detail-group">
-                <h4>Quality & Order Requirements</h4>
-                <ul>
-                  {qualityControl.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+          <div className="supply-quality-grid">
+            {supplyQualityCards.map((card, index) => (
+              <article className="supply-quality-card" key={card.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </article>
+            ))}
           </div>
         </section>
 

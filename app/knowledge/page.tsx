@@ -78,47 +78,47 @@ const productLines = [
 
 const companySnapshot = [
   ["Company Name", "JUST YOU AUDIO"],
-  ["Business Type", "Commercial Audio & 70V/100V PA System Supplier"],
+  ["Business Type", "Commercial Audio & PA System Supplier"],
   [
     "Main Products",
     "100V / 70V Amplifiers, Ceiling Speakers, Wall Mount Speakers, Outdoor Column Speakers, Horn Speakers, PA System Accessories",
   ],
-  ["Main Markets", "Latin America, Middle East, Southeast Asia, Africa"],
+  ["Main Markets", "Latin America, Middle East, Southeast Asia"],
   [
     "Applications",
     "Hotels, Schools, Churches, Shopping Malls, Industrial Projects, Public Spaces",
   ],
   [
     "Services",
-    "Product selection, system configuration guidance, OEM support and order coordination with specialized manufacturing partners",
+    "OEM coordination, product selection and system configuration guidance",
   ],
 ];
 
 const supplierFaqs = [
   {
-    question: "What kind of company is JUST YOU AUDIO?",
+    question: "Are you a manufacturer or a supplier?",
     answer:
-      "JUST YOU AUDIO is a China-based commercial audio and 70V/100V PA system supplier working with specialized manufacturing partners.",
+      "JUST YOU AUDIO is a supplier of commercial audio and 70V/100V public address products. We work with specialized manufacturing partners and coordinate product selection, OEM requirements and order follow-up for distributors, integrators and project contractors.",
   },
   {
     question: "Do you support OEM/ODM?",
     answer:
-      "Yes. Logo, packaging and selected product customization can be discussed with the relevant manufacturing partner for each model and order.",
+      "Yes. Logo, packaging and selected product customization can be arranged with the relevant manufacturing partner. Available options, minimum order quantities and lead times are confirmed for each model and order.",
   },
   {
     question: "What is your warranty?",
     answer:
-      "Warranty terms depend on the selected product type, model and manufacturing partner. We confirm the applicable terms during quotation.",
+      "Warranty coverage and terms vary by product model and are confirmed in the quotation before ordering. Please contact us for details about the products you are considering.",
   },
   {
-    question: "Can you design a complete PA system?",
+    question: "Can you help configure a PA system?",
     answer:
-      "We can provide product selection and system configuration guidance based on the project area, installation environment, zones and estimated quantities.",
+      "Yes. We provide product selection and system configuration guidance based on your application, installation environment, zoning requirements and estimated quantities.",
   },
   {
     question: "What markets do you mainly serve?",
     answer:
-      "We mainly serve Latin America, Middle East, Southeast Asia, and Africa.",
+      "Our primary focus is Latin America. We also support customers in the Middle East and Southeast Asia.",
   },
 ];
 
@@ -259,14 +259,14 @@ export default function KnowledgePage() {
 
           <aside className="factory-profile" aria-label="Supplier profile">
             <div className="factory-profile-card">
-              <div className="label">Supplier Profile</div>
-              <h2>JUST YOU AUDIO supply support for PA audio distributors</h2>
+              <div className="label">Company Profile</div>
+              <h2>Commercial Audio & PA Supply for Distributors and Integrators</h2>
               <p>
                 JUST YOU AUDIO supplies commercial public address and background
-                music audio products for distributors, contractors and project
-                buyers. Our range is built around complete PA system sourcing,
-                coordinated manufacturing partner support, OEM discussion and
-                project matching guidance.
+                music audio products for distributors, integrators, contractors
+                and project buyers. We work with specialized manufacturing
+                partners and provide a clear contact point for product
+                selection, OEM coordination and order follow-up.
               </p>
               <div className="profile-stats">
                 <div>

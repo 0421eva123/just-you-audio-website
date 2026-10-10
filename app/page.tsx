@@ -276,7 +276,6 @@ export default function Home() {
                   src="/images/hero-pa-system.jpg"
                   alt="JUST YOU AUDIO PA amplifier and speaker product range"
                 />
-                <div className="tag one">Retail-ready appearance</div>
                 <div className="tag two">Complete PA product line</div>
                 <div className="tag three">Specialized Manufacturing Partnerships</div>
               </div>

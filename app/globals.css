@@ -419,14 +419,9 @@ img {
   backdrop-filter: blur(12px);
 }
 
-.tag.one {
+.tag.two {
   top: 32px;
   right: 30px;
-}
-
-.tag.two {
-  bottom: 28px;
-  left: 28px;
 }
 
 .tag.three {

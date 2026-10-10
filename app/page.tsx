@@ -216,10 +216,6 @@ export default function Home() {
             JUST YOU <span>AUDIO</span>
           </div>
           <div className="links">
-            <a href="#featured">Hot Products</a>
-            <a href="#categories">Categories</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#distributors">Distributor Support</a>
             <a href="#factory">Supply & Quality</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>

@@ -2,19 +2,25 @@ import type { Metadata } from "next";
 import { contactInfo, getEmailLink, getWhatsAppLink } from "../../site-config";
 import SolutionCaseSwitcher from "./SolutionCaseSwitcher";
 
-const workItems = [
-  [
-    "Focused Product Portfolio",
-    "Commercial speakers, PA amplifiers and complementary products for background music and public address installations.",
-  ],
-  [
-    "Specialized Manufacturing Partners",
-    "Coordinated supply and customization through manufacturing partners specializing in different audio product categories.",
-  ],
-  [
-    "Project & Distributor Support",
-    "Product selection and system configuration guidance for integrators, contractors and distribution partners.",
-  ],
+const supportTags = ["OEM / ODM", "QUALITY CONTROL", "PROJECT SUPPORT"];
+
+const certificationItems = [
+  {
+    title: "RoHS Compliance – Speaker",
+    note: "Issued by POCE",
+  },
+  {
+    title: "RoHS Compliance – Amplifier",
+    note: "Issued by POCE",
+  },
+  {
+    title: "ISO 9001 Quality Management System",
+    note: "Manufacturing Partner",
+  },
+  {
+    title: "EMC Compliance – Speaker",
+    note: "CE / EMC Directive 2014/30/EU",
+  },
 ];
 
 export const metadata: Metadata = {
@@ -66,97 +72,60 @@ export default function AboutPage() {
       </nav>
 
       <main className="about-page about-simple">
-        <section className="about-simple-hero">
-          <div>
-            <div className="label">About JUST YOU AUDIO</div>
-            <h1>About JUST YOU AUDIO</h1>
-            <p>
-              Commercial Audio & 70V/100V PA System Supplier
-            </p>
-          </div>
-          <div className="about-year-card">
-            <span>Supplier Profile</span>
-            <strong>PA Audio</strong>
-            <p>Commercial audio sourcing, product matching and OEM support.</p>
-          </div>
-        </section>
-
-        <section className="about-history-section">
-          <div className="about-section-title">
-            <div className="label">Company Profile</div>
-            <h2>Commercial audio supply for distributors and project contractors.</h2>
-          </div>
-          <div className="about-history-layout">
-            <div className="about-history-copy">
+        <section className="about-profile-section">
+          <div className="about-profile-layout">
+            <div className="about-profile-copy">
+              <div className="label">JUST YOU AUDIO</div>
+              <h1>Commercial Audio & 70V/100V PA Systems</h1>
+              <h2>Professional Solutions for Commercial & Public Address Projects</h2>
               <p>
-                JUST YOU AUDIO is a China-based supplier of commercial audio
-                and 70V/100V public address products for distributors, system
-                integrators and project contractors.
+                70V/100V amplifiers, commercial speakers and complete PA
+                solutions for indoor and outdoor projects.
               </p>
-              <p>
-                Our product portfolio includes PA amplifiers, ceiling and
-                wall-mounted speakers, indoor and outdoor column speakers, horn
-                speakers, landscape speakers and IP network audio products.
-                Microphones, speaker cables and other accessories are available
-                to help complete project requirements.
-              </p>
-              <p>
-                We work with specialized manufacturing partners to coordinate
-                product supply, customization and order requirements. This
-                approach allows us to offer a broad range of audio products and
-                flexible support for commercial background music and public
-                address projects.
+              <div className="about-support-tags" aria-label="JUST YOU AUDIO support">
+                {supportTags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+              <p className="about-profile-note">
+                Built on specialized manufacturing partnerships, consistent
+                quality control and flexible OEM/ODM support.
               </p>
             </div>
-            <div className="about-history-list">
-              {workItems.map(([title, text]) => (
-                <article key={title}>
-                  <strong>{title}</strong>
-                  <p>{text}</p>
-                </article>
-              ))}
+            <div className="about-profile-image-placeholder" aria-label="Company and product image placeholder">
+              <span>Image Placeholder</span>
             </div>
-          </div>
-        </section>
-
-        <section className="about-history-section">
-          <div className="about-section-title">
-            <div className="label">How We Work</div>
-            <h2>Clear sourcing support from product selection to order follow-up.</h2>
-          </div>
-          <div className="about-history-copy">
-            <p>
-              We help customers select suitable products based on application,
-              installation environment, zoning requirements and estimated
-              quantities. Our role is to coordinate product selection,
-              manufacturing partners and order follow-up, giving customers a
-              clear point of contact throughout the sourcing process.
-            </p>
-            <p>
-              For OEM customers, we can discuss logo, packaging and selected
-              product customization with the relevant manufacturing partner.
-              Availability, minimum order quantities and lead times are
-              confirmed for each model and order.
-            </p>
           </div>
         </section>
 
         <section className="about-honor-section">
           <div className="about-section-title centered">
-            <div className="label">Documentation</div>
-            <h2>Certifications & Product Documentation</h2>
+            <div className="label">Certifications & Compliance</div>
+            <h2>Selected Certifications & Compliance Documents</h2>
+            <p>
+              Compliance documentation from our specialized manufacturing
+              partners is available according to product and project
+              requirements.
+            </p>
           </div>
-          <div className="about-history-copy">
+          <div className="about-certification-grid">
+            {certificationItems.map((item) => (
+              <article key={item.title}>
+                <div className="about-certificate-placeholder">
+                  <span>Certificate Image</span>
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.note}</p>
+              </article>
+            ))}
+          </div>
+          <div className="about-certification-notes">
             <p>
-              Applicable certificates, test reports and declarations can be
-              requested for the selected product model. Document availability
-              and coverage vary by model and manufacturing partner.
+              Applicable certificates, test reports and declarations are
+              available upon request. Coverage varies by product model and
+              manufacturing partner.
             </p>
-            <p>
-              Please share your target market and project requirements so we can
-              check the available documentation for the products you are
-              considering.
-            </p>
+            <small>Manufacturer details are withheld for commercial confidentiality.</small>
           </div>
         </section>
 

@@ -1496,6 +1496,7 @@ img {
 }
 
 .about-simple-hero,
+.about-profile-section,
 .about-history-section,
 .about-honor-section,
 .about-case-section,
@@ -1514,6 +1515,7 @@ img {
 }
 
 .about-simple-hero > div:first-child,
+.about-profile-section,
 .about-year-card,
 .about-history-section,
 .about-honor-section,
@@ -1527,6 +1529,105 @@ img {
 .about-simple-hero > div:first-child {
   padding: 44px;
   border-radius: 30px;
+}
+
+.about-profile-section {
+  padding: 38px;
+  border-radius: 30px;
+}
+
+.about-profile-layout {
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+  align-items: stretch;
+}
+
+.about-profile-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 440px;
+  padding: 10px 0;
+}
+
+.about-profile-copy h1 {
+  max-width: 680px;
+  margin: 14px 0 16px;
+  font-size: 54px;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.about-profile-copy h2 {
+  max-width: 640px;
+  margin-bottom: 18px;
+  color: #2c2d31;
+  font-size: 24px;
+  line-height: 1.24;
+  letter-spacing: 0;
+}
+
+.about-profile-copy p {
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.about-support-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.about-support-tags span {
+  padding: 10px 14px;
+  border: 1px solid rgba(185, 147, 83, 0.34);
+  border-radius: 999px;
+  background: var(--softgold);
+  color: #7f612c;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.about-profile-note {
+  padding-left: 18px;
+  border-left: 3px solid var(--gold);
+}
+
+.about-profile-image-placeholder {
+  display: flex;
+  min-height: 440px;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(185, 147, 83, 0.5);
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(244, 239, 229, 0.92), rgba(255, 255, 255, 0.96)),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(185, 147, 83, 0.1) 0,
+      rgba(185, 147, 83, 0.1) 1px,
+      transparent 1px,
+      transparent 14px
+    );
+}
+
+.about-profile-image-placeholder span {
+  color: rgba(117, 94, 51, 0.58);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-profile-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .about-simple-hero h1 {
@@ -1686,6 +1787,78 @@ img {
   padding: 18px;
   text-align: center;
   font-size: 16px;
+}
+
+.about-certification-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.about-certification-grid article {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(91, 69, 31, 0.04);
+}
+
+.about-certificate-placeholder {
+  display: flex;
+  min-height: 320px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, rgba(185, 147, 83, 0.2), rgba(216, 191, 130, 0.06))
+      border-box;
+}
+
+.about-certificate-placeholder span {
+  color: rgba(185, 147, 83, 0.24);
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-certificate-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-certification-grid h3 {
+  padding: 18px 18px 6px;
+  color: #26272c;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.about-certification-grid p {
+  padding: 0 18px 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.about-certification-notes {
+  margin-top: 22px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--softgold);
+}
+
+.about-certification-notes p {
+  color: #4f5158;
+  font-size: 15px;
+}
+
+.about-certification-notes small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
 }
 
 .enterprise-qualification {
@@ -2957,6 +3130,7 @@ img {
   .lead-box,
   .about-hero,
   .about-simple-hero,
+  .about-profile-layout,
   .about-history-layout,
   .about-simple-cta,
   .solution-directory,
@@ -2981,6 +3155,7 @@ img {
   .about-stats,
   .about-proof-grid,
   .certificate-grid,
+  .about-certification-grid,
   .simple-case-grid,
   .solution-case-grid,
   .case-grid,
@@ -3085,6 +3260,7 @@ img {
   }
 
   .about-simple-hero > div:first-child,
+  .about-profile-section,
   .about-history-section,
   .about-honor-section,
   .about-case-section,
@@ -3095,6 +3271,27 @@ img {
 
   .about-simple-hero h1 {
     font-size: 38px;
+  }
+
+  .about-profile-layout {
+    gap: 24px;
+  }
+
+  .about-profile-copy {
+    min-height: 0;
+    padding: 0;
+  }
+
+  .about-profile-copy h1 {
+    font-size: 38px;
+  }
+
+  .about-profile-copy h2 {
+    font-size: 21px;
+  }
+
+  .about-profile-image-placeholder {
+    min-height: 260px;
   }
 
   .about-year-card {
@@ -3117,6 +3314,14 @@ img {
 
   .certificate-frame {
     min-height: 170px;
+  }
+
+  .about-certification-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-certificate-placeholder {
+    min-height: 280px;
   }
 
   .simple-case-grid img {

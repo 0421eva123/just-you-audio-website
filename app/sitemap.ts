@@ -4,7 +4,7 @@ import { allSeoPages } from "./seo-pages";
 
 export const dynamic = "force-static";
 
-const pages = ["", "/supply-quality", "/about", "/catalog", "/download-catalog", "/knowledge"];
+const pages = ["", "/about", "/catalog", "/download-catalog", "/knowledge"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [...pages, ...allSeoPages.map((page) => page.route)].map((path) => ({

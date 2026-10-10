@@ -451,13 +451,12 @@ export default function Home() {
           <div className="section-head">
             <div>
               <div className="label">Supply & Quality</div>
-              <h2>Specialized Partners. Coordinated Support.</h2>
+              <h2>Product & Order Support</h2>
             </div>
             <p>
-              We work with specialized manufacturing partners across different
-              audio product categories. From product selection to order
-              preparation, we coordinate specifications, customization and
-              quality requirements for your selected models.
+              From product selection to order preparation, we coordinate
+              specifications, customization and quality requirements for your
+              selected models.
             </p>
           </div>
           <div className="supply-quality-grid">

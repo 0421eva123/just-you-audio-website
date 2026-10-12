@@ -107,8 +107,8 @@ export default function AboutPage() {
                 ))}
               </div>
               <p className="about-profile-note">
-                Built on specialized manufacturing partnerships, consistent
-                quality control and flexible OEM/ODM support.
+                We provide commercial audio products, quality control and
+                flexible OEM/ODM support for your project requirements.
               </p>
             </div>
             <div className="about-profile-image-placeholder" aria-label="Company and product image placeholder">
@@ -150,9 +150,8 @@ export default function AboutPage() {
             <div className="label">Certifications & Compliance</div>
             <h2>Selected Certifications & Compliance Documents</h2>
             <p>
-              Compliance documentation from our specialized manufacturing
-              partners is available according to product and project
-              requirements.
+              We provide applicable certificates, test reports and compliance
+              documents according to product and project requirements.
             </p>
           </div>
           <div className="about-certification-grid">

@@ -27,18 +27,34 @@ const certificationItems = [
   {
     title: "RoHS Compliance – Speaker",
     note: "Issued by POCE",
+    image: "/images/about/rohs-speaker.webp",
+    imageAlt: "RoHS Compliance certificate for speaker",
+    imageHeight: 1333,
+    imageWidth: 1000,
   },
   {
     title: "RoHS Compliance – Amplifier",
     note: "Issued by POCE",
+    image: "/images/about/rohs-amplifier.webp",
+    imageAlt: "RoHS Compliance certificate for amplifier",
+    imageHeight: 1333,
+    imageWidth: 1000,
   },
   {
     title: "ISO 9001 Quality Management System",
     note: "Manufacturing Partner",
+    image: "/images/about/iso9001.webp",
+    imageAlt: "ISO 9001 Quality Management System certificate",
+    imageHeight: 1454,
+    imageWidth: 1000,
   },
   {
     title: "EMC Compliance – Speaker",
     note: "CE / EMC Directive 2014/30/EU",
+    image: "/images/about/emc-speaker.webp",
+    imageAlt: "EMC Compliance certificate for speaker",
+    imageHeight: 1359,
+    imageWidth: 1000,
   },
 ];
 
@@ -112,7 +128,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="about-profile-image-placeholder" aria-label="Company and product image placeholder">
-              <span>Image Placeholder</span>
+              <img
+                alt="JUST YOU AUDIO company and commercial audio product overview"
+                height={800}
+                src="/images/about/company-overview.webp"
+                width={800}
+              />
             </div>
           </div>
         </section>
@@ -124,7 +145,12 @@ export default function AboutPage() {
           </div>
           <div className="about-distributor-layout">
             <div className="about-distributor-image-placeholder" aria-label="Distributor support image placeholder">
-              <span>Image Placeholder</span>
+              <img
+                alt="Distributor support for JUST YOU AUDIO commercial audio products"
+                height={750}
+                src="/images/about/distributor-support.webp"
+                width={1500}
+              />
             </div>
             <div className="about-distributor-cards">
               {distributorSupportItems.map((item) => (
@@ -158,7 +184,12 @@ export default function AboutPage() {
             {certificationItems.map((item) => (
               <article key={item.title}>
                 <div className="about-certificate-placeholder">
-                  <span>Certificate Image</span>
+                  <img
+                    alt={item.imageAlt}
+                    height={item.imageHeight}
+                    src={item.image}
+                    width={item.imageWidth}
+                  />
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.note}</p>

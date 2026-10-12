@@ -168,8 +168,7 @@ export default function AboutPage() {
           <div className="about-certification-notes">
             <p>
               Applicable certificates, test reports and declarations are
-              available upon request. Coverage varies by product model and
-              manufacturing partner.
+              available upon request. Coverage varies by product model.
             </p>
             <small>Manufacturer details are withheld for commercial confidentiality.</small>
           </div>

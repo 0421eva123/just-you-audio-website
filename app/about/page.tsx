@@ -4,6 +4,25 @@ import SolutionCaseSwitcher from "./SolutionCaseSwitcher";
 
 const supportTags = ["OEM / ODM", "QUALITY CONTROL", "PROJECT SUPPORT"];
 
+const distributorSupportItems = [
+  {
+    title: "OEM / ODM",
+    text: "Private label, logo and product customization",
+  },
+  {
+    title: "Stable Supply",
+    text: "Coordinated lead times and consistent product availability",
+  },
+  {
+    title: "Quality Control",
+    text: "Product inspection and consistent quality standards",
+  },
+  {
+    title: "Project Matching",
+    text: "Product selection, zoning and system configuration guidance",
+  },
+];
+
 const certificationItems = [
   {
     title: "RoHS Compliance – Speaker",
@@ -95,6 +114,34 @@ export default function AboutPage() {
             <div className="about-profile-image-placeholder" aria-label="Company and product image placeholder">
               <span>Image Placeholder</span>
             </div>
+          </div>
+        </section>
+
+        <section className="about-distributor-section">
+          <div className="about-section-title centered">
+            <div className="label">Distributor Support</div>
+            <h2>Support for Distributors, Integrators & Installers</h2>
+          </div>
+          <div className="about-distributor-layout">
+            <div className="about-distributor-image-placeholder" aria-label="Distributor support image placeholder">
+              <span>Image Placeholder</span>
+            </div>
+            <div className="about-distributor-cards">
+              {distributorSupportItems.map((item) => (
+                <article key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div className="about-distributor-closing">
+            <strong>
+              WE SUPPORT.
+              <br />
+              YOU GROW.
+            </strong>
+            <p>Reliable supply and flexible support for long-term market growth.</p>
           </div>
         </section>
 

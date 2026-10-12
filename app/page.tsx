@@ -276,11 +276,13 @@ export default function Home() {
               <div className="product-stage">
                 <img
                   className="hero-product-image"
-                  src="/images/hero-pa-system.jpg"
+                  src="/images/home-hero-pa-system.webp"
                   alt="JUST YOU AUDIO PA amplifier and speaker product range"
                 />
                 <div className="tag two">PA Product Range</div>
-                <div className="tag three">Manufacturing Partners</div>
+                <div className="tag three">
+                  Consistent quality control and flexible OEM/ODM support.
+                </div>
               </div>
             </div>
           </div>

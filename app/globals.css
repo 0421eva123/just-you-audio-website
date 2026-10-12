@@ -409,6 +409,7 @@ img {
 
 .tag {
   position: absolute;
+  max-width: calc(100% - 60px);
   padding: 12px 14px;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -417,6 +418,8 @@ img {
   color: #555;
   font-size: 12px;
   font-weight: 800;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
   backdrop-filter: blur(12px);
 }
 
@@ -428,6 +431,7 @@ img {
 .tag.three {
   right: 30px;
   bottom: 38px;
+  width: min(300px, calc(100% - 60px));
   color: var(--gold);
 }
 

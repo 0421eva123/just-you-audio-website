@@ -11,13 +11,6 @@ const solutionCases = [
     image: "/images/scene-school-public.jpg",
   },
   {
-    category: "Commercial buildings",
-    title: "Commercial Building Background Music",
-    description:
-      "Ceiling speakers, wall speakers and zone amplifiers for offices, lobbies and shared commercial spaces.",
-    image: "/images/solution-cases/solution-02-shopping-malls.jpg",
-  },
-  {
     category: "Restaurants and hotels",
     title: "Restaurant & Hotel Audio System",
     description:

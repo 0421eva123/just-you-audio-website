@@ -13,6 +13,15 @@ export const contactInfo = {
 
 export const whatsappNumber = contactInfo.whatsappNumber;
 
+export const whatsappMessages = {
+  englishQuotation:
+    "Hi Eva, I would like a quotation for commercial audio and PA products. My country: __. Product or project: __. Quantity: __.",
+  projectConsultation:
+    "Hi Eva, I need help selecting a commercial PA system. Project type: __. Area: __. Number of zones: __.",
+  spanishQuotation:
+    "Hola Eva, quisiera una cotización de productos de audio comercial y megafonía. Mi país: __. Producto o proyecto: __. Cantidad: __.",
+};
+
 export function getWhatsAppLink(message?: string) {
   const query = message ? `?text=${encodeURIComponent(message)}` : "";
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { englishKnowledgePages, spanishLandingPages } from "../seo-pages";
-import { contactInfo, getEmailLink, getWhatsAppLink } from "../../site-config";
+import { contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../../site-config";
 
 const boardPosts = [
   {
@@ -163,7 +163,7 @@ export default function KnowledgePage() {
             <a className="nav-btn" href="/catalog">
               Request Catalog
             </a>
-            <a className="nav-btn dark" href="/catalog">
+            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.englishQuotation)}>
               Ask Quotation
             </a>
           </div>

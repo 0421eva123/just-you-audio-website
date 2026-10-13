@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { contactInfo, getEmailLink, getWhatsAppLink } from "../site-config";
+import { contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../site-config";
 
 export type SeoPage = {
   slug: string;
@@ -1231,7 +1231,7 @@ export const spanishLandingPages: SeoPage[] = [
     locale: "es",
     title: "Sistema de Megafonía para Proyectos Comerciales",
     metaDescription:
-      "Estructura inicial para una página en español sobre sistemas de megafonía, audio comercial, altavoces, amplificadores y soporte para proyectos.",
+      "Guía en español sobre sistemas de megafonía, audio comercial, amplificadores, altavoces y selección de equipos para proyectos comerciales.",
     canonical: "/es/sistema-de-megafonia",
     eyebrow: "Megafonía Comercial",
     h1: "Sistema de megafonía para proyectos comerciales",
@@ -1246,7 +1246,7 @@ export const spanishLandingPages: SeoPage[] = [
         eyebrow: "Aplicaciones",
         title: "Dónde se usa un sistema de megafonía",
         intro:
-          "Espacio reservado para explicar usos reales en hoteles, colegios, comercios, fábricas y áreas públicas.",
+          "Un sistema de megafonía permite distribuir música ambiental y avisos por voz en hoteles, colegios, comercios, fábricas y áreas públicas. La selección de amplificadores, altavoces y accesorios depende del tamaño del espacio, las zonas y las condiciones de instalación. JUST YOU AUDIO ofrece apoyo para seleccionar y combinar los equipos adecuados.",
         items: [
           {
             title: "Música ambiental",
@@ -1311,7 +1311,7 @@ export const spanishLandingPages: SeoPage[] = [
       {
         question: "¿Qué datos necesito para cotizar un sistema?",
         answer:
-          "La versión final explicará qué área, cantidad de altavoces, zonas y uso principal ayudan a recomendar el sistema.",
+          "Para preparar una cotización, comparta el tipo de proyecto, la superficie aproximada, la cantidad de zonas y las condiciones de instalación interior o exterior. Indique también si necesita música ambiental, avisos por micrófono o ambas funciones, y la cantidad estimada de altavoces, si ya la conoce. Con estos datos podemos recomendar una configuración inicial y confirmar modelos, cantidades y precios.",
       },
       {
         question: "¿JUST YOU AUDIO puede apoyar con la selección?",
@@ -1323,7 +1323,7 @@ export const spanishLandingPages: SeoPage[] = [
     ctaText:
       "Escríbenos por WhatsApp o descarga el catálogo para revisar líneas de producto y preparar tu consulta.",
     whatsappMessage:
-      "Hola, necesito apoyo para un sistema de megafonía. ¿Me pueden recomendar amplificadores y altavoces?",
+      "Hola Eva, necesito un sistema de megafonía y música ambiental. Tipo de proyecto: __. Superficie: __. Zonas: __. ¿Me puede recomendar los equipos y enviar una cotización?",
   },
   {
     slug: "amplificador-pa",
@@ -1331,7 +1331,7 @@ export const spanishLandingPages: SeoPage[] = [
     locale: "es",
     title: "Amplificador PA para Audio Comercial",
     metaDescription:
-      "Estructura de contenido para una página en español sobre amplificadores PA, potencia, entradas, zonas y aplicaciones comerciales.",
+      "Guía en español para seleccionar amplificadores PA según potencia, entradas, zonas y aplicaciones de audio comercial.",
     canonical: "/es/amplificador-pa",
     eyebrow: "Amplificador PA",
     h1: "Amplificador PA para audio comercial",
@@ -1350,15 +1350,15 @@ export const spanishLandingPages: SeoPage[] = [
         items: [
           {
             title: "Potencia",
-            text: "Relacionar potencia del amplificador con cantidad y watts de los altavoces.",
+            text: "En sistemas de 70V/100V, sume la potencia de las tomas seleccionadas en los altavoces de cada salida y elija un amplificador con capacidad suficiente y reserva de trabajo. Confirme la compatibilidad de la línea y las recomendaciones del equipo.",
           },
           {
             title: "Entradas",
-            text: "Considerar Bluetooth, USB, micrófono, entrada de línea y prioridad de voceo.",
+            text: "Seleccione las entradas según las fuentes de audio que utilizará: micrófonos, reproductores u otros equipos. Bluetooth, USB y prioridad de micrófono están disponibles en determinados modelos; confirme las funciones del amplificador elegido.",
           },
           {
             title: "Zonas",
-            text: "Explicar cuándo conviene control por áreas o un sistema sencillo de una zona.",
+            text: "El control por zonas permite gestionar distintas áreas del proyecto. Confirme si necesita encender o apagar zonas, ajustar su volumen o reproducir fuentes independientes: son funciones diferentes y dependen del modelo y de la configuración del sistema.",
           },
         ],
       },
@@ -1366,7 +1366,7 @@ export const spanishLandingPages: SeoPage[] = [
         eyebrow: "Aplicaciones",
         title: "Usos comunes en proyectos",
         intro:
-          "Relaciona modelos de amplificador con necesidades de hoteles, tiendas y escuelas.",
+          "Seleccione el amplificador según el uso del proyecto: música ambiental en tiendas y restaurantes, avisos por micrófono en colegios y bodegas, o distribución de audio en varias áreas de un hotel.",
         items: [
           {
             title: "Música ambiental",
@@ -1378,7 +1378,7 @@ export const spanishLandingPages: SeoPage[] = [
           },
           {
             title: "Venta para distribuidores",
-            text: "Para armar una línea básica con potencias fáciles de vender.",
+            text: "Disponemos de distintas opciones de potencia y funciones para desarrollar una línea de audio comercial. Comparta su mercado y las aplicaciones de sus clientes para recibir una selección de modelos y una cotización.",
           },
         ],
       },
@@ -1406,7 +1406,7 @@ export const spanishLandingPages: SeoPage[] = [
       {
         question: "¿Cómo se calcula la potencia necesaria?",
         answer:
-          "La redacción final explicará la suma de watts de altavoces y margen de trabajo del amplificador.",
+          "Para una línea de 70V/100V, calcule la carga sumando la potencia seleccionada en cada altavoz conectado a la misma salida. Por ejemplo, 12 altavoces ajustados a 6 W representan una carga de 72 W. La carga no debe superar la capacidad nominal de esa salida; seleccione una potencia con reserva según las instrucciones del equipo y considere pérdidas de cable y futuras ampliaciones. Si existen varios canales de amplificación, calcule cada uno por separado.",
       },
       {
         question: "¿Puedo pedir recomendación por WhatsApp?",
@@ -1418,7 +1418,7 @@ export const spanishLandingPages: SeoPage[] = [
     ctaText:
       "Comparte los datos de tu proyecto y te ayudamos a elegir una potencia y configuración adecuada.",
     whatsappMessage:
-      "Hola, necesito un amplificador PA para audio comercial. ¿Me pueden recomendar un modelo?",
+      "Hola Eva, busco un amplificador PA para audio comercial. Carga total de altavoces: __ W. Línea: __ V. Zonas: __. Solicito una recomendación y cotización.",
   },
   {
     slug: "altavoces-para-audio-comercial",
@@ -1426,7 +1426,7 @@ export const spanishLandingPages: SeoPage[] = [
     locale: "es",
     title: "Altavoces para Audio Comercial y Megafonía",
     metaDescription:
-      "Página estructural en español sobre altavoces para audio comercial: techo, pared, columna, trompeta, jardín y aplicaciones por proyecto.",
+      "Guía en español sobre altavoces para audio comercial: techo, pared, columna, trompeta, jardín y aplicaciones por proyecto.",
     canonical: "/es/altavoces-para-audio-comercial",
     eyebrow: "Altavoces Comerciales",
     h1: "Altavoces para audio comercial y megafonía",
@@ -1435,13 +1435,13 @@ export const spanishLandingPages: SeoPage[] = [
     keywords: ["altavoces comerciales", "altavoces de techo", "altavoces exteriores", "megafonía"],
     trustTitle: "El altavoz correcto depende del espacio",
     trustText:
-      "La versión final debe comparar opciones de manera natural para compradores, distribuidores e instaladores de Latinoamérica.",
+      "Seleccione los altavoces según el espacio, el montaje y el uso principal: música ambiental, avisos por voz o ambos. Podemos ayudarle a elegir modelos para su proyecto.",
     sections: [
       {
         eyebrow: "Tipos de altavoces",
         title: "Opciones para interiores y exteriores",
         intro:
-          "Se dejará espacio para explicar ventajas, usos y límites de cada familia de producto.",
+          "Los altavoces de techo ofrecen una instalación discreta; los de pared facilitan el montaje y la orientación. Para exteriores, seleccione modelos adecuados al clima y al uso previsto.",
         items: [
           {
             title: "Altavoces de techo",
@@ -1465,15 +1465,15 @@ export const spanishLandingPages: SeoPage[] = [
         items: [
           {
             title: "Ambiente",
-            text: "Distinguir entre espacios interiores, semiexteriores y exteriores expuestos.",
+            text: "Confirme si la instalación será interior, bajo techo o exterior expuesta. La protección frente a humedad y polvo depende del modelo.",
           },
           {
             title: "Cobertura",
-            text: "Relacionar cantidad, distancia, altura de montaje y volumen esperado.",
+            text: "Considere la superficie, altura de montaje, distribución del espacio y ruido ambiental. La cobertura requiere definir cantidad, ubicación y características de los altavoces.",
           },
           {
             title: "Tipo de audio",
-            text: "Separar música ambiental, anuncios por voz y aplicaciones mixtas.",
+            text: "Para música ambiental, considere reproducción musical y distribución uniforme. Para avisos, priorice claridad de voz. En usos mixtos, seleccione un modelo adecuado a ambas necesidades.",
           },
         ],
       },
@@ -1506,7 +1506,7 @@ export const spanishLandingPages: SeoPage[] = [
       {
         question: "¿Qué altavoz conviene para interiores?",
         answer:
-          "La versión final comparará techo y pared según diseño del espacio, instalación y cobertura.",
+          "Los altavoces de techo son una opción cuando existe un plafón o techo compatible. Los de pared resultan prácticos si el montaje en techo es difícil o se necesita orientar el sonido. La selección depende de la estructura, altura, cobertura y uso del espacio.",
       },
       {
         question: "¿Qué altavoz conviene para exteriores?",
@@ -1518,7 +1518,7 @@ export const spanishLandingPages: SeoPage[] = [
     ctaText:
       "Envía el tipo de espacio y la aplicación. Podemos sugerir opciones de altavoz y amplificador.",
     whatsappMessage:
-      "Hola, busco altavoces para audio comercial. ¿Me pueden recomendar opciones para mi proyecto?",
+      "Hola Eva, busco altavoces para audio comercial. Instalación interior/exterior: __. Uso: música/voceo. Cantidad: __. Solicito modelos adecuados y una cotización.",
   },
 ];
 
@@ -1565,7 +1565,10 @@ export function createSeoMetadata(page: SeoPage): Metadata {
   };
 }
 
-function Navigation() {
+function Navigation({ locale = "en" }: { locale?: SeoPage["locale"] }) {
+  const quotationMessage =
+    locale === "es" ? whatsappMessages.spanishQuotation : whatsappMessages.englishQuotation;
+
   return (
     <nav className="nav">
       <div className="nav-inner">
@@ -1582,7 +1585,7 @@ function Navigation() {
           <a className="nav-btn" href="/catalog">
             Request Catalog
           </a>
-          <a className="nav-btn dark" href={getWhatsAppLink()}>
+          <a className="nav-btn dark" href={getWhatsAppLink(quotationMessage)}>
             Ask Quotation
           </a>
         </div>
@@ -1832,7 +1835,7 @@ function ArticleContentPage({ page }: { page: SeoPage }) {
 
   return (
     <>
-      <Navigation />
+      <Navigation locale={page.locale} />
 
       <main className="knowledge-page">
         <Breadcrumbs page={page} />
@@ -1905,7 +1908,7 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
 
   return (
     <>
-      <Navigation />
+      <Navigation locale={page.locale} />
 
       <main className="knowledge-page">
         <Breadcrumbs page={page} />

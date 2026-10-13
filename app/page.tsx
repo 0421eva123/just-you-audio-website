@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { brandName, contactInfo, getEmailLink, getWhatsAppLink, siteUrl } from "../site-config";
+import {
+  brandName,
+  contactInfo,
+  getEmailLink,
+  getWhatsAppLink,
+  siteUrl,
+  whatsappMessages,
+} from "../site-config";
 
 export const metadata: Metadata = {
   title: {
@@ -71,6 +78,8 @@ const featuredProducts = [
     model: "AMPLIFIER SERIES",
     deviceClass: "amp2",
     image: "/images/product-pa-amplifier.png",
+    whatsappMessage:
+      "Hi Eva, I am interested in your 70V/100V PA mixer amplifiers. Please send available models, specifications and a quotation. Quantity: __.",
   },
   {
     title: "Frameless Ceiling Speaker",
@@ -80,6 +89,8 @@ const featuredProducts = [
     model: "CEILING SERIES",
     deviceClass: "round2",
     image: "/images/product-ceiling-speaker.png",
+    whatsappMessage:
+      "Hi Eva, I am interested in your frameless ceiling speakers for a commercial audio project. Please send specifications and a quotation. Quantity: __.",
   },
   {
     title: "Wall Mount Speaker",
@@ -89,6 +100,8 @@ const featuredProducts = [
     model: "WALL SERIES",
     deviceClass: "wall2",
     image: "/images/product-wall-speaker.png",
+    whatsappMessage:
+      "Hi Eva, I am interested in your wall-mounted speakers for background music and paging. Please send available models and a quotation. Quantity: __.",
   },
   {
     title: "Outdoor Waterproof Column",
@@ -98,6 +111,8 @@ const featuredProducts = [
     model: "COLUMN SERIES",
     deviceClass: "column2",
     image: "/images/product-column-speaker.png",
+    whatsappMessage:
+      "Hi Eva, I am interested in your outdoor column speakers. Please send model specifications, weather-resistance information and a quotation. Quantity: __.",
   },
   {
     title: "Horn Speaker",
@@ -107,6 +122,8 @@ const featuredProducts = [
     model: "HORN SERIES",
     deviceClass: "horn2",
     image: "/images/product-horn-speaker.png",
+    whatsappMessage:
+      "Hi Eva, I am interested in your horn speakers for public address and voice announcements. Please send available models and a quotation. Quantity: __.",
   },
   {
     title: "Lawn & Garden Speaker",
@@ -116,6 +133,8 @@ const featuredProducts = [
     model: "LANDSCAPE SERIES",
     deviceClass: "lawn2",
     image: "/images/product-lawn-speaker.png",
+    whatsappMessage:
+      "Hi Eva, I am interested in your lawn and garden speakers for outdoor background music. Please send available models and a quotation. Quantity: __.",
   },
 ];
 
@@ -225,7 +244,7 @@ export default function Home() {
             <a className="nav-btn" href="/catalog">
               Request Catalog
             </a>
-            <a className="nav-btn dark" href="/catalog">
+            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.englishQuotation)}>
               Ask Quotation
             </a>
           </div>
@@ -243,16 +262,16 @@ export default function Home() {
                 Commercial Audio & 70V/100V PA Solutions
               </h1>
               <p>
-                PA amplifiers, commercial speakers and complementary products
-                for background music and public address projects. We help you
-                select suitable models, match system components and coordinate
-                OEM requirements through specialized manufacturing partners.
+                PA amplifiers, commercial speakers and accessories for
+                background music and public address projects. We provide
+                product selection, system matching and flexible OEM/ODM
+                support.
               </p>
               <div className="cta">
                 <a className="btn btn-primary" href="/catalog">
                   Get Product Catalog
                 </a>
-                <a className="btn btn-gold" href={getWhatsAppLink()}>
+                <a className="btn btn-gold" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
                   Discuss Your Project
                 </a>
               </div>
@@ -351,7 +370,7 @@ export default function Home() {
                   </div>
                   <div className="product-cta">
                     <span className="model">{product.model}</span>
-                    <a className="ask" href="#contact">
+                    <a className="ask" href={getWhatsAppLink(product.whatsappMessage)}>
                       Ask Price
                     </a>
                   </div>
@@ -388,11 +407,13 @@ export default function Home() {
             <div className="section-head">
               <div>
                 <div className="label">Project Solutions</div>
-                <h2>System combinations that trigger inquiries</h2>
+                <h2>PA Solutions for Commercial Projects</h2>
               </div>
               <p>
-                Choose products by application and send us the project details.
-                We can recommend a practical system list for fast quotation.
+                Explore typical amplifier and speaker combinations for hotels,
+                restaurants, schools and other commercial spaces. Share your
+                application, area and zoning requirements so we can recommend
+                suitable products.
               </p>
             </div>
             <div className="combo-grid">
@@ -421,11 +442,11 @@ export default function Home() {
           <div className="support-grid">
             <div className="dark-panel">
               <div className="label">Distributor Cooperation</div>
-              <h2>Built to help local dealers sell easier.</h2>
+              <h2>Support for Your Distribution Business</h2>
               <p>
-                For distributors, the website should clearly show business
-                value: stable product line, OEM support, project pricing,
-                marketable design and fast quotation communication.
+                We support distributors with a broad PA product range, OEM
+                options, quantity-based quotations and practical project
+                matching.
               </p>
               <div className="cta">
                 <a className="btn btn-secondary" href="/catalog">
@@ -479,13 +500,13 @@ export default function Home() {
               </p>
             </div>
             <div className="lead-actions">
-              <a className="gold-action" href={getWhatsAppLink()}>
+              <a className="gold-action" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
                 Contact on WhatsApp <span>→</span>
               </a>
               <a href="/catalog">
                 Get Catalog & Distributor Price <span>→</span>
               </a>
-              <a href={getEmailLink(contactInfo.salesEmail, "Project Quotation Request")}>
+              <a href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
                 Ask for Project Quotation <span>→</span>
               </a>
               <small>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { contactInfo, getEmailLink, getWhatsAppLink } from "../../site-config";
+import { contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../../site-config";
 
 const catalogMessage =
   "Hello, I am interested in your PA audio products. Could you send me your full catalog, model list and distributor price?";
@@ -52,7 +52,7 @@ export default function CatalogPage() {
             <a className="nav-btn" href="/catalog">
               Request Catalog
             </a>
-            <a className="nav-btn dark" href={getWhatsAppLink(catalogMessage)}>
+            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.englishQuotation)}>
               Ask Quotation
             </a>
           </div>

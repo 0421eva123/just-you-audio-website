@@ -69,8 +69,8 @@ export default function DownloadCatalogForm() {
           <input autoComplete="name" name="name" required type="text" />
         </label>
         <label>
-          Company Name *
-          <input autoComplete="organization" name="companyName" required type="text" />
+          Company Name
+          <input autoComplete="organization" name="companyName" type="text" />
         </label>
         <label>
           Country *

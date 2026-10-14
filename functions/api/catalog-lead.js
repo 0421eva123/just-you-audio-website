@@ -1,4 +1,4 @@
-const requiredFields = ["name", "companyName", "country", "email"];
+const requiredFields = ["name", "country", "email"];
 const resendEndpoint = "https://api.resend.com/emails";
 const defaultLeadEmailTo = "sales@justyouaudio.com";
 
@@ -46,7 +46,7 @@ function renderLeadRow(label, value) {
 function buildLeadEmailHtml(lead) {
   const rows = [
     ["Name:", lead.name],
-    ["Company:", lead.companyName],
+    ["Company:", valueOrFallback(lead.companyName)],
     ["Country:", lead.country],
     ["Email:", lead.email],
     ["WhatsApp:", valueOrFallback(lead.whatsapp)],
@@ -83,7 +83,7 @@ async function sendLeadEmail(lead, env) {
     throw new Error("LEAD_EMAIL_TO is not configured.");
   }
 
-  const subject = `New Catalog Lead - ${cleanSubject(lead.companyName)} - ${cleanSubject(lead.country)}`;
+  const subject = `New Catalog Lead - ${cleanSubject(valueOrFallback(lead.companyName))} - ${cleanSubject(lead.country)}`;
   const response = await fetch(resendEndpoint, {
     body: JSON.stringify({
       from,

@@ -193,7 +193,7 @@ export default function KnowledgePage() {
 
             <section className="solution-board">
               <div>
-                <div className="label">SEO Page Structure</div>
+                <div className="label">PA Guides & Resources</div>
                 <h2>New Knowledge</h2>
               </div>
               <div className="topic-grid route-grid">

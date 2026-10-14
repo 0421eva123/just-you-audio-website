@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { delayNavigationTo, trackGa4CustomEvent } from "../AnalyticsEvents";
 
-const pdfUrl = "/catalog/product-overview.pdf?v=20261014";
+const pdfUrl = "/catalog/product-overview-20261014.pdf?v=20261014";
 
 const businessTypes = [
   "Distributor",

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { englishKnowledgePages, spanishLandingPages } from "../seo-pages";
-import { contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../../site-config";
+import { contactInfo, getEmailLink, getWhatsAppLink, siteUrl, whatsappMessages } from "../../site-config";
 
 const boardPosts = [
   {
@@ -145,9 +145,32 @@ export const metadata: Metadata = {
   },
 };
 
+const knowledgeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Public Address Knowledge Hub",
+  description:
+    "PA audio news, public address Q&A, project solution guides and supplier information from JUST YOU AUDIO.",
+  url: `${siteUrl}/knowledge`,
+  inLanguage: "en",
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: [...englishKnowledgePages, ...spanishLandingPages].map((page, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: page.h1,
+      url: `${siteUrl}${page.route}`,
+    })),
+  },
+};
+
 export default function KnowledgePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeJsonLd) }}
+      />
       <nav className="nav">
         <div className="nav-inner">
           <a className="brand" href="/">

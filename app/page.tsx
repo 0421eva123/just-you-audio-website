@@ -218,6 +218,29 @@ const supplyQualityCards = [
   },
 ];
 
+const guideLinks = [
+  {
+    title: "100V PA System Guide",
+    href: "/knowledge/100v-pa-system-guide",
+    description: "Understand amplifier matching, speaker taps, zones and quotation details.",
+  },
+  {
+    title: "How to Choose a PA Amplifier",
+    href: "/knowledge/how-to-choose-pa-amplifier",
+    description: "Compare amplifier wattage, inputs and zone control for commercial projects.",
+  },
+  {
+    title: "Hotel Background Music System",
+    href: "/knowledge/hotel-background-music-system",
+    description: "Plan ceiling speakers, wall speakers and zone amplifiers for hotel spaces.",
+  },
+  {
+    title: "Outdoor Waterproof Speaker Guide",
+    href: "/knowledge/outdoor-waterproof-speaker-guide",
+    description: "Choose outdoor column, horn and garden speakers by coverage and exposure.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -396,6 +419,30 @@ export default function Home() {
               <article className="cat" key={title}>
                 <h3>{title}</h3>
                 <p>{description}</p>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section small-top" aria-label="PA guides and resources">
+          <div className="section-head">
+            <div>
+              <div className="label">PA Guides & Resources</div>
+              <h2>Selection guides for common PA projects</h2>
+            </div>
+            <p>
+              Use these guides to prepare project details before requesting
+              amplifier, speaker and system quotations.
+            </p>
+          </div>
+          <div className="category-grid">
+            {guideLinks.map((guide, index) => (
+              <article className="cat" key={guide.href}>
+                <h3>
+                  <a href={guide.href}>{guide.title}</a>
+                </h3>
+                <p>{guide.description}</p>
                 <span>{String(index + 1).padStart(2, "0")}</span>
               </article>
             ))}

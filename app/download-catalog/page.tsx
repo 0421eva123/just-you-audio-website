@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../../site-config";
+import { contactInfo, getEmailLink, getWhatsAppLink, siteUrl, whatsappMessages } from "../../site-config";
 import DownloadCatalogForm from "./DownloadCatalogForm";
 
 export const metadata: Metadata = {
@@ -25,9 +25,48 @@ export const metadata: Metadata = {
   },
 };
 
+const downloadCatalogJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Get JUST YOU AUDIO Product Catalog",
+    description:
+      "Leave your information to receive the latest JUST YOU AUDIO PA system product overview and distributor support.",
+    url: `${siteUrl}/download-catalog`,
+    inLanguage: "en",
+    publisher: {
+      "@type": "Organization",
+      name: "JUST YOU AUDIO",
+      url: siteUrl,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${siteUrl}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Download Catalog",
+        item: `${siteUrl}/download-catalog`,
+      },
+    ],
+  },
+];
+
 export default function DownloadCatalogPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(downloadCatalogJsonLd) }}
+      />
       <nav className="nav">
         <div className="nav-inner">
           <a className="brand" href="/">

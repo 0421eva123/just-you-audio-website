@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../site-config";
+import { contactInfo, getEmailLink, getWhatsAppLink, siteUrl, whatsappMessages } from "../site-config";
 
 export type SeoPage = {
   slug: string;
@@ -26,6 +26,11 @@ export type SeoPage = {
     }>;
   }>;
   productLinks: Array<{
+    label: string;
+    href: string;
+    note: string;
+  }>;
+  relatedGuides?: Array<{
     label: string;
     href: string;
     note: string;
@@ -68,15 +73,15 @@ export const englishKnowledgePages: SeoPage[] = [
         items: [
           {
             title: "Amplifier output",
-            text: "Introduce 100V and 70V outputs, total speaker wattage and safe headroom planning.",
+            text: "Review 100V and 70V outputs, total speaker wattage and safe headroom before selecting amplifier power.",
           },
           {
             title: "Speaker tapping",
-            text: "Explain how ceiling, wall, column and horn speakers use tap settings in a distributed system.",
+            text: "Use transformer tap settings on ceiling, wall, column and horn speakers to control each speaker load.",
           },
           {
             title: "Project zones",
-            text: "Reserve space for guidance on zones, paging priority and music areas.",
+            text: "Define paging areas, music areas and priority behavior before deciding whether simple or zone control is needed.",
           },
         ],
       },
@@ -116,6 +121,23 @@ export const englishKnowledgePages: SeoPage[] = [
         label: "Outdoor Column Speakers",
         href: "/#featured",
         note: "For campuses, public areas and long coverage zones.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "How to choose a PA amplifier",
+        href: "/knowledge/how-to-choose-pa-amplifier",
+        note: "Compare amplifier power, inputs and zone control for 100V projects.",
+      },
+      {
+        label: "Hotel background music system",
+        href: "/knowledge/hotel-background-music-system",
+        note: "See how 100V systems are planned for hotel BGM and paging zones.",
+      },
+      {
+        label: "Outdoor waterproof speaker guide",
+        href: "/knowledge/outdoor-waterproof-speaker-guide",
+        note: "Match 100V amplifiers with outdoor column, horn and garden speakers.",
       },
     ],
     checklist: [
@@ -841,7 +863,7 @@ Contact us through WhatsApp with your project information for equipment matching
     locale: "en",
     title: "How to Choose a PA Amplifier for Commercial Audio",
     metaDescription:
-      "Plan the structure for choosing a PA amplifier by wattage, zones, inputs, speaker type and commercial audio application.",
+      "Learn how to choose a PA amplifier by speaker wattage, 70V/100V line load, input sources, zone control and commercial audio application.",
     canonical: "/knowledge/how-to-choose-pa-amplifier",
     eyebrow: "Amplifier Selection",
     h1: "How to choose a PA amplifier for commercial audio",
@@ -859,15 +881,15 @@ Contact us through WhatsApp with your project information for equipment matching
         items: [
           {
             title: "Power rating",
-            text: "Reserve guidance for calculating speaker wattage and keeping practical headroom.",
+            text: "Add the selected tap wattage of all 70V/100V speakers on the same output and choose an amplifier with practical reserve capacity.",
           },
           {
             title: "Input sources",
-            text: "Cover Bluetooth, USB, microphone, line input, paging microphone and priority needs.",
+            text: "Confirm whether the project needs microphone inputs, line input, Bluetooth, USB playback, paging microphone or priority control.",
           },
           {
             title: "Zone control",
-            text: "Explain when a single-zone mixer amplifier is enough and when zone control matters.",
+            text: "Use a single-zone amplifier for simple spaces and zone control when different areas need separate on/off or volume management.",
           },
         ],
       },
@@ -903,6 +925,23 @@ Contact us through WhatsApp with your project information for equipment matching
         note: "Match amplifier power with ceiling, wall, column and horn speakers.",
       },
     ],
+    relatedGuides: [
+      {
+        label: "100V PA system guide",
+        href: "/knowledge/100v-pa-system-guide",
+        note: "Understand 70V/100V speaker line basics before calculating amplifier load.",
+      },
+      {
+        label: "Factory PA system design",
+        href: "/knowledge/factory-pa-system-design",
+        note: "See amplifier selection considerations for noisy production and warehouse areas.",
+      },
+      {
+        label: "Hotel background music system",
+        href: "/knowledge/hotel-background-music-system",
+        note: "Review amplifier and zone requirements for hotel BGM systems.",
+      },
+    ],
     checklist: [
       "Speaker quantity and tap wattage",
       "Input sources and microphone priority",
@@ -934,7 +973,7 @@ Contact us through WhatsApp with your project information for equipment matching
     locale: "en",
     title: "Hotel Background Music System Planning Guide",
     metaDescription:
-      "Structure a helpful guide for hotel background music systems, including zones, ceiling speakers, amplifiers and quotation details.",
+      "Plan a hotel background music system with ceiling speakers, wall speakers, PA amplifiers, zone control and quotation details.",
     canonical: "/knowledge/hotel-background-music-system",
     eyebrow: "Hotel BGM",
     h1: "Hotel background music system planning guide",
@@ -943,7 +982,7 @@ Contact us through WhatsApp with your project information for equipment matching
     keywords: ["hotel BGM", "ceiling speaker", "zone amplifier", "commercial audio"],
     trustTitle: "Designed for quiet, polished hospitality spaces",
     trustText:
-      "The structure focuses on guest areas, speaker appearance, zoning and simple operation for hotel staff.",
+      "Focus on guest areas, speaker appearance, zoning and simple daily operation for hotel staff.",
     sections: [
       {
         eyebrow: "Hotel Areas",
@@ -952,15 +991,15 @@ Contact us through WhatsApp with your project information for equipment matching
         items: [
           {
             title: "Lobby and reception",
-            text: "Structure guidance for comfortable music level, coverage and microphone announcements.",
+            text: "Use discreet ceiling or wall speakers to provide comfortable music level, even coverage and occasional microphone announcements.",
           },
           {
             title: "Corridors and public areas",
-            text: "Add notes on even distribution, low visual impact and zone separation.",
+            text: "Plan even speaker spacing, low visual impact and separate zones so staff can manage different public areas.",
           },
           {
             title: "Restaurant and lounge",
-            text: "Reserve space for richer sound, volume control and guest experience.",
+            text: "Consider richer music quality, local volume control and speaker placement that supports a quiet hospitality experience.",
           },
         ],
       },
@@ -1001,6 +1040,23 @@ Contact us through WhatsApp with your project information for equipment matching
         note: "Music, microphone and 100V speaker support.",
       },
     ],
+    relatedGuides: [
+      {
+        label: "100V PA system guide",
+        href: "/knowledge/100v-pa-system-guide",
+        note: "Learn how distributed 100V systems support many hotel speakers.",
+      },
+      {
+        label: "How to choose a PA amplifier",
+        href: "/knowledge/how-to-choose-pa-amplifier",
+        note: "Check amplifier power, inputs and zones before preparing a hotel quotation.",
+      },
+      {
+        label: "Outdoor waterproof speaker guide",
+        href: "/knowledge/outdoor-waterproof-speaker-guide",
+        note: "Plan outdoor entrance, garden or pool-area speakers for hotel projects.",
+      },
+    ],
     checklist: [
       "Hotel zone list and room function",
       "Ceiling height and interior finish",
@@ -1030,12 +1086,12 @@ Contact us through WhatsApp with your project information for equipment matching
     slug: "factory-pa-system-design",
     route: "/knowledge/factory-pa-system-design",
     locale: "en",
-    title: "Factory PA System Design Structure",
+    title: "Factory PA System Design Guide",
     metaDescription:
-      "Outline factory PA system design content for paging, announcements, warehouse coverage, horn speakers and amplifier matching.",
+      "Design a factory PA system for paging, shift announcements, warehouse coverage, horn speakers, outdoor speakers and amplifier matching.",
     canonical: "/knowledge/factory-pa-system-design",
     eyebrow: "Factory PA Design",
-    h1: "Factory PA system design structure",
+    h1: "Factory PA system design guide",
     intro:
       "A practical factory and warehouse public address system guide for paging, announcements and area coverage.",
     keywords: ["factory PA system", "warehouse paging", "horn speaker", "outdoor column speaker"],
@@ -1050,7 +1106,7 @@ Contact us through WhatsApp with your project information for equipment matching
         items: [
           {
             title: "Production floor",
-            text: "Reserve guidance for higher SPL, horn speakers and voice intelligibility.",
+            text: "Use higher-output horn or column speakers where machine noise requires stronger voice projection and clear announcements.",
           },
           {
             title: "Warehouse aisles",
@@ -1069,7 +1125,7 @@ Contact us through WhatsApp with your project information for equipment matching
         items: [
           {
             title: "Paging microphone",
-            text: "Add details about control room, reception or security desk paging.",
+            text: "Confirm whether paging starts from a control room, reception desk or security station and whether priority announcements are needed.",
           },
           {
             title: "Zone amplifier",
@@ -1097,6 +1153,23 @@ Contact us through WhatsApp with your project information for equipment matching
         label: "PA Amplifier Series",
         href: "/#featured",
         note: "Amplifier matching for multiple speakers and zones.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "100V PA system guide",
+        href: "/knowledge/100v-pa-system-guide",
+        note: "Review 100V line planning for multiple factory speaker runs.",
+      },
+      {
+        label: "Outdoor waterproof speaker guide",
+        href: "/knowledge/outdoor-waterproof-speaker-guide",
+        note: "Choose speakers for gates, loading docks and outdoor factory areas.",
+      },
+      {
+        label: "How to choose a PA amplifier",
+        href: "/knowledge/how-to-choose-pa-amplifier",
+        note: "Match amplifier power and zones to factory paging requirements.",
       },
     ],
     checklist: [
@@ -1130,7 +1203,7 @@ Contact us through WhatsApp with your project information for equipment matching
     locale: "en",
     title: "Outdoor Waterproof Speaker Guide for PA Projects",
     metaDescription:
-      "Create the structure for an outdoor waterproof speaker guide covering column speakers, horn speakers, lawn speakers and project environments.",
+      "Choose outdoor waterproof speakers for PA projects by weather exposure, coverage distance, mounting position and application type.",
     canonical: "/knowledge/outdoor-waterproof-speaker-guide",
     eyebrow: "Outdoor Speakers",
     h1: "Outdoor waterproof speaker guide for PA projects",
@@ -1167,7 +1240,7 @@ Contact us through WhatsApp with your project information for equipment matching
         items: [
           {
             title: "Weather exposure",
-            text: "Add guidance for covered, semi-open and fully exposed installation areas.",
+            text: "Confirm whether speakers will be installed under cover, in semi-open areas or fully exposed outdoor locations.",
           },
           {
             title: "Mounting position",
@@ -1175,7 +1248,7 @@ Contact us through WhatsApp with your project information for equipment matching
           },
           {
             title: "Coverage distance",
-            text: "Reserve notes for voice distance, background music zones and volume expectations.",
+            text: "Estimate voice distance, background music zones and expected sound level before choosing speaker type and amplifier power.",
           },
         ],
       },
@@ -1195,6 +1268,23 @@ Contact us through WhatsApp with your project information for equipment matching
         label: "Lawn & Garden Speaker",
         href: "/#featured",
         note: "For villas, resorts, gardens and landscaped spaces.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "100V PA system guide",
+        href: "/knowledge/100v-pa-system-guide",
+        note: "Understand how 100V amplifier lines support multiple outdoor speakers.",
+      },
+      {
+        label: "Factory PA system design",
+        href: "/knowledge/factory-pa-system-design",
+        note: "See outdoor speaker planning for factory gates, yards and loading docks.",
+      },
+      {
+        label: "Hotel background music system",
+        href: "/knowledge/hotel-background-music-system",
+        note: "Plan outdoor hotel areas such as entrances, gardens and resort paths.",
       },
     ],
     checklist: [
@@ -1300,6 +1390,18 @@ export const spanishLandingPages: SeoPage[] = [
         note: "Para patios, escuelas, parques y zonas abiertas.",
       },
     ],
+    relatedGuides: [
+      {
+        label: "Amplificador PA para audio comercial",
+        href: "/es/amplificador-pa",
+        note: "Revise potencia, entradas y zonas antes de cotizar el sistema.",
+      },
+      {
+        label: "Altavoces para audio comercial",
+        href: "/es/altavoces-para-audio-comercial",
+        note: "Compare altavoces de techo, pared y exteriores para cada aplicación.",
+      },
+    ],
     checklist: [
       "Tipo de proyecto y cantidad de zonas",
       "Número aproximado de altavoces",
@@ -1393,6 +1495,18 @@ export const spanishLandingPages: SeoPage[] = [
         label: "Categorías de altavoces",
         href: "/#categories",
         note: "Para calcular carga y tipo de instalación.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "Sistema de megafonía",
+        href: "/es/sistema-de-megafonia",
+        note: "Vea la estructura general de un sistema de megafonía comercial.",
+      },
+      {
+        label: "Altavoces para audio comercial",
+        href: "/es/altavoces-para-audio-comercial",
+        note: "Seleccione altavoces según instalación interior, exterior y uso principal.",
       },
     ],
     checklist: [
@@ -1495,6 +1609,18 @@ export const spanishLandingPages: SeoPage[] = [
         note: "Para proyectos exteriores y espacios abiertos.",
       },
     ],
+    relatedGuides: [
+      {
+        label: "Sistema de megafonía",
+        href: "/es/sistema-de-megafonia",
+        note: "Conecte la selección de altavoces con el sistema completo de megafonía.",
+      },
+      {
+        label: "Amplificador PA para audio comercial",
+        href: "/es/amplificador-pa",
+        note: "Calcule la potencia del amplificador según los altavoces seleccionados.",
+      },
+    ],
     checklist: [
       "Interior, exterior o instalación mixta",
       "Altura de montaje y distancia de cobertura",
@@ -1539,7 +1665,7 @@ export function createSeoMetadata(page: SeoPage): Metadata {
       )
     : page.locale === "en"
       ? { en: page.canonical }
-      : { es: page.canonical };
+      : { "es-419": page.canonical, es: page.canonical };
 
   return {
     title: page.title,
@@ -1563,6 +1689,125 @@ export function createSeoMetadata(page: SeoPage): Metadata {
       url: page.canonical,
     },
   };
+}
+
+function absoluteUrl(path: string) {
+  return path.startsWith("http") ? path : `${siteUrl}${path}`;
+}
+
+function SeoStructuredData({ page }: { page: SeoPage }) {
+  const language = page.locale === "es" ? "es-419" : "en";
+  const pageUrl = absoluteUrl(page.route);
+  const breadcrumbParent = page.locale === "es" ? "Spanish PA Guides" : "Knowledge";
+  const breadcrumbParentUrl = page.locale === "es" ? `${siteUrl}/` : `${siteUrl}/knowledge`;
+  const articleType = page.articleMarkdown ? "Article" : "TechArticle";
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": articleType,
+    headline: page.h1,
+    description: page.metaDescription,
+    inLanguage: language,
+    mainEntityOfPage: pageUrl,
+    dateModified: "2026-10-14",
+    author: {
+      "@type": "Organization",
+      name: "JUST YOU AUDIO",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "JUST YOU AUDIO",
+      url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/icon.svg`,
+      },
+    },
+    about: page.keywords,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${siteUrl}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: breadcrumbParent,
+        item: breadcrumbParentUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: page.h1,
+        item: pageUrl,
+      },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: page.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+    </>
+  );
+}
+
+function RelatedGuides({ page }: { page: SeoPage }) {
+  if (!page.relatedGuides?.length) {
+    return null;
+  }
+
+  const isSpanish = page.locale === "es";
+
+  return (
+    <section className="knowledge-block two-column">
+      <div className="knowledge-block-head">
+        <div className="label">{isSpanish ? "Guías relacionadas" : "Related Guides"}</div>
+        <h2>{isSpanish ? "Más recursos para planificar el sistema" : "More PA planning resources"}</h2>
+      </div>
+      <div className="system-overview-grid">
+        {page.relatedGuides.map((link) => (
+          <article key={link.href}>
+            <h3>
+              <a href={link.href}>{link.label}</a>
+            </h3>
+            <p>{link.note}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 function Navigation({ locale = "en" }: { locale?: SeoPage["locale"] }) {
@@ -1802,7 +2047,7 @@ function getArticleSections(markdown: string) {
   return sections;
 }
 
-function ArticleMarkdown({ markdown }: { markdown: string }) {
+function ArticleMarkdown({ markdown, title }: { markdown: string; title: string }) {
   const sections = getArticleSections(markdown);
 
   return (
@@ -1810,7 +2055,7 @@ function ArticleMarkdown({ markdown }: { markdown: string }) {
       <div className="article-topic-board">
         <div className="article-topic-board-head">
           <span className="label">Article Sections</span>
-          <h2>100V PA System Guide Topics</h2>
+          <h2>{title} Topics</h2>
         </div>
         <div className="article-topic-list">
           {sections.map((section, index) => (
@@ -1835,9 +2080,10 @@ function ArticleContentPage({ page }: { page: SeoPage }) {
 
   return (
     <>
+      <SeoStructuredData page={page} />
       <Navigation locale={page.locale} />
 
-      <main className="knowledge-page">
+      <main className="knowledge-page" lang={page.locale === "es" ? "es-419" : "en"}>
         <Breadcrumbs page={page} />
 
         <section className="knowledge-trust-hero article-hero">
@@ -1861,8 +2107,10 @@ function ArticleContentPage({ page }: { page: SeoPage }) {
         </section>
 
         <section className="seo-article-shell">
-          <ArticleMarkdown markdown={page.articleMarkdown ?? ""} />
+          <ArticleMarkdown markdown={page.articleMarkdown ?? ""} title={page.title} />
         </section>
+
+        <RelatedGuides page={page} />
 
         <section className="knowledge-cta">
           <div>
@@ -1908,9 +2156,10 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
 
   return (
     <>
+      <SeoStructuredData page={page} />
       <Navigation locale={page.locale} />
 
-      <main className="knowledge-page">
+      <main className="knowledge-page" lang={page.locale === "es" ? "es-419" : "en"}>
         <Breadcrumbs page={page} />
 
         <section className="knowledge-trust-hero">
@@ -1967,6 +2216,8 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
             ))}
           </div>
         </section>
+
+        <RelatedGuides page={page} />
 
         <section className="knowledge-block two-column">
           <div className="knowledge-block-head">

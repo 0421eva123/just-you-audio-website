@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { contactInfo, getEmailLink, getWhatsAppLink, siteUrl, whatsappMessages } from "../../site-config";
+import {
+  brandTagline,
+  contactInfo,
+  getEmailLink,
+  getWhatsAppLink,
+  siteUrl,
+  whatsappMessages,
+} from "../../site-config";
 import DownloadCatalogForm from "./DownloadCatalogForm";
 
 export const metadata: Metadata = {
@@ -318,7 +325,7 @@ export default function DownloadCatalogPage() {
         <div className="footer-inner">
           <div className="footer-brand">
             <strong>JUST YOU AUDIO</strong>
-            <p>Premium PA & Background Music Audio Solutions</p>
+            <p>{brandTagline}</p>
           </div>
           <div className="footer-column">
             <h3>Contact</h3>

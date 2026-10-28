@@ -2,24 +2,24 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import type { ReactNode } from "react";
 import { AnalyticsEvents } from "./AnalyticsEvents";
-import { contactInfo, siteUrl } from "../site-config";
+import { brandTagline, contactInfo, siteUrl } from "../site-config";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
+    default: `${brandTagline} | JUST YOU AUDIO`,
     template: "%s | JUST YOU AUDIO",
   },
   description:
-    "JUST YOU AUDIO supplies PA systems, amplifiers, ceiling speakers, wall speakers, column speakers, horn speakers and audio solutions for distributors and project contractors.",
+    "JUST YOU AUDIO is a commercial audio and 70V/100V PA supply partner for distributors, system integrators, project contractors and private-label brands.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
+    title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "Professional PA audio products and public address system solutions for distributors and project contractors.",
+      "Commercial audio supply, flexible OEM support and project matching for distributors, integrators and contractors.",
     emails: [contactInfo.salesEmail, contactInfo.infoEmail],
     images: [
       {
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
+    title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "PA systems, amplifiers, speakers and public address solutions for distributors and project contractors.",
+      "Commercial audio supply, OEM support and project matching for distributors, integrators and contractors.",
     images: ["/images/hero-pa-system.jpg"],
   },
   icons: {

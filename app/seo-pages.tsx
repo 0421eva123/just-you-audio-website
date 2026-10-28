@@ -1,6 +1,13 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { contactInfo, getEmailLink, getWhatsAppLink, siteUrl, whatsappMessages } from "../site-config";
+import {
+  brandTagline,
+  contactInfo,
+  getEmailLink,
+  getWhatsAppLink,
+  siteUrl,
+  whatsappMessages,
+} from "../site-config";
 
 export type SeoPage = {
   slug: string;
@@ -1321,16 +1328,16 @@ export const spanishLandingPages: SeoPage[] = [
     locale: "es",
     title: "Sistema de Megafonía para Proyectos Comerciales",
     metaDescription:
-      "Guía en español sobre sistemas de megafonía, audio comercial, amplificadores, altavoces y selección de equipos para proyectos comerciales.",
+      "Guía en español sobre sistemas de megafonía, disponibilidad de productos, reposición flexible y selección de equipos para proyectos comerciales en Latinoamérica.",
     canonical: "/es/sistema-de-megafonia",
     eyebrow: "Megafonía Comercial",
     h1: "Sistema de megafonía para proyectos comerciales",
     intro:
-      "Soluciones de megafonía, audio ambiental y voceo para proyectos comerciales de Latinoamérica.",
+      "Soluciones de megafonía, audio ambiental y voceo para distribuidores, integradores y proyectos comerciales en México, Colombia, Perú y otros mercados de Latinoamérica.",
     keywords: ["megafonía", "audio comercial", "100V", "voceo"],
-    trustTitle: "Pensada para distribuidores e instaladores",
+    trustTitle: "Para distribuidores e integradores de Latinoamérica",
     trustText:
-      "Revisa aplicaciones, componentes y datos necesarios para preparar una cotización clara.",
+      "Revise aplicaciones, productos seleccionados disponibles, reposición flexible y datos necesarios para preparar una cotización clara.",
     sections: [
       {
         eyebrow: "Aplicaciones",
@@ -1433,16 +1440,16 @@ export const spanishLandingPages: SeoPage[] = [
     locale: "es",
     title: "Amplificador PA para Audio Comercial",
     metaDescription:
-      "Guía en español para seleccionar amplificadores PA según potencia, entradas, zonas y aplicaciones de audio comercial.",
+      "Guía en español para seleccionar amplificadores PA según potencia, entradas, zonas, disponibilidad de modelos y aplicaciones de audio comercial.",
     canonical: "/es/amplificador-pa",
     eyebrow: "Amplificador PA",
     h1: "Amplificador PA para audio comercial",
     intro:
-      "Guía para elegir amplificadores PA para música ambiental y voceo en proyectos comerciales.",
+      "Guía para elegir amplificadores PA para música ambiental y voceo, con apoyo de producto para distribuidores e integradores comerciales.",
     keywords: ["amplificador PA", "amplificador 100V", "audio comercial", "zonas"],
     trustTitle: "Selección por potencia, entradas y aplicación",
     trustText:
-      "Define potencia, entradas y funciones de control según las necesidades del proyecto.",
+      "Defina potencia, entradas y funciones de control, y confirme opciones de suministro y reposición según las necesidades del proyecto.",
     sections: [
       {
         eyebrow: "Cómo elegir",
@@ -1480,7 +1487,7 @@ export const spanishLandingPages: SeoPage[] = [
           },
           {
             title: "Venta para distribuidores",
-            text: "Disponemos de distintas opciones de potencia y funciones para desarrollar una línea de audio comercial. Comparta su mercado y las aplicaciones de sus clientes para recibir una selección de modelos y una cotización.",
+            text: "Ofrecemos opciones de potencia y funciones para desarrollar una línea de audio comercial, con modelos seleccionados para reposición y opciones OEM según requisitos. Comparta su mercado y las aplicaciones de sus clientes para recibir una selección y cotización.",
           },
         ],
       },
@@ -1540,16 +1547,16 @@ export const spanishLandingPages: SeoPage[] = [
     locale: "es",
     title: "Altavoces para Audio Comercial y Megafonía",
     metaDescription:
-      "Guía en español sobre altavoces para audio comercial: techo, pared, columna, trompeta, jardín y aplicaciones por proyecto.",
+      "Guía en español sobre altavoces para audio comercial: techo, pared, columna, trompeta, jardín, reposición flexible y aplicaciones por proyecto.",
     canonical: "/es/altavoces-para-audio-comercial",
     eyebrow: "Altavoces Comerciales",
     h1: "Altavoces para audio comercial y megafonía",
     intro:
-      "Altavoces comerciales organizados por tipo de instalación, ambiente y necesidad de sonido.",
+      "Altavoces comerciales organizados por tipo de instalación, ambiente y necesidad de sonido para distribuidores e integradores de Latinoamérica.",
     keywords: ["altavoces comerciales", "altavoces de techo", "altavoces exteriores", "megafonía"],
     trustTitle: "El altavoz correcto depende del espacio",
     trustText:
-      "Seleccione los altavoces según el espacio, el montaje y el uso principal: música ambiental, avisos por voz o ambos. Podemos ayudarle a elegir modelos para su proyecto.",
+      "Seleccione los altavoces según el espacio, el montaje y el uso principal. Podemos ayudarle a elegir modelos, coordinar opciones OEM y planificar reposición para su proyecto.",
     sections: [
       {
         eyebrow: "Tipos de altavoces",
@@ -1845,7 +1852,7 @@ function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <strong>JUST YOU AUDIO</strong>
-          <p>Premium PA & Background Music Audio Solutions</p>
+          <p>{brandTagline}</p>
         </div>
         <div className="footer-column">
           <h3>Contact</h3>

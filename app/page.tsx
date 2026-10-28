@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import {
+  brandTagline,
   brandName,
   contactInfo,
+  coreValueLine,
   getEmailLink,
   getWhatsAppLink,
   siteUrl,
@@ -10,17 +12,17 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
+    absolute: `${brandTagline} | JUST YOU AUDIO`,
   },
   description:
-    "JUST YOU AUDIO is a China-based commercial audio and 70V/100V PA supplier supporting distributors, system integrators and project contractors.",
+    "JUST YOU AUDIO is a commercial audio and 70V/100V PA supply partner supporting distributors, system integrators, project contractors and private-label brands.",
   alternates: {
     canonical: `${siteUrl}/`,
   },
   openGraph: {
-    title: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
+    title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "JUST YOU AUDIO is a China-based commercial audio and 70V/100V PA supplier supporting distributors, system integrators and project contractors.",
+      "Commercial audio supply, flexible OEM support and project matching for distributors, integrators and contractors.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -35,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Commercial Audio & 70V/100V PA Supplier | JUST YOU AUDIO",
+    title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "JUST YOU AUDIO is a China-based commercial audio and 70V/100V PA supplier supporting distributors, system integrators and project contractors.",
+      "Commercial audio supply, flexible OEM support and project matching for distributors, integrators and contractors.",
     images: ["/images/hero-pa-system.jpg"],
   },
 };
@@ -50,7 +52,7 @@ const organizationJsonLd = {
   url: `${siteUrl}/`,
   logo: `${siteUrl}/icon.svg`,
   description:
-    "China-based commercial audio and 70V/100V PA supplier supporting distributors, system integrators and project contractors.",
+    "Commercial audio and 70V/100V PA supply partner providing reliable supply coordination, OEM support and project matching for distributors, integrators and contractors.",
 };
 
 const websiteJsonLd = {
@@ -189,32 +191,32 @@ const solutions = [
 ];
 
 const supports = [
-  ["Distributor Price", "Quantity-based quotation for dealers, wholesalers and project buyers."],
-  ["OEM Logo Support", "Logo, packaging and regional brand cooperation for long-term partners."],
-  ["Catalog & Model List", "Complete product catalog and recommended hot-selling models for market testing."],
-  ["Project Matching", "Recommend amplifier power, speaker type and quantity based on the project."],
+  ["Competitive Pricing", "Practical quotations for distributors, repeat orders and commercial audio projects."],
+  ["OEM & Private Label", "Logo, packaging and selected product customization based on order requirements."],
+  ["Catalog & Model Support", "Product catalog, model selection and popular PA options for market planning."],
+  ["Technical & Project Support", "Product matching, zoning guidance and documentation for commercial installations."],
 ];
 
 const supplyQualityCards = [
   {
-    title: "Product Matching",
+    title: "Ready Stock & Fast Dispatch",
     description:
-      "Select amplifiers, speakers and accessories according to the application, zoning and installation requirements.",
+      "Selected popular PA models available from stock for faster order fulfillment and urgent replenishment.",
   },
   {
-    title: "OEM Support",
+    title: "Flexible MOQ & Replenishment",
     description:
-      "We support logo, packaging and selected product customization based on your requirements.",
+      "Flexible order quantities and repeat-order support to help distributors manage inventory and project requirements.",
   },
   {
-    title: "Quality Coordination",
+    title: "Competitive Pricing & OEM",
     description:
-      "Confirm inspection requirements and available test documentation for the selected models and order.",
+      "Competitive sourcing through our manufacturing partners, with private-label and small-batch customization options on selected models.",
   },
   {
-    title: "Order Follow-Up",
+    title: "Technical & Project Support",
     description:
-      "Coordinate specifications, production updates, packing requirements and shipment preparation.",
+      "Product selection, system matching and technical documentation for commercial audio installations.",
   },
 ];
 
@@ -285,11 +287,10 @@ export default function Home() {
                 Commercial Audio & 70V/100V PA Solutions
               </h1>
               <p>
-                PA amplifiers, commercial speakers and accessories for
-                background music and public address projects. We provide
-                product selection, system matching and flexible OEM/ODM
-                support.
+                Professional PA amplifiers, commercial speakers and complete
+                audio solutions for distributors and system integrators.
               </p>
+              <div className="hero-value-line">{coreValueLine}</div>
               <div className="cta">
                 <a className="btn btn-primary" href="/catalog">
                   Get Product Catalog
@@ -335,28 +336,29 @@ export default function Home() {
             <div className="proof">
               <strong>For Distributors</strong>
               <p>
-                Stable category supply, flexible model selection and marketable
-                product appearance.
+                Reliable stock availability, flexible replenishment, competitive
+                pricing and a broad commercial audio product range.
               </p>
             </div>
             <div className="proof">
-              <strong>For Contractors</strong>
+              <strong>For System Integrators</strong>
               <p>
-                Project matching support based on area, quantity, installation
-                environment and application.
+                70V/100V audio solutions, product matching and practical
+                technical support for installations, upgrades and replacements.
               </p>
             </div>
             <div className="proof">
               <strong>For OEM Brands</strong>
               <p>
-                Support logo, packaging and regional product line development.
+                Private-label solutions, new model development and flexible
+                customization options based on requirements and quantities.
               </p>
             </div>
             <div className="proof">
-              <strong>For Commercial Projects</strong>
+              <strong>For Project Contractors</strong>
               <p>
-                Suitable for hotels, schools, restaurants, villas, malls and
-                outdoor public areas.
+                Product selection, system matching and practical documentation
+                for commercial audio installations.
               </p>
             </div>
           </div>
@@ -491,9 +493,8 @@ export default function Home() {
               <div className="label">Distributor Cooperation</div>
               <h2>Support for Your Distribution Business</h2>
               <p>
-                We support distributors with a broad PA product range, OEM
-                options, quantity-based quotations and practical project
-                matching.
+                Reliable supply coordination, flexible purchasing options and
+                practical support for commercial audio distribution and projects.
               </p>
               <div className="cta">
                 <a className="btn btn-secondary" href="/catalog">
@@ -569,7 +570,7 @@ export default function Home() {
         <div className="footer-inner">
           <div className="footer-brand">
             <strong>JUST YOU AUDIO</strong>
-            <p>Premium PA & Background Music Audio Solutions</p>
+            <p>{brandTagline}</p>
           </div>
           <div className="footer-column">
             <h3>Contact</h3>

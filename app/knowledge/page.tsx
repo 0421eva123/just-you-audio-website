@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { englishKnowledgePages, spanishLandingPages } from "../seo-pages";
-import { contactInfo, getEmailLink, getWhatsAppLink, siteUrl, whatsappMessages } from "../../site-config";
+import {
+  brandTagline,
+  contactInfo,
+  getEmailLink,
+  getWhatsAppLink,
+  siteUrl,
+  whatsappMessages,
+} from "../../site-config";
 
 const boardPosts = [
   {
@@ -37,12 +44,12 @@ const qas = [
   {
     question: "Can one supplier provide amplifiers, speakers and accessories together?",
     answer:
-      "Yes. JUST YOU AUDIO supports one-stop PA audio supply, including mixer amplifiers, ceiling speakers, wall speakers, column speakers, horn speakers, microphones and speaker cable accessories.",
+      "Yes. JUST YOU AUDIO coordinates a commercial PA product range, including mixer amplifiers, ceiling speakers, wall speakers, column speakers, horn speakers, microphones and speaker cable accessories.",
   },
   {
     question: "Do you support OEM branding for regional distributors?",
     answer:
-      "Yes. We support logo, packaging and model line cooperation for distributors who want to develop a stable local PA audio product range.",
+      "Yes. We support logo, packaging and selected product customization for distributors developing a local PA audio product range. Options depend on the model and order requirements.",
   },
   {
     question: "Can you help match products for hotels, schools and public areas?",
@@ -78,19 +85,19 @@ const productLines = [
 
 const companySnapshot = [
   ["Company Name", "JUST YOU AUDIO"],
-  ["Business Type", "Commercial Audio & PA System Supplier"],
+  ["Business Type", "Commercial Audio & PA Supply Partner"],
   [
     "Main Products",
     "100V / 70V Amplifiers, Ceiling Speakers, Wall Mount Speakers, Outdoor Column Speakers, Horn Speakers, PA System Accessories",
   ],
-  ["Main Markets", "Latin America, Middle East, Southeast Asia"],
+  ["Main Markets", "Mexico, Colombia, Peru and other Latin American markets; Middle East; Southeast Asia"],
   [
     "Applications",
     "Hotels, Schools, Churches, Shopping Malls, Industrial Projects, Public Spaces",
   ],
   [
     "Services",
-    "OEM coordination, product selection and system configuration guidance",
+    "Reliable supply coordination, OEM support, product selection and system configuration guidance",
   ],
 ];
 
@@ -98,7 +105,7 @@ const supplierFaqs = [
   {
     question: "Are you a manufacturer or a supplier?",
     answer:
-      "JUST YOU AUDIO is a supplier of commercial audio and 70V/100V public address products. We work with specialized manufacturing partners and coordinate product selection, OEM requirements and order follow-up for distributors, integrators and project contractors.",
+      "JUST YOU AUDIO is a commercial audio and 70V/100V PA supply partner. We work with specialized manufacturing partners and coordinate product selection, OEM requirements and order follow-up for distributors, integrators and project contractors.",
   },
   {
     question: "Do you support OEM/ODM?",
@@ -123,16 +130,16 @@ const supplierFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Public Address Knowledge Hub",
+  title: "PA Guides & Resources",
   description:
-    "Public address news, PA audio Q&A, project solution knowledge and supplier information from JUST YOU AUDIO.",
+    "PA audio guides, commercial audio Q&A, project solution knowledge and supply support information from JUST YOU AUDIO.",
   alternates: {
     canonical: "/knowledge",
   },
   openGraph: {
-    title: "Public Address Knowledge Hub | JUST YOU AUDIO",
+    title: "PA Guides & Resources | JUST YOU AUDIO",
     description:
-      "PA audio news, Q&A and solution knowledge for distributors, installers and project buyers.",
+      "PA audio guides, Q&A and project solution knowledge for distributors, integrators and project buyers.",
     images: [
       {
         url: "/images/scene-school-public.jpg",
@@ -148,9 +155,9 @@ export const metadata: Metadata = {
 const knowledgeJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "Public Address Knowledge Hub",
+  name: "PA Guides & Resources",
   description:
-    "PA audio news, public address Q&A, project solution guides and supplier information from JUST YOU AUDIO.",
+    "PA audio news, public address Q&A, project solution guides and commercial audio supply information from JUST YOU AUDIO.",
   url: `${siteUrl}/knowledge`,
   inLanguage: "en",
   mainEntity: {
@@ -195,12 +202,12 @@ export default function KnowledgePage() {
 
       <main className="knowledge-page">
         <section className="knowledge-hero">
-          <div className="label">Public Address Knowledge</div>
-          <h1>PA audio news, Q&A and project solution guide</h1>
+          <div className="label">Commercial Audio Knowledge</div>
+          <h1>PA Guides & Resources</h1>
           <p>
             A practical information board for distributors, installers and
             project buyers who need public address products, background music
-            systems and reliable sourcing support.
+            systems and supply support for commercial audio projects.
           </p>
         </section>
 
@@ -279,22 +286,23 @@ export default function KnowledgePage() {
           <aside className="factory-profile" aria-label="Supplier profile">
             <div className="factory-profile-card">
               <div className="label">Company Profile</div>
-              <h2>Commercial Audio & PA Supply for Distributors and Integrators</h2>
+              <h2>Commercial Audio & PA Supply Partner</h2>
               <p>
                 JUST YOU AUDIO supplies commercial public address and background
                 music audio products for distributors, integrators, contractors
-                and project buyers. We work with specialized manufacturing
-                partners and provide a clear contact point for product
-                selection, OEM coordination and order follow-up.
+                and private-label brands. We coordinate a reliable supply network
+                of specialized manufacturing partners, with product selection,
+                OEM support and order follow-up. Our team and manufacturing
+                partners bring industry experience dating back to 2000.
               </p>
               <div className="profile-stats">
                 <div>
-                  <strong>Full Line</strong>
-                  <span>Amplifiers, speakers, microphones and accessories</span>
+                  <strong>Supply Network</strong>
+                  <span>Commercial audio products from specialized manufacturing partners</span>
                 </div>
                 <div>
-                  <strong>OEM</strong>
-                  <span>Logo, packaging and distributor product line support</span>
+                  <strong>Flexible Support</strong>
+                  <span>OEM options, replenishment planning and product matching</span>
                 </div>
                 <div>
                   <strong>Projects</strong>
@@ -343,7 +351,7 @@ export default function KnowledgePage() {
         <div className="footer-inner">
           <div className="footer-brand">
             <strong>JUST YOU AUDIO</strong>
-            <p>Premium PA & Background Music Audio Solutions</p>
+            <p>{brandTagline}</p>
           </div>
           <div className="footer-column">
             <h3>Contact</h3>

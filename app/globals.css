@@ -189,6 +189,16 @@ img {
   font-size: 18px;
 }
 
+.hero-value-line {
+  max-width: 720px;
+  margin-top: 16px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
 .cta {
   flex-wrap: wrap;
   gap: 14px;
@@ -3707,6 +3717,11 @@ img {
 
   .hero h1 {
     font-size: 40px;
+  }
+
+  .hero-value-line {
+    margin-right: 110px;
+    font-size: 12.5px;
   }
 
   .buyer-bar,

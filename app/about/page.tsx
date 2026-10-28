@@ -1,25 +1,31 @@
 import type { Metadata } from "next";
-import { contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../../site-config";
+import {
+  brandTagline,
+  contactInfo,
+  getEmailLink,
+  getWhatsAppLink,
+  whatsappMessages,
+} from "../../site-config";
 import SolutionCaseSwitcher from "./SolutionCaseSwitcher";
 
 const supportTags = ["OEM / ODM", "QUALITY CONTROL", "PROJECT SUPPORT"];
 
 const distributorSupportItems = [
   {
-    title: "OEM / ODM",
-    text: "Private label, logo and product customization",
+    title: "OEM & Private Label",
+    text: "Logo, packaging and selected product customization based on requirements.",
   },
   {
-    title: "Stable Supply",
-    text: "Coordinated lead times and consistent product availability",
+    title: "Ready Stock & Replenishment",
+    text: "Selected popular models and flexible repeat-order support for local markets.",
   },
   {
-    title: "Quality Control",
-    text: "Product inspection and consistent quality standards",
+    title: "Quality Coordination",
+    text: "Inspection requirements and available documentation for selected models.",
   },
   {
-    title: "Project Matching",
-    text: "Product selection, zoning and system configuration guidance",
+    title: "Technical & Project Support",
+    text: "Product selection, zoning and system configuration guidance.",
   },
 ];
 
@@ -59,16 +65,16 @@ const certificationItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "About JUST YOU AUDIO | Commercial Audio & PA Supplier",
+  title: "About JUST YOU AUDIO | Commercial Audio & PA Supply Partner",
   description:
-    "Learn about JUST YOU AUDIO, a China-based commercial audio and 70V/100V PA supplier supporting distributors, integrators and project contractors.",
+    "Learn about JUST YOU AUDIO, a commercial audio and 70V/100V PA supply partner supporting distributors, integrators, project contractors and private-label brands.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About JUST YOU AUDIO | Commercial Audio & PA Supplier",
+    title: "About JUST YOU AUDIO | Commercial Audio & PA Supply Partner",
     description:
-      "China-based commercial audio and 70V/100V PA supplier supporting distributors, integrators and project contractors.",
+      "Commercial audio supply, OEM support and project matching for distributors, integrators and contractors.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -111,11 +117,11 @@ export default function AboutPage() {
           <div className="about-profile-layout">
             <div className="about-profile-copy">
               <div className="label">JUST YOU AUDIO</div>
-              <h1>Commercial Audio & 70V/100V PA Systems</h1>
-              <h2>Professional Solutions for Commercial & Public Address Projects</h2>
+              <h1>Commercial Audio & 70V/100V PA Supply Partner</h1>
+              <h2>Supply Support for Commercial & Public Address Projects</h2>
               <p>
-                70V/100V amplifiers, commercial speakers and complete PA
-                solutions for indoor and outdoor projects.
+                70V/100V amplifiers, commercial speakers and complete audio
+                solutions for distributors, system integrators and project contractors.
               </p>
               <div className="about-support-tags" aria-label="JUST YOU AUDIO support">
                 {supportTags.map((tag) => (
@@ -123,8 +129,10 @@ export default function AboutPage() {
                 ))}
               </div>
               <p className="about-profile-note">
-                We provide commercial audio products, quality control and
-                flexible OEM/ODM support for your project requirements.
+                We coordinate reliable supply through a network of specialized
+                manufacturing partners, with quality coordination, flexible
+                OEM/ODM options and practical project support. Our team and
+                manufacturing partners bring industry experience dating back to 2000.
               </p>
             </div>
             <div className="about-profile-image-placeholder" aria-label="Company and product image placeholder">
@@ -201,7 +209,7 @@ export default function AboutPage() {
               Applicable certificates, test reports and declarations are
               available upon request. Coverage varies by product model.
             </p>
-            <small>Manufacturer details are withheld for commercial confidentiality.</small>
+            <small>Specific manufacturing partner details are withheld for commercial confidentiality.</small>
           </div>
         </section>
 
@@ -230,7 +238,7 @@ export default function AboutPage() {
         <div className="footer-inner">
           <div className="footer-brand">
             <strong>JUST YOU AUDIO</strong>
-            <p>Premium PA & Background Music Audio Solutions</p>
+            <p>{brandTagline}</p>
           </div>
           <div className="footer-column">
             <h3>Contact</h3>

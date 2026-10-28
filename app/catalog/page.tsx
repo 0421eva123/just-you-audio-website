@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../../site-config";
+import { brandTagline, contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../../site-config";
 
 const catalogMessage =
   "Hello, I am interested in your PA audio products. Could you send me your full catalog, model list and distributor price?";
@@ -128,7 +128,7 @@ export default function CatalogPage() {
         <div className="footer-inner">
           <div className="footer-brand">
             <strong>JUST YOU AUDIO</strong>
-            <p>Premium PA & Background Music Audio Solutions</p>
+            <p>{brandTagline}</p>
           </div>
           <div className="footer-column">
             <h3>Contact</h3>

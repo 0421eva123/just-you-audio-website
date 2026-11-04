@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     absolute: `${brandTagline} | JUST YOU AUDIO`,
   },
   description:
-    "JUST YOU AUDIO is a commercial audio and 70V/100V PA supply partner supporting distributors, system integrators, project contractors and private-label brands.",
+    "JUST YOU AUDIO provides authorized international sales, OEM/ODM coordination, wholesale PA supply and engineering support for commercial audio distributors and project teams.",
   alternates: {
     canonical: `${siteUrl}/`,
   },
   openGraph: {
     title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "Commercial audio supply, flexible OEM support and project matching for distributors, integrators and contractors.",
+      "Authorized international sales, OEM/ODM coordination and commercial PA support for distributors, integrators and contractors.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "Commercial audio supply, flexible OEM support and project matching for distributors, integrators and contractors.",
+      "Authorized international sales, OEM/ODM coordination and commercial PA support for distributors, integrators and contractors.",
     images: ["/images/hero-pa-system.jpg"],
   },
 };
@@ -52,7 +52,7 @@ const organizationJsonLd = {
   url: `${siteUrl}/`,
   logo: `${siteUrl}/icon.svg`,
   description:
-    "Commercial audio and 70V/100V PA supply partner providing reliable supply coordination, OEM support and project matching for distributors, integrators and contractors.",
+    "Authorized international sales and commercial audio manufacturing support for 70V/100V PA products, including OEM/ODM coordination, quality assurance coordination and engineering support.",
 };
 
 const websiteJsonLd = {
@@ -95,7 +95,7 @@ const featuredProducts = [
       "Hi Eva, I am interested in your frameless ceiling speakers for a commercial audio project. Please send specifications and a quotation. Quantity: __.",
   },
   {
-    title: "Wall Mount Speaker",
+    title: "Wall-Mounted Speaker",
     description:
       "Modern indoor background music speaker with clear voice and elegant appearance.",
     specs: ["Indoor Commercial Use", "Black / White", "Clear Voice", "100V Optional"],
@@ -143,12 +143,12 @@ const featuredProducts = [
 const categories = [
   ["PA Amplifiers", "Mixer amplifier, power amplifier, zone amplifier and digital amplifier."],
   ["Ceiling Speakers", "Frameless, grille, high-power and premium background music models."],
-  ["Wall Speakers", "Commercial wall speakers for indoor music and paging applications."],
-  ["Column Speakers", "Indoor and outdoor column speakers for voice coverage and public areas."],
+  ["Wall-Mounted Speakers", "Commercial wall speakers for indoor music and paging applications."],
+  ["Outdoor Waterproof Sound Columns", "Indoor and outdoor sound columns for voice coverage and public areas."],
   ["Horn Speakers", "Long-distance voice broadcast for warehouses, schools and factories."],
-  ["Lawn Speakers", "Outdoor decorative speakers for gardens, resorts and villa projects."],
+  ["Lawn & Garden Speakers", "Outdoor decorative speakers for gardens, resorts and villa projects."],
   ["IP Audio Systems", "IP amplifiers, paging microphone and network broadcast devices."],
-  ["Microphones & Cable", "Wireless microphones, paging microphones and speaker cable accessories."],
+  ["Microphones, Cable & Accessories", "Supporting products for system matching, installation and wholesale project supply."],
 ];
 
 const solutions = [
@@ -191,32 +191,42 @@ const solutions = [
 ];
 
 const supports = [
-  ["Competitive Pricing", "Practical quotations for distributors, repeat orders and commercial audio projects."],
-  ["OEM & Private Label", "Logo, packaging and selected product customization based on order requirements."],
-  ["Catalog & Model Support", "Product catalog, model selection and popular PA options for market planning."],
-  ["Technical & Project Support", "Product matching, zoning guidance and documentation for commercial installations."],
+  ["Wholesale & Project Supply", "Commercial PA product lines, selected stock support and repeat-order planning for distributors and projects."],
+  ["OEM/ODM Solutions", "Private-label, packaging and selected product customization reviewed by model and order requirements."],
+  ["Authorized Sales Coordination", "International sales support for authorized manufacturing product lines, with quotation and order follow-up."],
+  ["Engineering Support", "Product matching, zoning guidance and technical documentation for commercial installations."],
 ];
 
 const supplyQualityCards = [
   {
-    title: "Ready Stock & Fast Dispatch",
+    title: "Manufacturing Capabilities",
     description:
-      "Selected popular PA models available from stock for faster order fulfillment and urgent replenishment.",
+      "Authorized access to specialized PA manufacturing capabilities across amplifiers, speakers and system accessories.",
   },
   {
-    title: "Flexible MOQ & Replenishment",
+    title: "Production & Assembly",
     description:
-      "Flexible order quantities and repeat-order support to help distributors manage inventory and project requirements.",
+      "Model-specific production and assembly arrangements are coordinated with the relevant authorized manufacturer.",
   },
   {
-    title: "Competitive Pricing & OEM",
+    title: "Quality Control & Testing",
     description:
-      "Competitive sourcing through our manufacturing partners, with private-label and small-batch customization options on selected models.",
+      "Inspection requirements and available product testing documentation are confirmed by model and order.",
   },
   {
-    title: "Technical & Project Support",
+    title: "OEM/ODM Customization",
     description:
-      "Product selection, system matching and technical documentation for commercial audio installations.",
+      "Logo, packaging and selected product customization options are reviewed against model and order requirements.",
+  },
+  {
+    title: "Engineering Support",
+    description:
+      "Product selection, 70V/100V system matching and technical documentation for commercial installations.",
+  },
+  {
+    title: "Wholesale Production & Delivery",
+    description:
+      "Wholesale order planning, packing requirements and delivery coordination for selected models.",
   },
 ];
 
@@ -260,17 +270,17 @@ export default function Home() {
             JUST YOU <span>AUDIO</span>
           </div>
           <div className="links">
-            <a href="#factory">Supply & Quality</a>
+            <a href="#factory">Manufacturing & Quality</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
           </div>
           <div className="nav-actions">
             <a className="nav-btn" href="/catalog">
-              Request Catalog
+              Request Distributor Pricing
             </a>
-            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.englishQuotation)}>
-              Ask Quotation
+            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
+              Submit Project Requirements
             </a>
           </div>
         </div>
@@ -284,33 +294,37 @@ export default function Home() {
                 For Distributors, Integrators & Project Contractors
               </div>
               <h1>
-                Commercial Audio & 70V/100V PA Solutions
+                Commercial Audio & 70V/100V PA Systems
               </h1>
               <p>
-                Professional PA amplifiers, commercial speakers and complete
-                audio solutions for distributors and system integrators.
+                Authorized international sales for commercial audio manufacturing
+                partners, providing wholesale PA supply, OEM/ODM solutions and
+                engineering support for distributors, integrators and project contractors.
               </p>
+              <div className="hero-manufacturing-line">
+                Manufacturing · International Sales · OEM/ODM
+              </div>
               <div className="hero-value-line">{coreValueLine}</div>
               <div className="cta">
                 <a className="btn btn-primary" href="/catalog">
-                  Get Product Catalog
+                  Request Distributor Pricing
                 </a>
                 <a className="btn btn-gold" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
-                  Discuss Your Project
+                  Submit Project Requirements
                 </a>
               </div>
               <div className="buyer-bar">
                 <div className="buyer-item">
-                  <strong>System Supply</strong>
-                  <span>Amplifiers, speakers and project accessories.</span>
+                  <strong>Manufacturing Support</strong>
+                  <span>Authorized product-line coordination across specialized PA manufacturing capabilities.</span>
                 </div>
                 <div className="buyer-item">
-                  <strong>OEM Support</strong>
-                  <span>Branding and packaging options for selected models.</span>
+                  <strong>OEM/ODM Solutions</strong>
+                  <span>Logo, packaging and selected customization options subject to model and order requirements.</span>
                 </div>
                 <div className="buyer-item">
-                  <strong>Project Matching</strong>
-                  <span>Product selection and configuration guidance.</span>
+                  <strong>Engineering Support</strong>
+                  <span>70V/100V product matching and documentation for commercial projects.</span>
                 </div>
               </div>
             </div>
@@ -336,29 +350,29 @@ export default function Home() {
             <div className="proof">
               <strong>For Distributors</strong>
               <p>
-                Reliable stock availability, flexible replenishment, competitive
-                pricing and a broad commercial audio product range.
+                Wholesale product range, selected stock support, flexible
+                replenishment and distributor pricing on request.
               </p>
             </div>
             <div className="proof">
               <strong>For System Integrators</strong>
               <p>
-                70V/100V audio solutions, product matching and practical
-                technical support for installations, upgrades and replacements.
+                70V/100V system matching, technical documentation and product
+                coordination for installations, upgrades and replacements.
               </p>
             </div>
             <div className="proof">
               <strong>For OEM Brands</strong>
               <p>
-                Private-label solutions, new model development and flexible
-                customization options based on requirements and quantities.
+                Private-label, logo, packaging and selected product customization
+                subject to model and order requirements.
               </p>
             </div>
             <div className="proof">
               <strong>For Project Contractors</strong>
               <p>
-                Product selection, system matching and practical documentation
-                for commercial audio installations.
+                Complete PA product supply, system matching and engineering
+                support for commercial installations.
               </p>
             </div>
           </div>
@@ -408,12 +422,12 @@ export default function Home() {
         <section className="section small-top" id="categories">
           <div className="section-head">
             <div>
-              <div className="label">Complete Category Supply</div>
-              <h2>More product types for one-stop sourcing</h2>
+              <div className="label">Wholesale Product Range</div>
+              <h2>Commercial Audio Product Range for Wholesale & Projects</h2>
             </div>
             <p>
-              Build a complete local product lineup from one supplier, so you
-              can quote more projects and expand beyond a single product order.
+              Build a commercial PA range across amplifiers, speakers and
+              accessories for repeat supply, OEM programs and project quotations.
             </p>
           </div>
           <div className="category-grid">
@@ -493,12 +507,13 @@ export default function Home() {
               <div className="label">Distributor Cooperation</div>
               <h2>Support for Your Distribution Business</h2>
               <p>
-                Reliable supply coordination, flexible purchasing options and
-                practical support for commercial audio distribution and projects.
+                Authorized manufacturing sales coordination, flexible wholesale
+                purchasing and practical support for long-term distribution and
+                project supply.
               </p>
               <div className="cta">
                 <a className="btn btn-secondary" href="/catalog">
-                  Get Catalog & Distributor Price
+                  Request Distributor Pricing
                 </a>
               </div>
             </div>
@@ -517,13 +532,13 @@ export default function Home() {
         <section className="section" id="factory">
           <div className="section-head">
             <div>
-              <div className="label">Supply & Quality</div>
-              <h2>Product & Order Support</h2>
+              <div className="label">Manufacturing & Quality Assurance</div>
+              <h2>Manufacturing Support for Wholesale & Projects</h2>
             </div>
             <p>
-              From product selection to order preparation, we coordinate
-              specifications, customization and quality requirements for your
-              selected models.
+              Through authorized manufacturing sales relationships, we coordinate
+              production capability, quality requirements, OEM/ODM options and
+              delivery preparation for selected commercial audio models.
             </p>
           </div>
           <div className="supply-quality-grid">
@@ -540,26 +555,26 @@ export default function Home() {
         <section className="lead-section" id="contact">
           <div className="lead-box">
             <div>
-              <h2>Get full catalog, model list and distributor price.</h2>
+              <h2>Request distributor pricing, OEM/ODM support or project matching.</h2>
               <p>
-                Send us your target market, product category or project details.
-                We will recommend suitable PA amplifiers, speakers and
-                accessories for your business or project quotation.
+                Share your target market, product category, estimated quantity or
+                project requirements. We will coordinate suitable commercial PA
+                models and a quotation for your request.
               </p>
             </div>
             <div className="lead-actions">
               <a className="gold-action" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
-                Contact on WhatsApp <span>→</span>
+                Submit Project Requirements <span>→</span>
               </a>
               <a href="/catalog">
-                Get Catalog & Distributor Price <span>→</span>
+                Request Distributor Pricing <span>→</span>
               </a>
-              <a href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
-                Ask for Project Quotation <span>→</span>
+              <a href={getWhatsAppLink(whatsappMessages.oemQuotation)}>
+                Request OEM/ODM Quote <span>→</span>
               </a>
               <small>
-                Share your target market, quantity and application. We will
-                reply with suitable models and distributor pricing.
+                Share your target market, quantity and application. Pricing is
+                provided by quotation only.
               </small>
             </div>
           </div>

@@ -85,7 +85,7 @@ const productLines = [
 
 const companySnapshot = [
   ["Company Name", "JUST YOU AUDIO"],
-  ["Business Type", "Commercial Audio & PA Supply Partner"],
+  ["Business Type", "Authorized International Sales & Commercial Audio Manufacturing Support"],
   [
     "Main Products",
     "100V / 70V Amplifiers, Ceiling Speakers, Wall Mount Speakers, Outdoor Column Speakers, Horn Speakers, PA System Accessories",
@@ -97,7 +97,7 @@ const companySnapshot = [
   ],
   [
     "Services",
-    "Reliable supply coordination, OEM support, product selection and system configuration guidance",
+    "Authorized international sales, OEM/ODM coordination, quality assurance coordination, product selection and engineering support",
   ],
 ];
 
@@ -105,12 +105,12 @@ const supplierFaqs = [
   {
     question: "Are you a manufacturer or a supplier?",
     answer:
-      "JUST YOU AUDIO is a commercial audio and 70V/100V PA supply partner. We work with specialized manufacturing partners and coordinate product selection, OEM requirements and order follow-up for distributors, integrators and project contractors.",
+      "JUST YOU AUDIO works under authorized international sales arrangements with specialized commercial audio manufacturers. We coordinate wholesale supply, OEM/ODM requests and order follow-up for distributors, integrators and project contractors.",
   },
   {
     question: "Do you support OEM/ODM?",
     answer:
-      "Yes. Logo, packaging and selected product customization can be arranged with the relevant manufacturing partner. Available options, minimum order quantities and lead times are confirmed for each model and order.",
+      "Yes. Logo, packaging and selected product customization can be coordinated with the relevant authorized manufacturer. Available options, minimum order quantities and lead times are confirmed for each model and order.",
   },
   {
     question: "What is your warranty?",
@@ -132,14 +132,14 @@ const supplierFaqs = [
 export const metadata: Metadata = {
   title: "PA Guides & Resources",
   description:
-    "PA audio guides, commercial audio Q&A, project solution knowledge and supply support information from JUST YOU AUDIO.",
+    "PA audio guides, commercial audio Q&A, project solution knowledge and authorized international sales support information from JUST YOU AUDIO.",
   alternates: {
     canonical: "/knowledge",
   },
   openGraph: {
     title: "PA Guides & Resources | JUST YOU AUDIO",
     description:
-      "PA audio guides, Q&A and project solution knowledge for distributors, integrators and project buyers.",
+      "PA audio guides, Q&A and commercial PA knowledge for distributors, integrators and project buyers.",
     images: [
       {
         url: "/images/scene-school-public.jpg",
@@ -157,7 +157,7 @@ const knowledgeJsonLd = {
   "@type": "CollectionPage",
   name: "PA Guides & Resources",
   description:
-    "PA audio news, public address Q&A, project solution guides and commercial audio supply information from JUST YOU AUDIO.",
+    "PA audio news, public address Q&A, project solution guides and commercial audio manufacturing support information from JUST YOU AUDIO.",
   url: `${siteUrl}/knowledge`,
   inLanguage: "en",
   mainEntity: {
@@ -184,17 +184,17 @@ export default function KnowledgePage() {
             JUST YOU <span>AUDIO</span>
           </a>
           <div className="links">
-            <a href="/#factory">Supply & Quality</a>
+            <a href="/#factory">Manufacturing & Quality</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
           </div>
           <div className="nav-actions">
             <a className="nav-btn" href="/catalog">
-              Request Catalog
+              Request Distributor Pricing
             </a>
-            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.englishQuotation)}>
-              Ask Quotation
+            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
+              Submit Project Requirements
             </a>
           </div>
         </div>
@@ -286,27 +286,27 @@ export default function KnowledgePage() {
           <aside className="factory-profile" aria-label="Supplier profile">
             <div className="factory-profile-card">
               <div className="label">Company Profile</div>
-              <h2>Commercial Audio & PA Supply Partner</h2>
+              <h2>Authorized Manufacturing Sales & International Support</h2>
               <p>
-                JUST YOU AUDIO supplies commercial public address and background
-                music audio products for distributors, integrators, contractors
-                and private-label brands. We coordinate a reliable supply network
-                of specialized manufacturing partners, with product selection,
-                OEM support and order follow-up. Our team and manufacturing
-                partners bring industry experience dating back to 2000.
+                JUST YOU AUDIO works under authorized international sales
+                arrangements with specialized commercial audio manufacturers. We
+                support wholesale PA supply, OEM/ODM coordination, product
+                selection and engineering guidance for distributors, integrators,
+                contractors and private-label brands. Our team and authorized
+                manufacturing partners bring industry experience dating back to 2000.
               </p>
               <div className="profile-stats">
                 <div>
-                  <strong>Supply Network</strong>
-                  <span>Commercial audio products from specialized manufacturing partners</span>
+                  <strong>Manufacturing Support</strong>
+                  <span>Authorized access to specialized commercial audio manufacturing capabilities</span>
                 </div>
                 <div>
-                  <strong>Flexible Support</strong>
-                  <span>OEM options, replenishment planning and product matching</span>
+                  <strong>International Sales</strong>
+                  <span>Wholesale quotation coordination, OEM/ODM support and order follow-up</span>
                 </div>
                 <div>
-                  <strong>Projects</strong>
-                  <span>Hotels, schools, villas, restaurants and public areas</span>
+                  <strong>Engineering Support</strong>
+                  <span>70V/100V product matching and documentation for commercial projects</span>
                 </div>
               </div>
               <dl className="manufacturer-snapshot">
@@ -318,7 +318,7 @@ export default function KnowledgePage() {
                 ))}
               </dl>
               <a className="btn btn-gold profile-button" href="/catalog">
-                Request Full Catalog
+                Request Distributor Pricing
               </a>
             </div>
 

@@ -1,5 +1,6 @@
 export const brandName = "JUST YOU AUDIO";
-export const brandTagline = "Commercial Audio & PA Supply Partner";
+export const brandTagline =
+  "Commercial Audio Manufacturing Support & International Sales";
 export const coreValueLine =
   "Ready Stock · Flexible MOQ · Competitive Pricing · OEM & Project Support";
 export const siteUrl = "https://www.justyouaudio.com";
@@ -21,6 +22,8 @@ export const whatsappMessages = {
     "Hi Eva, I would like a quotation for commercial audio and PA products. My country: __. Product or project: __. Quantity: __.",
   projectConsultation:
     "Hi Eva, I need help selecting a commercial PA system. Project type: __. Area: __. Number of zones: __.",
+  oemQuotation:
+    "Hi Eva, I would like an OEM/ODM quote for commercial audio products. Brand requirements: __. Product category: __. Estimated quantity: __.",
   spanishQuotation:
     "Hola Eva, quisiera una cotización de productos de audio comercial y megafonía. Mi país: __. Producto o proyecto: __. Cantidad: __.",
 };

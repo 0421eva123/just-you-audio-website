@@ -2,26 +2,26 @@ import type { Metadata } from "next";
 import { brandTagline, contactInfo, getEmailLink, getWhatsAppLink, whatsappMessages } from "../../site-config";
 
 const catalogMessage =
-  "Hello, I am interested in your PA audio products. Could you send me your full catalog, model list and distributor price?";
+  "Hello, I am interested in your commercial audio products. Could you send distributor pricing, available models and wholesale ordering information?";
 
 const reasons = [
-  "Complete PA audio product range for distributors and project contractors",
-  "PA amplifiers, ceiling speakers, wall speakers, column speakers, horn speakers and accessories",
-  "OEM logo and packaging support for regional distributors",
-  "Project matching support for hotels, restaurants, schools, villas and public areas",
+  "Commercial PA product range for distributors, OEM brands and project contractors",
+  "PA amplifiers, ceiling speakers, wall-mounted speakers, sound columns, horn speakers and accessories",
+  "OEM/ODM logo, packaging and selected product customization options",
+  "Engineering support for hotels, restaurants, schools, villas and public areas",
 ];
 
 export const metadata: Metadata = {
-  title: "Get Product Catalog & Distributor Price",
+  title: "Request Distributor Pricing & OEM/ODM Quote",
   description:
-    "Download a quick product overview or request the full JUST YOU AUDIO catalog, model list and distributor price.",
+    "Download a quick product overview or request JUST YOU AUDIO distributor pricing, OEM/ODM support and a commercial PA project quotation.",
   alternates: {
     canonical: "/catalog",
   },
   openGraph: {
-    title: "Get Product Catalog & Distributor Price | JUST YOU AUDIO",
+    title: "Request Distributor Pricing & OEM/ODM Quote | JUST YOU AUDIO",
     description:
-      "Request the JUST YOU AUDIO catalog, model list and distributor price by WhatsApp or email.",
+      "Request JUST YOU AUDIO catalog access, wholesale pricing, OEM/ODM support and commercial PA project quotations.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -43,17 +43,17 @@ export default function CatalogPage() {
             JUST YOU <span>AUDIO</span>
           </a>
           <div className="links">
-            <a href="/#factory">Supply & Quality</a>
+            <a href="/#factory">Manufacturing & Quality</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
           </div>
           <div className="nav-actions">
             <a className="nav-btn" href="/catalog">
-              Request Catalog
+              Request Distributor Pricing
             </a>
-            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.englishQuotation)}>
-              Ask Quotation
+            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
+              Submit Project Requirements
             </a>
           </div>
         </div>
@@ -62,10 +62,10 @@ export default function CatalogPage() {
       <main className="catalog-page">
         <section className="catalog-hero">
           <div className="label">Catalog Request</div>
-          <h1>Get Product Catalog & Distributor Price</h1>
+          <h1>Request Catalog, Distributor Pricing & OEM/ODM Quote</h1>
           <p>
-            Download a quick product overview or contact us to receive the full
-            model list, distributor price and project quotation.
+            Download a quick product overview or submit a B2B inquiry for the
+            full model list, distributor pricing, OEM/ODM support and project quotation.
           </p>
         </section>
 
@@ -91,11 +91,12 @@ export default function CatalogPage() {
 
           <article className="catalog-card catalog-card-dark">
             <div>
-              <span className="catalog-card-kicker">Full Distributor Support</span>
-              <h2>Need Full Model List & Distributor Price?</h2>
+              <span className="catalog-card-kicker">Wholesale & OEM/ODM</span>
+              <h2>Request Distributor Pricing & OEM/ODM Quote</h2>
               <p>
-                Send us your market, product category and quantity. We will send
-                the latest catalog, model list and distributor price by WhatsApp.
+                Share your target market, product category, estimated quantity
+                and branding requirements. We will confirm available models,
+                customization options and a quotation by WhatsApp.
               </p>
             </div>
             <a
@@ -104,7 +105,15 @@ export default function CatalogPage() {
               rel="noreferrer"
               target="_blank"
             >
-              Contact on WhatsApp
+              Request Distributor Pricing
+            </a>
+            <a
+              className="catalog-text-link"
+              href={getWhatsAppLink(whatsappMessages.oemQuotation)}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Request OEM/ODM Quote
             </a>
           </article>
         </section>

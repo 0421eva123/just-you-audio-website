@@ -1817,10 +1817,7 @@ function RelatedGuides({ page }: { page: SeoPage }) {
   );
 }
 
-function Navigation({ locale = "en" }: { locale?: SeoPage["locale"] }) {
-  const quotationMessage =
-    locale === "es" ? whatsappMessages.spanishQuotation : whatsappMessages.englishQuotation;
-
+function Navigation() {
   return (
     <nav className="nav">
       <div className="nav-inner">
@@ -1828,17 +1825,17 @@ function Navigation({ locale = "en" }: { locale?: SeoPage["locale"] }) {
           JUST YOU <span>AUDIO</span>
         </a>
         <div className="links">
-          <a href="/#factory">Supply & Quality</a>
+          <a href="/#factory">Manufacturing & Quality</a>
           <a href="/about">About Us</a>
           <a href="/knowledge">Knowledge</a>
           <a href="/catalog">Catalog</a>
         </div>
         <div className="nav-actions">
           <a className="nav-btn" href="/catalog">
-            Request Catalog
+            Request Distributor Pricing
           </a>
-          <a className="nav-btn dark" href={getWhatsAppLink(quotationMessage)}>
-            Ask Quotation
+          <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
+            Submit Project Requirements
           </a>
         </div>
       </div>
@@ -2088,7 +2085,7 @@ function ArticleContentPage({ page }: { page: SeoPage }) {
   return (
     <>
       <SeoStructuredData page={page} />
-      <Navigation locale={page.locale} />
+      <Navigation />
 
       <main className="knowledge-page" lang={page.locale === "es" ? "es-419" : "en"}>
         <Breadcrumbs page={page} />
@@ -2164,7 +2161,7 @@ export function SeoContentPage({ page }: { page: SeoPage }) {
   return (
     <>
       <SeoStructuredData page={page} />
-      <Navigation locale={page.locale} />
+      <Navigation />
 
       <main className="knowledge-page" lang={page.locale === "es" ? "es-419" : "en"}>
         <Breadcrumbs page={page} />

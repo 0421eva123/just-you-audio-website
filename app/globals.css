@@ -199,6 +199,17 @@ img {
   line-height: 1.5;
 }
 
+.hero-manufacturing-line {
+  max-width: 720px;
+  margin-top: 17px;
+  color: #45464b;
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
 .cta {
   flex-wrap: wrap;
   gap: 14px;
@@ -448,7 +459,7 @@ img {
 .supply-quality-grid {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .supply-quality-card {
@@ -1696,7 +1707,7 @@ img {
 .about-distributor-cards {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .about-distributor-cards article {
@@ -1953,9 +1964,17 @@ img {
 }
 
 .about-certification-grid p {
-  padding: 0 18px 20px;
+  padding: 0 18px 8px;
   color: var(--muted);
   font-size: 13px;
+}
+
+.about-certification-grid small {
+  display: block;
+  padding: 0 18px 20px;
+  color: #77736d;
+  font-size: 12px;
+  line-height: 1.55;
 }
 
 .about-certification-notes {
@@ -2390,6 +2409,18 @@ img {
 .catalog-button {
   width: fit-content;
   margin-top: 34px;
+}
+
+.catalog-text-link {
+  width: fit-content;
+  margin-top: 14px;
+  color: var(--gold2);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.catalog-text-link:hover {
+  color: #fff;
 }
 
 .catalog-proof {

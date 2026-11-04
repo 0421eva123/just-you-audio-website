@@ -8,31 +8,28 @@ import {
 } from "../../site-config";
 import SolutionCaseSwitcher from "./SolutionCaseSwitcher";
 
-const supportTags = ["OEM / ODM", "QUALITY CONTROL", "PROJECT SUPPORT"];
+const supportTags = ["MANUFACTURING SUPPORT", "INTERNATIONAL SALES", "OEM / ODM"];
 
 const distributorSupportItems = [
   {
-    title: "OEM & Private Label",
-    text: "Logo, packaging and selected product customization based on requirements.",
+    title: "Manufacturing",
+    text: "Authorized access to specialized commercial audio manufacturing capabilities for selected PA product lines.",
   },
   {
-    title: "Ready Stock & Replenishment",
-    text: "Selected popular models and flexible repeat-order support for local markets.",
+    title: "International Sales",
+    text: "Overseas sales authorization, wholesale quotation coordination and order follow-up for distributors and OEM brands.",
   },
   {
-    title: "Quality Coordination",
-    text: "Inspection requirements and available documentation for selected models.",
-  },
-  {
-    title: "Technical & Project Support",
-    text: "Product selection, zoning and system configuration guidance.",
+    title: "Engineering Support",
+    text: "70V/100V product selection, system matching and documentation for project requirements.",
   },
 ];
 
 const certificationItems = [
   {
     title: "RoHS Compliance – Speaker",
-    note: "Issued by POCE",
+    note: "Issuer: Shenzhen POCE Technology Co., Ltd. · Certificate holder: redacted on the displayed document.",
+    scope: "Applicable product: Speaker, model CLS-615 (including listed annex models).",
     image: "/images/about/rohs-speaker.webp",
     imageAlt: "RoHS Compliance certificate for speaker",
     imageHeight: 1333,
@@ -40,7 +37,8 @@ const certificationItems = [
   },
   {
     title: "RoHS Compliance – Amplifier",
-    note: "Issued by POCE",
+    note: "Issuer: Shenzhen POCE Technology Co., Ltd. · Certificate holder: redacted on the displayed document.",
+    scope: "Applicable product: Amplifier, model F-6250 (including listed annex models).",
     image: "/images/about/rohs-amplifier.webp",
     imageAlt: "RoHS Compliance certificate for amplifier",
     imageHeight: 1333,
@@ -48,7 +46,8 @@ const certificationItems = [
   },
   {
     title: "ISO 9001 Quality Management System",
-    note: "Manufacturing Partner",
+    note: "Certificate holder: redacted on the displayed document. Issuer: Shandong Saige Certification Technology Co., Ltd.",
+    scope: "Applicable scope: Production and sales of audio power amplifier.",
     image: "/images/about/iso9001.webp",
     imageAlt: "ISO 9001 Quality Management System certificate",
     imageHeight: 1454,
@@ -56,7 +55,8 @@ const certificationItems = [
   },
   {
     title: "EMC Compliance – Speaker",
-    note: "CE / EMC Directive 2014/30/EU",
+    note: "Certificate holder: redacted on the displayed document. Issuer: Guangdong Zhonghan Testing Technology Co., Ltd.",
+    scope: "Applicable product: Speaker, listed models including MD-65S23-04.",
     image: "/images/about/emc-speaker.webp",
     imageAlt: "EMC Compliance certificate for speaker",
     imageHeight: 1359,
@@ -65,16 +65,16 @@ const certificationItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "About JUST YOU AUDIO | Commercial Audio & PA Supply Partner",
+  title: "About JUST YOU AUDIO | Authorized International Sales & Manufacturing Support",
   description:
-    "Learn about JUST YOU AUDIO, a commercial audio and 70V/100V PA supply partner supporting distributors, integrators, project contractors and private-label brands.",
+    "Learn how JUST YOU AUDIO supports authorized international sales, OEM/ODM coordination and commercial PA supply for distributors, integrators and project contractors.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About JUST YOU AUDIO | Commercial Audio & PA Supply Partner",
+    title: "About JUST YOU AUDIO | International Sales & Manufacturing Support",
     description:
-      "Commercial audio supply, OEM support and project matching for distributors, integrators and contractors.",
+      "Authorized international sales, OEM/ODM coordination and commercial PA support for distributors, integrators and contractors.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -96,17 +96,17 @@ export default function AboutPage() {
             JUST YOU <span>AUDIO</span>
           </a>
           <div className="links">
-            <a href="/#factory">Supply & Quality</a>
+            <a href="/#factory">Manufacturing & Quality</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
           </div>
           <div className="nav-actions">
             <a className="nav-btn" href="/catalog">
-              Request Catalog
+              Request Distributor Pricing
             </a>
-            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.englishQuotation)}>
-              Ask Quotation
+            <a className="nav-btn dark" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
+              Submit Project Requirements
             </a>
           </div>
         </div>
@@ -117,11 +117,12 @@ export default function AboutPage() {
           <div className="about-profile-layout">
             <div className="about-profile-copy">
               <div className="label">JUST YOU AUDIO</div>
-              <h1>Commercial Audio & 70V/100V PA Supply Partner</h1>
-              <h2>Supply Support for Commercial & Public Address Projects</h2>
+              <h1>Authorized International Sales for Commercial Audio</h1>
+              <h2>70V/100V PA Systems · OEM/ODM · Wholesale & Project Supply</h2>
               <p>
-                70V/100V amplifiers, commercial speakers and complete audio
-                solutions for distributors, system integrators and project contractors.
+                Commercial PA amplifiers, speakers and complete 70V/100V audio
+                solutions for wholesalers, distributors, OEM brands, system
+                integrators and project contractors.
               </p>
               <div className="about-support-tags" aria-label="JUST YOU AUDIO support">
                 {supportTags.map((tag) => (
@@ -129,10 +130,12 @@ export default function AboutPage() {
                 ))}
               </div>
               <p className="about-profile-note">
-                We coordinate reliable supply through a network of specialized
-                manufacturing partners, with quality coordination, flexible
-                OEM/ODM options and practical project support. Our team and
-                manufacturing partners bring industry experience dating back to 2000.
+                JUST YOU AUDIO works under authorized international sales
+                arrangements with specialized commercial audio manufacturers. We
+                coordinate wholesale supply, OEM/ODM requirements, quality
+                assurance requirements and practical project support. Our team and
+                authorized manufacturing partners bring industry experience dating
+                back to 2000.
               </p>
             </div>
             <div className="about-profile-image-placeholder" aria-label="Company and product image placeholder">
@@ -148,13 +151,13 @@ export default function AboutPage() {
 
         <section className="about-distributor-section">
           <div className="about-section-title centered">
-            <div className="label">Distributor Support</div>
-            <h2>Support for Distributors, Integrators & Installers</h2>
+            <div className="label">Core Capabilities</div>
+            <h2>Manufacturing, International Sales & Engineering Support</h2>
           </div>
           <div className="about-distributor-layout">
             <div className="about-distributor-image-placeholder" aria-label="Distributor support image placeholder">
               <img
-                alt="Distributor support for JUST YOU AUDIO commercial audio products"
+                alt="Commercial audio manufacturing and international sales support"
                 height={750}
                 src="/images/about/distributor-support.webp"
                 width={1500}
@@ -184,8 +187,10 @@ export default function AboutPage() {
             <div className="label">Certifications & Compliance</div>
             <h2>Selected Certifications & Compliance Documents</h2>
             <p>
-              We provide applicable certificates, test reports and compliance
-              documents according to product and project requirements.
+              The displayed records are issued to the certificate holders shown
+              on each document and apply only to the listed product or management
+              system scope. They are not certifications issued to JUST YOU AUDIO
+              unless expressly shown.
             </p>
           </div>
           <div className="about-certification-grid">
@@ -201,6 +206,7 @@ export default function AboutPage() {
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.note}</p>
+                <small>{item.scope}</small>
               </article>
             ))}
           </div>
@@ -209,7 +215,11 @@ export default function AboutPage() {
               Applicable certificates, test reports and declarations are
               available upon request. Coverage varies by product model.
             </p>
-            <small>Specific manufacturing partner details are withheld for commercial confidentiality.</small>
+            <small>
+              The displayed document copies redact some holder information for
+              commercial confidentiality. Certificate availability, holder and
+              coverage must be confirmed for the selected product model.
+            </small>
           </div>
         </section>
 
@@ -222,13 +232,13 @@ export default function AboutPage() {
         </section>
 
         <section className="about-simple-cta">
-          <h2>Request company profile, catalog and distributor price.</h2>
+          <h2>Request distributor pricing, OEM/ODM support or project matching.</h2>
           <div>
             <a className="btn btn-gold" href="/catalog">
-              Get Catalog & Distributor Price
+              Request Distributor Pricing
             </a>
-            <a className="btn btn-secondary" href={getWhatsAppLink()}>
-              Contact on WhatsApp
+            <a className="btn btn-secondary" href={getWhatsAppLink(whatsappMessages.oemQuotation)}>
+              Request OEM/ODM Quote
             </a>
           </div>
         </section>

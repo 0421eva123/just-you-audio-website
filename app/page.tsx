@@ -541,14 +541,31 @@ export default function Home() {
               delivery preparation for selected commercial audio models.
             </p>
           </div>
-          <div className="supply-quality-grid">
-            {supplyQualityCards.map((card, index) => (
-              <article className="supply-quality-card" key={card.title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-              </article>
-            ))}
+          <div className="manufacturing-content">
+            <a
+              className="manufacturing-showcase"
+              href="/images/manufacturing-quality-supply.jpg"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                alt="JUST YOU AUDIO manufacturing support, quality control, commercial audio production and reliable supply"
+                decoding="async"
+                height={2560}
+                loading="lazy"
+                src="/images/manufacturing-quality-supply.jpg"
+                width={1917}
+              />
+            </a>
+            <div className="supply-quality-grid">
+              {supplyQualityCards.map((card, index) => (
+                <article className="supply-quality-card" key={card.title}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{card.title}</h3>
+                  <p>{card.description}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

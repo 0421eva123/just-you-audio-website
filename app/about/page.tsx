@@ -149,6 +149,33 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="about-capability-visual-section">
+          <div className="about-section-title centered">
+            <div className="label">Manufacturing & Supply</div>
+            <h2>Manufacturing, Quality & Supply Capabilities</h2>
+            <p>
+              Explore our manufacturing support, product testing, commercial
+              audio range, showroom and supply capabilities for distributors
+              and system integrators.
+            </p>
+          </div>
+          <a
+            className="about-capability-visual"
+            href="/images/about-manufacturing-capabilities.jpg"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="JUST YOU AUDIO manufacturing support, product testing, commercial audio range, showroom and supply capabilities"
+              decoding="async"
+              height={2560}
+              loading="lazy"
+              src="/images/about-manufacturing-capabilities.jpg"
+              width={1907}
+            />
+          </a>
+        </section>
+
         <section className="about-distributor-section">
           <div className="about-section-title centered">
             <div className="label">Core Capabilities</div>

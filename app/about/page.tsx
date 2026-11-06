@@ -13,11 +13,11 @@ const supportTags = ["MANUFACTURING SUPPORT", "INTERNATIONAL SALES", "OEM / ODM"
 const distributorSupportItems = [
   {
     title: "Manufacturing",
-    text: "Authorized access to specialized commercial audio manufacturing capabilities for selected PA product lines.",
+    text: "Manufacturing support for selected commercial PA product lines.",
   },
   {
-    title: "International Sales",
-    text: "Overseas sales authorization, wholesale quotation coordination and order follow-up for distributors and OEM brands.",
+    title: "International Sales & Supply",
+    text: "Wholesale quotation support and order follow-up for distributors and OEM brands.",
   },
   {
     title: "Engineering Support",
@@ -65,16 +65,16 @@ const certificationItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "About JUST YOU AUDIO | Authorized International Sales & Manufacturing Support",
+  title: "About JUST YOU AUDIO | Manufacturing-Backed Commercial Audio Supply",
   description:
-    "Learn how JUST YOU AUDIO supports authorized international sales, OEM/ODM coordination and commercial PA supply for distributors, integrators and project contractors.",
+    "Learn how JUST YOU AUDIO supports commercial audio distributors, OEM brands and system integrators with 70V/100V PA products, OEM/ODM customization and engineering support.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About JUST YOU AUDIO | International Sales & Manufacturing Support",
+    title: "About JUST YOU AUDIO | Manufacturing-Backed Commercial Audio Supply",
     description:
-      "Authorized international sales, OEM/ODM coordination and commercial PA support for distributors, integrators and contractors.",
+      "Commercial audio supply, OEM/ODM customization, quality assurance and engineering support for 70V/100V PA projects.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -96,7 +96,7 @@ export default function AboutPage() {
             JUST YOU <span>AUDIO</span>
           </a>
           <div className="links">
-            <a href="/#factory">Manufacturing & Quality</a>
+            <a href="/#factory">Manufacturing Support</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
@@ -117,12 +117,13 @@ export default function AboutPage() {
           <div className="about-profile-layout">
             <div className="about-profile-copy">
               <div className="label">JUST YOU AUDIO</div>
-              <h1>Authorized International Sales for Commercial Audio</h1>
+              <h1>Manufacturing-Backed Commercial Audio Supply</h1>
               <h2>70V/100V PA Systems · OEM/ODM · Wholesale & Project Supply</h2>
               <p>
-                Commercial PA amplifiers, speakers and complete 70V/100V audio
-                solutions for wholesalers, distributors, OEM brands, system
-                integrators and project contractors.
+                JUST YOU AUDIO specializes in commercial audio and 70V/100V PA
+                systems, supporting distributors, OEM brands and system integrators
+                worldwide. Our range includes PA amplifiers, commercial speakers
+                and complete solutions for wholesale and project supply.
               </p>
               <div className="about-support-tags" aria-label="JUST YOU AUDIO support">
                 {supportTags.map((tag) => (
@@ -130,12 +131,12 @@ export default function AboutPage() {
                 ))}
               </div>
               <p className="about-profile-note">
-                JUST YOU AUDIO works under authorized international sales
-                arrangements with specialized commercial audio manufacturers. We
-                coordinate wholesale supply, OEM/ODM requirements, quality
-                assurance requirements and practical project support. Our team and
-                authorized manufacturing partners bring industry experience dating
-                back to 2000.
+                Our capabilities cover product sourcing and manufacturing support,
+                quality coordination, OEM/ODM customization, wholesale supply and
+                technical assistance for commercial installations. With industry
+                experience across our team and manufacturing network dating back to
+                2000, we focus on reliable products, consistent quality and
+                long-term business relationships.
               </p>
             </div>
             <div className="about-profile-image-placeholder" aria-label="Company and product image placeholder">

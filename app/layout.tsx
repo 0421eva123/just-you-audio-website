@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     template: "%s | JUST YOU AUDIO",
   },
   description:
-    "JUST YOU AUDIO provides authorized international sales, OEM/ODM coordination, wholesale PA supply and engineering support for distributors, integrators and project contractors.",
+    "JUST YOU AUDIO provides 70V/100V PA products, OEM/ODM customization, quality assurance, flexible wholesale supply and engineering support for distributors, OEM brands and system integrators.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "Authorized international sales, OEM/ODM coordination and commercial PA support for distributors, integrators and contractors.",
+      "70V/100V PA systems, wholesale supply, OEM/ODM customization and engineering support for commercial audio projects.",
     emails: [contactInfo.salesEmail, contactInfo.infoEmail],
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "Authorized international sales, OEM/ODM coordination and commercial PA support for distributors, integrators and contractors.",
+      "70V/100V PA systems, wholesale supply, OEM/ODM customization and engineering support for commercial audio projects.",
     images: ["/images/hero-pa-system.jpg"],
   },
   icons: {

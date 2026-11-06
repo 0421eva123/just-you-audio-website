@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     absolute: `${brandTagline} | JUST YOU AUDIO`,
   },
   description:
-    "JUST YOU AUDIO provides authorized international sales, OEM/ODM coordination, wholesale PA supply and engineering support for commercial audio distributors and project teams.",
+    "Reliable commercial audio supply for distributors, OEM brands and system integrators, including 70V/100V PA products, OEM/ODM customization, quality assurance and engineering support.",
   alternates: {
     canonical: `${siteUrl}/`,
   },
   openGraph: {
     title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "Authorized international sales, OEM/ODM coordination and commercial PA support for distributors, integrators and contractors.",
+      "70V/100V PA systems, flexible wholesale supply, OEM/ODM customization, quality assurance and engineering support.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${brandTagline} | JUST YOU AUDIO`,
     description:
-      "Authorized international sales, OEM/ODM coordination and commercial PA support for distributors, integrators and contractors.",
+      "70V/100V PA systems, flexible wholesale supply, OEM/ODM customization, quality assurance and engineering support.",
     images: ["/images/hero-pa-system.jpg"],
   },
 };
@@ -51,7 +51,7 @@ const organizationJsonLd = {
   url: `${siteUrl}/`,
   logo: `${siteUrl}/icon.svg`,
   description:
-    "Authorized international sales and commercial audio manufacturing support for 70V/100V PA products, including OEM/ODM coordination, quality assurance coordination and engineering support.",
+    "Manufacturing-backed commercial audio supply for 70V/100V PA products, including OEM/ODM customization, quality assurance, flexible wholesale supply and engineering support.",
 };
 
 const websiteJsonLd = {
@@ -192,7 +192,7 @@ const solutions = [
 const supports = [
   ["Wholesale & Project Supply", "Commercial PA product lines, selected stock support and repeat-order planning for distributors and projects."],
   ["OEM/ODM Solutions", "Private-label, packaging and selected product customization reviewed by model and order requirements."],
-  ["Authorized Sales Coordination", "International sales support for authorized manufacturing product lines, with quotation and order follow-up."],
+  ["International Sales & Supply", "International sales, quotation support and order follow-up for distributors and OEM brands."],
   ["Engineering Support", "Product matching, zoning guidance and technical documentation for commercial installations."],
 ];
 
@@ -217,7 +217,7 @@ const supplyQualityCards = [
   },
   {
     title: "Ready Stock & Replenishment",
-    description: "Stock availability and flexible replenishment",
+    description: "Stock availability for selected models and flexible replenishment support.",
     image: "/images/manufacturing-capabilities/04.jpg",
     imageAlt: "Warehouse stock for commercial audio replenishment",
   },
@@ -252,7 +252,7 @@ export default function Home() {
             JUST YOU <span>AUDIO</span>
           </div>
           <div className="links">
-            <a href="#factory">Manufacturing & Quality</a>
+            <a href="#factory">Manufacturing Support</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
@@ -279,9 +279,10 @@ export default function Home() {
                 Commercial Audio & 70V/100V PA Systems
               </h1>
               <p>
-                Authorized international sales for commercial audio manufacturing
-                partners, providing wholesale PA supply, OEM/ODM solutions and
-                engineering support for distributors, integrators and project contractors.
+                Reliable commercial audio supply for distributors, OEM brands and
+                system integrators. We provide 70V/100V PA products, OEM/ODM
+                customization, quality assurance, flexible wholesale supply and
+                engineering support.
               </p>
               <div className="hero-support-line">
                 Manufacturing · International Sales · OEM/ODM · Ready Stock · Flexible MOQ · Competitive Pricing · OEM &amp; Project Support
@@ -297,7 +298,7 @@ export default function Home() {
               <div className="buyer-bar">
                 <div className="buyer-item">
                   <strong>Manufacturing Support</strong>
-                  <span>Authorized product-line coordination across specialized PA manufacturing capabilities.</span>
+                  <span>Manufacturing support for selected commercial PA product lines.</span>
                 </div>
                 <div className="buyer-item">
                   <strong>OEM/ODM Solutions</strong>
@@ -401,8 +402,7 @@ export default function Home() {
               <h2>Manufacturing &amp; Supply Capabilities</h2>
             </div>
             <p>
-              Through authorized manufacturing sales relationships, we coordinate
-              production capability, quality requirements, OEM/ODM options and
+              Manufacturing support, quality assurance, OEM/ODM options and
               delivery preparation for selected commercial audio models.
             </p>
           </div>
@@ -486,9 +486,8 @@ export default function Home() {
               <div className="label">Distributor Cooperation</div>
               <h2>Support for Your Distribution Business</h2>
               <p>
-                Authorized manufacturing sales coordination, flexible wholesale
-                purchasing and practical support for long-term distribution and
-                project supply.
+                Flexible wholesale supply and practical support for long-term
+                distribution and commercial project supply.
               </p>
               <div className="cta">
                 <a className="btn btn-secondary" href="/catalog">

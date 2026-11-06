@@ -60,7 +60,7 @@ export default function DownloadCatalogForm() {
     <form className="download-form" onSubmit={handleSubmit}>
       <div className="download-form-head">
         <span>Lead Capture</span>
-        <h2>Receive the product overview</h2>
+        <h2>Receive the product catalog</h2>
       </div>
 
       <div className="download-form-grid">

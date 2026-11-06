@@ -12,16 +12,16 @@ const reasons = [
 ];
 
 export const metadata: Metadata = {
-  title: "Request Distributor Pricing & OEM/ODM Quote",
+  title: "Get Product Catalog & Request Distributor Pricing",
   description:
-    "Download a quick product overview or request JUST YOU AUDIO distributor pricing, OEM/ODM support and a commercial PA project quotation.",
+    "Request the latest JUST YOU AUDIO product catalog, distributor pricing, OEM/ODM customization and support for commercial PA projects.",
   alternates: {
     canonical: "/catalog",
   },
   openGraph: {
-    title: "Request Distributor Pricing & OEM/ODM Quote | JUST YOU AUDIO",
+    title: "Get Product Catalog & Request Distributor Pricing | JUST YOU AUDIO",
     description:
-      "Request JUST YOU AUDIO catalog access, wholesale pricing, OEM/ODM support and commercial PA project quotations.",
+      "Request the latest JUST YOU AUDIO product catalog, wholesale pricing, OEM/ODM customization and commercial PA project support.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -43,7 +43,7 @@ export default function CatalogPage() {
             JUST YOU <span>AUDIO</span>
           </a>
           <div className="links">
-            <a href="/#factory">Manufacturing & Quality</a>
+            <a href="/#factory">Manufacturing Support</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
@@ -62,30 +62,29 @@ export default function CatalogPage() {
       <main className="catalog-page">
         <section className="catalog-hero">
           <div className="label">Catalog Request</div>
-          <h1>Request Catalog, Distributor Pricing & OEM/ODM Quote</h1>
+          <h1>Get Product Catalog &amp; Request Distributor Pricing</h1>
           <p>
-            Download a quick product overview or submit a B2B inquiry for the
-            full model list, distributor pricing, OEM/ODM support and project quotation.
+            Request the latest 15-page product catalog, or submit a B2B inquiry
+            for distributor pricing, OEM/ODM customization and project support.
           </p>
         </section>
 
         <section className="catalog-actions" aria-label="Catalog request options">
           <article className="catalog-card">
             <div>
-              <span className="catalog-card-kicker">Product Overview</span>
-              <h2>Download Product Overview</h2>
+              <span className="catalog-card-kicker">Product Catalog</span>
+              <h2>Get the Latest Product Catalog</h2>
               <p>
-                A quick overview of our PA amplifiers, ceiling speakers, wall
+                A 15-page overview of PA amplifiers, ceiling speakers, wall
                 speakers, outdoor column speakers, horn speakers and background
                 music system solutions.
               </p>
               <small>
-                This overview is a general product introduction and does not
-                include detailed prices.
+                Distributor pricing is provided separately by quotation.
               </small>
             </div>
             <a className="btn btn-secondary catalog-button" href="/download-catalog">
-              Download Product Overview PDF
+              Get Product Catalog
             </a>
           </article>
 

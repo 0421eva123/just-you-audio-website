@@ -85,7 +85,7 @@ const productLines = [
 
 const companySnapshot = [
   ["Company Name", "JUST YOU AUDIO"],
-  ["Business Type", "Authorized International Sales & Commercial Audio Manufacturing Support"],
+  ["Business Type", "Manufacturing-Backed Commercial Audio Supplier"],
   [
     "Main Products",
     "100V / 70V Amplifiers, Ceiling Speakers, Wall Mount Speakers, Outdoor Column Speakers, Horn Speakers, PA System Accessories",
@@ -97,7 +97,7 @@ const companySnapshot = [
   ],
   [
     "Services",
-    "Authorized international sales, OEM/ODM coordination, quality assurance coordination, product selection and engineering support",
+    "Manufacturing support, OEM/ODM customization, quality assurance, product selection and engineering support",
   ],
 ];
 
@@ -105,12 +105,12 @@ const supplierFaqs = [
   {
     question: "Are you a manufacturer or a supplier?",
     answer:
-      "JUST YOU AUDIO works under authorized international sales arrangements with specialized commercial audio manufacturers. We coordinate wholesale supply, OEM/ODM requests and order follow-up for distributors, integrators and project contractors.",
+      "JUST YOU AUDIO is a manufacturing-backed commercial audio supplier working with specialized production partners in China. We coordinate manufacturing, OEM/ODM requirements, quality assurance and international sales for distributors and project customers.",
   },
   {
     question: "Do you support OEM/ODM?",
     answer:
-      "Yes. Logo, packaging and selected product customization can be coordinated with the relevant authorized manufacturer. Available options, minimum order quantities and lead times are confirmed for each model and order.",
+      "Yes. Logo, packaging and selected product customization are available for selected models. Available options, minimum order quantities and lead times are confirmed for each model and order.",
   },
   {
     question: "What is your warranty?",
@@ -132,7 +132,7 @@ const supplierFaqs = [
 export const metadata: Metadata = {
   title: "PA Guides & Resources",
   description:
-    "PA audio guides, commercial audio Q&A, project solution knowledge and authorized international sales support information from JUST YOU AUDIO.",
+    "PA audio guides, commercial audio Q&A and project solution knowledge for distributors, OEM brands, integrators and commercial project buyers.",
   alternates: {
     canonical: "/knowledge",
   },
@@ -157,7 +157,7 @@ const knowledgeJsonLd = {
   "@type": "CollectionPage",
   name: "PA Guides & Resources",
   description:
-    "PA audio news, public address Q&A, project solution guides and commercial audio manufacturing support information from JUST YOU AUDIO.",
+    "PA audio news, public address Q&A, project solution guides and commercial audio supply information from JUST YOU AUDIO.",
   url: `${siteUrl}/knowledge`,
   inLanguage: "en",
   mainEntity: {
@@ -184,7 +184,7 @@ export default function KnowledgePage() {
             JUST YOU <span>AUDIO</span>
           </a>
           <div className="links">
-            <a href="/#factory">Manufacturing & Quality</a>
+            <a href="/#factory">Manufacturing Support</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
@@ -286,23 +286,22 @@ export default function KnowledgePage() {
           <aside className="factory-profile" aria-label="Supplier profile">
             <div className="factory-profile-card">
               <div className="label">Company Profile</div>
-              <h2>Authorized Manufacturing Sales & International Support</h2>
+              <h2>Manufacturing-Backed Commercial Audio Supply</h2>
               <p>
-                JUST YOU AUDIO works under authorized international sales
-                arrangements with specialized commercial audio manufacturers. We
-                support wholesale PA supply, OEM/ODM coordination, product
-                selection and engineering guidance for distributors, integrators,
-                contractors and private-label brands. Our team and authorized
-                manufacturing partners bring industry experience dating back to 2000.
+                JUST YOU AUDIO specializes in commercial audio and 70V/100V PA
+                systems, supporting distributors, OEM brands and system
+                integrators. We provide manufacturing support, quality
+                coordination, OEM/ODM customization, wholesale supply and
+                engineering guidance for commercial installations.
               </p>
               <div className="profile-stats">
                 <div>
                   <strong>Manufacturing Support</strong>
-                  <span>Authorized access to specialized commercial audio manufacturing capabilities</span>
+                  <span>Manufacturing support for selected commercial audio product lines</span>
                 </div>
                 <div>
-                  <strong>International Sales</strong>
-                  <span>Wholesale quotation coordination, OEM/ODM support and order follow-up</span>
+                  <strong>International Sales &amp; Supply</strong>
+                  <span>Wholesale quotation, OEM/ODM support and order follow-up</span>
                 </div>
                 <div>
                   <strong>Engineering Support</strong>

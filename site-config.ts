@@ -1,6 +1,6 @@
 export const brandName = "JUST YOU AUDIO";
 export const brandTagline =
-  "Commercial Audio Manufacturing Support & International Sales";
+  "Manufacturing-Backed Commercial Audio Supplier";
 export const coreValueLine =
   "Ready Stock · Flexible MOQ · Competitive Pricing · OEM & Project Support";
 export const siteUrl = "https://www.justyouaudio.com";

@@ -12,14 +12,14 @@ import DownloadCatalogForm from "./DownloadCatalogForm";
 export const metadata: Metadata = {
   title: "Get JUST YOU AUDIO Product Catalog",
   description:
-    "Leave your information to receive the latest JUST YOU AUDIO PA product overview, wholesale support and OEM/ODM information.",
+    "Leave your information to receive the latest JUST YOU AUDIO product catalog, wholesale supply and OEM/ODM information.",
   alternates: {
     canonical: "/download-catalog",
   },
   openGraph: {
     title: "Get JUST YOU AUDIO Product Catalog",
     description:
-      "Request the JUST YOU AUDIO PA product overview, wholesale support and OEM/ODM information.",
+      "Request the latest JUST YOU AUDIO product catalog, wholesale supply and OEM/ODM information.",
     images: [
       {
         url: "/images/hero-pa-system.jpg",
@@ -38,7 +38,7 @@ const downloadCatalogJsonLd = [
     "@type": "WebPage",
     name: "Get JUST YOU AUDIO Product Catalog",
     description:
-      "Leave your information to receive the latest JUST YOU AUDIO PA product overview, wholesale support and OEM/ODM information.",
+      "Leave your information to receive the latest JUST YOU AUDIO product catalog, wholesale supply and OEM/ODM information.",
     url: `${siteUrl}/download-catalog`,
     inLanguage: "en",
     publisher: {
@@ -80,7 +80,7 @@ export default function DownloadCatalogPage() {
             JUST YOU <span>AUDIO</span>
           </a>
           <div className="links">
-            <a href="/#factory">Manufacturing & Quality</a>
+            <a href="/#factory">Manufacturing Support</a>
             <a href="/about">About Us</a>
             <a href="/knowledge">Knowledge</a>
             <a href="/catalog">Catalog</a>
@@ -102,8 +102,8 @@ export default function DownloadCatalogPage() {
             <div className="label">Catalog Download</div>
             <h1>Get JUST YOU AUDIO Product Catalog</h1>
             <p>
-              Leave your information to receive our latest PA product overview,
-              wholesale support and OEM/ODM information.
+              Leave your information to receive our latest 15-page product
+              catalog, wholesale supply and OEM/ODM information.
             </p>
             <div className="download-trust">
               <span>PA amplifiers</span>

@@ -1825,7 +1825,7 @@ function Navigation() {
           JUST YOU <span>AUDIO</span>
         </a>
         <div className="links">
-          <a href="/#factory">Manufacturing & Quality</a>
+          <a href="/#factory">Manufacturing Support</a>
           <a href="/about">About Us</a>
           <a href="/knowledge">Knowledge</a>
           <a href="/catalog">Catalog</a>

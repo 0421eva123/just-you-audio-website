@@ -154,15 +154,15 @@ export default function AboutPage() {
             <div className="label">Core Capabilities</div>
             <h2>Manufacturing, International Sales & Engineering Support</h2>
           </div>
+          <div className="about-distributor-feature-image">
+            <img
+              alt="Commercial audio manufacturing and supply support"
+              height={750}
+              src="/images/about/distributor-support.webp"
+              width={1500}
+            />
+          </div>
           <div className="about-distributor-layout">
-            <div className="about-distributor-image-placeholder" aria-label="Distributor support image placeholder">
-              <img
-                alt="Commercial audio manufacturing and international sales support"
-                height={750}
-                src="/images/about/distributor-support.webp"
-                width={1500}
-              />
-            </div>
             <div className="about-distributor-cards">
               {distributorSupportItems.map((item) => (
                 <article key={item.title}>

@@ -3,7 +3,6 @@ import {
   brandTagline,
   brandName,
   contactInfo,
-  coreValueLine,
   getEmailLink,
   getWhatsAppLink,
   siteUrl,
@@ -199,57 +198,40 @@ const supports = [
 
 const supplyQualityCards = [
   {
-    title: "Manufacturing Capabilities",
-    description:
-      "Authorized access to specialized PA manufacturing capabilities across amplifiers, speakers and system accessories.",
+    title: "Manufacturing Support",
+    description: "Production coordination and manufacturing capabilities",
+    image: "/images/manufacturing-capabilities/01.jpg",
+    imageAlt: "Manufacturing support for commercial speaker production",
   },
   {
-    title: "Production & Assembly",
-    description:
-      "Model-specific production and assembly arrangements are coordinated with the relevant authorized manufacturer.",
+    title: "OEM/ODM",
+    description: "Private labeling, packaging and product customization",
+    image: "/images/manufacturing-capabilities/02.jpg",
+    imageAlt: "OEM and ODM support for commercial speaker production",
   },
   {
-    title: "Quality Control & Testing",
-    description:
-      "Inspection requirements and available product testing documentation are confirmed by model and order.",
+    title: "Quality Assurance",
+    description: "Product inspection and testing support",
+    image: "/images/manufacturing-capabilities/03.jpg",
+    imageAlt: "Commercial audio quality assurance testing equipment",
   },
   {
-    title: "OEM/ODM Customization",
-    description:
-      "Logo, packaging and selected product customization options are reviewed against model and order requirements.",
+    title: "Ready Stock & Replenishment",
+    description: "Stock availability and flexible replenishment",
+    image: "/images/manufacturing-capabilities/04.jpg",
+    imageAlt: "Warehouse stock for commercial audio replenishment",
   },
   {
     title: "Engineering Support",
-    description:
-      "Product selection, 70V/100V system matching and technical documentation for commercial installations.",
+    description: "PA system matching, zoning and technical guidance",
+    image: "/images/manufacturing-capabilities/05.jpg",
+    imageAlt: "Commercial audio products supporting PA system engineering",
   },
   {
-    title: "Wholesale Production & Delivery",
-    description:
-      "Wholesale order planning, packing requirements and delivery coordination for selected models.",
-  },
-];
-
-const guideLinks = [
-  {
-    title: "100V PA System Guide",
-    href: "/knowledge/100v-pa-system-guide",
-    description: "Understand amplifier matching, speaker taps, zones and quotation details.",
-  },
-  {
-    title: "How to Choose a PA Amplifier",
-    href: "/knowledge/how-to-choose-pa-amplifier",
-    description: "Compare amplifier wattage, inputs and zone control for commercial projects.",
-  },
-  {
-    title: "Hotel Background Music System",
-    href: "/knowledge/hotel-background-music-system",
-    description: "Plan ceiling speakers, wall speakers and zone amplifiers for hotel spaces.",
-  },
-  {
-    title: "Outdoor Waterproof Speaker Guide",
-    href: "/knowledge/outdoor-waterproof-speaker-guide",
-    description: "Choose outdoor column, horn and garden speakers by coverage and exposure.",
+    title: "International Sales",
+    description: "Dedicated overseas communication and order support",
+    image: "/images/manufacturing-capabilities/06.jpg",
+    imageAlt: "Commercial audio manufacturing and international sales support",
   },
 ];
 
@@ -288,8 +270,8 @@ export default function Home() {
 
       <main>
         <section className="hero">
-          <div className="hero-inner">
-            <div>
+          <div className="hero-inner hero-stacked">
+            <div className="hero-copy">
               <div className="eyebrow">
                 For Distributors, Integrators & Project Contractors
               </div>
@@ -301,17 +283,16 @@ export default function Home() {
                 partners, providing wholesale PA supply, OEM/ODM solutions and
                 engineering support for distributors, integrators and project contractors.
               </p>
-              <div className="hero-manufacturing-line">
-                Manufacturing · International Sales · OEM/ODM
+              <div className="hero-support-line">
+                Manufacturing · International Sales · OEM/ODM · Ready Stock · Flexible MOQ · Competitive Pricing · OEM &amp; Project Support
               </div>
-              <div className="hero-value-line">{coreValueLine}</div>
-              <div className="cta">
-                <a className="btn btn-primary" href="/catalog">
-                  Request Distributor Pricing
-                </a>
-                <a className="btn btn-gold" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
-                  Submit Project Requirements
-                </a>
+              <div className="hero-feature-image">
+                <img
+                  alt="JUST YOU AUDIO manufacturing, product range and delivery capabilities"
+                  height={400}
+                  src="/images/home-hero-capabilities.jpg"
+                  width={1000}
+                />
               </div>
               <div className="buyer-bar">
                 <div className="buyer-item">
@@ -325,20 +306,6 @@ export default function Home() {
                 <div className="buyer-item">
                   <strong>Engineering Support</strong>
                   <span>70V/100V product matching and documentation for commercial projects.</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="visual">
-              <div className="product-stage">
-                <img
-                  className="hero-product-image"
-                  src="/images/home-hero-pa-system.webp"
-                  alt="JUST YOU AUDIO PA amplifier and speaker product range"
-                />
-                <div className="tag two">PA Product Range</div>
-                <div className="tag three">
-                  Consistent quality control and flexible OEM/ODM support.
                 </div>
               </div>
             </div>
@@ -379,6 +346,14 @@ export default function Home() {
         </div>
 
         <section className="section" id="featured">
+          <div className="cta featured-cta">
+            <a className="btn btn-primary" href="/catalog">
+              Request Distributor Pricing
+            </a>
+            <a className="btn btn-gold" href={getWhatsAppLink(whatsappMessages.projectConsultation)}>
+              Submit Project Requirements
+            </a>
+          </div>
           <div className="section-head">
             <div>
               <div className="label">Featured Products</div>
@@ -419,6 +394,34 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section" id="factory">
+          <div className="section-head">
+            <div>
+              <div className="label">Manufacturing & Supply</div>
+              <h2>Manufacturing &amp; Supply Capabilities</h2>
+            </div>
+            <p>
+              Through authorized manufacturing sales relationships, we coordinate
+              production capability, quality requirements, OEM/ODM options and
+              delivery preparation for selected commercial audio models.
+            </p>
+          </div>
+          <div className="supply-quality-grid">
+            {supplyQualityCards.map((card, index) => (
+              <article className="supply-quality-card" key={card.title}>
+                <div className="supply-quality-heading">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{card.title}</h3>
+                </div>
+                <div className="supply-quality-image">
+                  <img alt={card.imageAlt} loading="lazy" src={card.image} />
+                </div>
+                <p>{card.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="section small-top" id="categories">
           <div className="section-head">
             <div>
@@ -435,30 +438,6 @@ export default function Home() {
               <article className="cat" key={title}>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section small-top" aria-label="PA guides and resources">
-          <div className="section-head">
-            <div>
-              <div className="label">PA Guides & Resources</div>
-              <h2>Selection guides for common PA projects</h2>
-            </div>
-            <p>
-              Use these guides to prepare project details before requesting
-              amplifier, speaker and system quotations.
-            </p>
-          </div>
-          <div className="category-grid">
-            {guideLinks.map((guide, index) => (
-              <article className="cat" key={guide.href}>
-                <h3>
-                  <a href={guide.href}>{guide.title}</a>
-                </h3>
-                <p>{guide.description}</p>
                 <span>{String(index + 1).padStart(2, "0")}</span>
               </article>
             ))}
@@ -526,29 +505,6 @@ export default function Home() {
                 </article>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="section" id="factory">
-          <div className="section-head">
-            <div>
-              <div className="label">Manufacturing & Quality Assurance</div>
-              <h2>Manufacturing Support for Wholesale & Projects</h2>
-            </div>
-            <p>
-              Through authorized manufacturing sales relationships, we coordinate
-              production capability, quality requirements, OEM/ODM options and
-              delivery preparation for selected commercial audio models.
-            </p>
-          </div>
-          <div className="supply-quality-grid">
-            {supplyQualityCards.map((card, index) => (
-              <article className="supply-quality-card" key={card.title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-              </article>
-            ))}
           </div>
         </section>
 

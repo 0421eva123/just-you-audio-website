@@ -192,28 +192,28 @@ const solutions = [
 const supports = [
   ["Wholesale & Project Supply", "Commercial PA product lines, selected stock support and repeat-order planning for distributors and projects."],
   ["OEM/ODM Solutions", "Private-label, packaging and selected product customization reviewed by model and order requirements."],
-  ["International Sales & Supply", "International sales, quotation support and order follow-up for distributors and OEM brands."],
+  ["Quality Assurance", "Product inspection and testing support for selected commercial PA models."],
   ["Engineering Support", "Product matching, zoning guidance and technical documentation for commercial installations."],
 ];
 
 const supplyQualityCards = [
   {
-    title: "Manufacturing Support",
-    description: "Production coordination and manufacturing capabilities",
+    title: "Commercial PA Production",
+    description: "Production and assembly support for commercial PA products.",
     image: "/images/manufacturing-capabilities/01.jpg",
-    imageAlt: "Manufacturing support for commercial speaker production",
+    imageAlt: "Commercial PA product assembly and production equipment",
   },
   {
-    title: "OEM/ODM",
-    description: "Private labeling, packaging and product customization",
+    title: "OEM/ODM Customization",
+    description: "Private labeling, packaging and selected product customization.",
     image: "/images/manufacturing-capabilities/02.jpg",
     imageAlt: "OEM and ODM support for commercial speaker production",
   },
   {
-    title: "Quality Assurance",
-    description: "Product inspection and testing support",
+    title: "Quality Control & Testing",
+    description: "Product inspection and testing support for selected models.",
     image: "/images/manufacturing-capabilities/03.jpg",
-    imageAlt: "Commercial audio quality assurance testing equipment",
+    imageAlt: "Commercial audio quality control and testing equipment",
   },
   {
     title: "Ready Stock & Replenishment",
@@ -223,15 +223,15 @@ const supplyQualityCards = [
   },
   {
     title: "Engineering Support",
-    description: "PA system matching, zoning and technical guidance",
+    description: "PA system matching, zoning and technical guidance.",
     image: "/images/manufacturing-capabilities/05.jpg",
     imageAlt: "Commercial audio products supporting PA system engineering",
   },
   {
-    title: "International Sales",
-    description: "Dedicated overseas communication and order support",
+    title: "Wholesale & Project Supply",
+    description: "Flexible wholesale supply and delivery support for repeat orders and commercial projects.",
     image: "/images/manufacturing-capabilities/06.jpg",
-    imageAlt: "Commercial audio manufacturing and international sales support",
+    imageAlt: "Commercial audio production and wholesale supply support",
   },
 ];
 
@@ -285,12 +285,12 @@ export default function Home() {
                 engineering support.
               </p>
               <div className="hero-support-line">
-                Manufacturing · International Sales · OEM/ODM · Ready Stock · Flexible MOQ · Competitive Pricing · OEM &amp; Project Support
+                Reliable Quality · Flexible Supply · Ready Stock for Selected Models · Engineering Support
               </div>
               <div className="hero-feature-image">
                 <img
                   alt="JUST YOU AUDIO manufacturing, product range and delivery capabilities"
-                  height={400}
+                  height={1000}
                   src="/images/home-hero-capabilities.jpg"
                   width={1000}
                 />
@@ -298,11 +298,11 @@ export default function Home() {
               <div className="buyer-bar">
                 <div className="buyer-item">
                   <strong>Manufacturing Support</strong>
-                  <span>Manufacturing support for selected commercial PA product lines.</span>
+                  <span>Commercial PA products with production and assembly support.</span>
                 </div>
                 <div className="buyer-item">
                   <strong>OEM/ODM Solutions</strong>
-                  <span>Logo, packaging and selected customization options subject to model and order requirements.</span>
+                  <span>Logo, packaging and selected customization options by model and order requirements.</span>
                 </div>
                 <div className="buyer-item">
                   <strong>Engineering Support</strong>
@@ -326,7 +326,7 @@ export default function Home() {
               <strong>For System Integrators</strong>
               <p>
                 70V/100V system matching, technical documentation and product
-                coordination for installations, upgrades and replacements.
+                selection support for installations, upgrades and replacements.
               </p>
             </div>
             <div className="proof">
@@ -402,8 +402,8 @@ export default function Home() {
               <h2>Manufacturing &amp; Supply Capabilities</h2>
             </div>
             <p>
-              Manufacturing support, quality assurance, OEM/ODM options and
-              delivery preparation for selected commercial audio models.
+              Commercial PA production, quality control, OEM/ODM customization,
+              selected ready-stock models and practical project support.
             </p>
           </div>
           <div className="supply-quality-grid">
@@ -513,8 +513,8 @@ export default function Home() {
               <h2>Request distributor pricing, OEM/ODM support or project matching.</h2>
               <p>
                 Share your target market, product category, estimated quantity or
-                project requirements. We will coordinate suitable commercial PA
-                models and a quotation for your request.
+                project requirements. We will recommend suitable commercial PA
+                models and prepare a quotation for your request.
               </p>
             </div>
             <div className="lead-actions">

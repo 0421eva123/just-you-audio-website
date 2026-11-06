@@ -1333,7 +1333,7 @@ export const spanishLandingPages: SeoPage[] = [
     eyebrow: "Megafonía Comercial",
     h1: "Sistema de megafonía para proyectos comerciales",
     intro:
-      "Soluciones de megafonía, audio ambiental y voceo para distribuidores, integradores y proyectos comerciales en México, Colombia, Perú y otros mercados de Latinoamérica.",
+      "Soluciones de megafonía, audio ambiental y voceo para distribuidores, integradores y proyectos comerciales en México, Colombia, Perú y otros mercados de Latinoamérica. JUST YOU AUDIO es un proveedor de audio comercial con respaldo de fabricación, con venta mayorista, opciones OEM/ODM y soporte para proyectos.",
     keywords: ["megafonía", "audio comercial", "100V", "voceo"],
     trustTitle: "Para distribuidores e integradores de Latinoamérica",
     trustText:

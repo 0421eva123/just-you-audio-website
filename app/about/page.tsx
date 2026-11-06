@@ -8,16 +8,16 @@ import {
 } from "../../site-config";
 import SolutionCaseSwitcher from "./SolutionCaseSwitcher";
 
-const supportTags = ["MANUFACTURING SUPPORT", "INTERNATIONAL SALES", "OEM / ODM"];
+const supportTags = ["MANUFACTURING SUPPORT", "WHOLESALE SUPPLY", "OEM / ODM"];
 
 const distributorSupportItems = [
   {
-    title: "Manufacturing",
-    text: "Manufacturing support for selected commercial PA product lines.",
+    title: "Manufacturing Support",
+    text: "Commercial PA production, product assembly and selected model support.",
   },
   {
-    title: "International Sales & Supply",
-    text: "Wholesale quotation support and order follow-up for distributors and OEM brands.",
+    title: "Wholesale & Project Supply",
+    text: "Flexible wholesale supply and delivery support for distributors and commercial projects.",
   },
   {
     title: "Engineering Support",
@@ -65,14 +65,14 @@ const certificationItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "About JUST YOU AUDIO | Manufacturing-Backed Commercial Audio Supply",
+  title: "About JUST YOU AUDIO | Manufacturing-Backed Commercial Audio Supplier",
   description:
     "Learn how JUST YOU AUDIO supports commercial audio distributors, OEM brands and system integrators with 70V/100V PA products, OEM/ODM customization and engineering support.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About JUST YOU AUDIO | Manufacturing-Backed Commercial Audio Supply",
+    title: "About JUST YOU AUDIO | Manufacturing-Backed Commercial Audio Supplier",
     description:
       "Commercial audio supply, OEM/ODM customization, quality assurance and engineering support for 70V/100V PA projects.",
     images: [
@@ -117,13 +117,12 @@ export default function AboutPage() {
           <div className="about-profile-layout">
             <div className="about-profile-copy">
               <div className="label">JUST YOU AUDIO</div>
-              <h1>Manufacturing-Backed Commercial Audio Supply</h1>
+              <h1>Manufacturing-Backed Commercial Audio Supplier</h1>
               <h2>70V/100V PA Systems · OEM/ODM · Wholesale & Project Supply</h2>
               <p>
-                JUST YOU AUDIO specializes in commercial audio and 70V/100V PA
-                systems, supporting distributors, OEM brands and system integrators
-                worldwide. Our range includes PA amplifiers, commercial speakers
-                and complete solutions for wholesale and project supply.
+                JUST YOU AUDIO specializes in commercial audio and 70V/100V public
+                address systems, offering PA amplifiers, commercial speakers,
+                OEM/ODM solutions, wholesale supply and project support.
               </p>
               <div className="about-support-tags" aria-label="JUST YOU AUDIO support">
                 {supportTags.map((tag) => (
@@ -131,12 +130,10 @@ export default function AboutPage() {
                 ))}
               </div>
               <p className="about-profile-note">
-                Our capabilities cover product sourcing and manufacturing support,
-                quality coordination, OEM/ODM customization, wholesale supply and
-                technical assistance for commercial installations. With industry
-                experience across our team and manufacturing network dating back to
-                2000, we focus on reliable products, consistent quality and
-                long-term business relationships.
+                With extensive industry experience and reliable manufacturing
+                resources, we focus on product quality, flexible supply, selected
+                ready-stock models and practical support for distributors and
+                system integrators worldwide.
               </p>
             </div>
             <div className="about-profile-image-placeholder" aria-label="Company and product image placeholder">
@@ -153,7 +150,7 @@ export default function AboutPage() {
         <section className="about-distributor-section">
           <div className="about-section-title centered">
             <div className="label">Core Capabilities</div>
-            <h2>Manufacturing, International Sales & Engineering Support</h2>
+            <h2>Manufacturing, Quality & Supply Support</h2>
           </div>
           <div className="about-distributor-feature-image">
             <img

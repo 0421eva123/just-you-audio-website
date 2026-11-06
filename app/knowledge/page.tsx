@@ -42,9 +42,9 @@ const boardPosts = [
 
 const qas = [
   {
-    question: "Can one supplier provide amplifiers, speakers and accessories together?",
+    question: "Can I source amplifiers, speakers and accessories together?",
     answer:
-      "Yes. JUST YOU AUDIO coordinates a commercial PA product range, including mixer amplifiers, ceiling speakers, wall speakers, column speakers, horn speakers, microphones and speaker cable accessories.",
+      "Yes. JUST YOU AUDIO offers a commercial PA product range, including mixer amplifiers, ceiling speakers, wall speakers, column speakers, horn speakers, microphones and speaker cable accessories.",
   },
   {
     question: "Do you support OEM branding for regional distributors?",
@@ -97,15 +97,15 @@ const companySnapshot = [
   ],
   [
     "Services",
-    "Manufacturing support, OEM/ODM customization, quality assurance, product selection and engineering support",
+    "OEM/ODM · Wholesale Supply · Quality Assurance · Project Support",
   ],
 ];
 
 const supplierFaqs = [
   {
-    question: "Are you a manufacturer or a supplier?",
+    question: "What manufacturing and OEM/ODM capabilities do you offer?",
     answer:
-      "JUST YOU AUDIO is a manufacturing-backed commercial audio supplier working with specialized production partners in China. We coordinate manufacturing, OEM/ODM requirements, quality assurance and international sales for distributors and project customers.",
+      "We support commercial audio product manufacturing, OEM/ODM customization, quality inspection and wholesale supply for selected PA amplifiers and speaker models. Customization options and order requirements are confirmed by model.",
   },
   {
     question: "Do you support OEM/ODM?",
@@ -283,25 +283,24 @@ export default function KnowledgePage() {
             </section>
           </div>
 
-          <aside className="factory-profile" aria-label="Supplier profile">
+          <aside className="factory-profile" aria-label="Company profile">
             <div className="factory-profile-card">
               <div className="label">Company Profile</div>
-              <h2>Manufacturing-Backed Commercial Audio Supply</h2>
+              <h2>Manufacturing-Backed Commercial Audio Supplier</h2>
               <p>
                 JUST YOU AUDIO specializes in commercial audio and 70V/100V PA
-                systems, supporting distributors, OEM brands and system
-                integrators. We provide manufacturing support, quality
-                coordination, OEM/ODM customization, wholesale supply and
-                engineering guidance for commercial installations.
+                systems. We provide PA products, OEM/ODM customization, quality
+                assurance, wholesale supply and engineering support for
+                distributors, OEM brands and system integrators.
               </p>
               <div className="profile-stats">
                 <div>
-                  <strong>Manufacturing Support</strong>
-                  <span>Manufacturing support for selected commercial audio product lines</span>
+                  <strong>Commercial PA Production</strong>
+                  <span>Production and assembly support for selected commercial audio models</span>
                 </div>
                 <div>
-                  <strong>International Sales &amp; Supply</strong>
-                  <span>Wholesale quotation, OEM/ODM support and order follow-up</span>
+                  <strong>Wholesale &amp; Project Supply</strong>
+                  <span>Flexible supply, replenishment and quotation support</span>
                 </div>
                 <div>
                   <strong>Engineering Support</strong>
@@ -332,7 +331,7 @@ export default function KnowledgePage() {
 
             <div className="manufacturer-faq-card">
               <div className="label">FAQ</div>
-              <h2>Supplier FAQ</h2>
+              <h2>Commercial Audio FAQ</h2>
               <div className="manufacturer-faq-list">
                 {supplierFaqs.map((faq) => (
                   <article key={faq.question}>
